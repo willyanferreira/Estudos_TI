@@ -132,6 +132,47 @@ int main(void)
 	>= 40 e < 60 D
 	< 40 E*/
 
+	/*int mat;
+	float n1, n2, n3, me, ma;
+
+	printf("Informe sua matrícula: \n");
+	scanf("%d", &mat);
+
+	printf("Informe a sua primeira média: \n");
+	scanf("%f", &n1);
+
+	printf("Informe a sua segunda média: \n");
+	scanf("%f", &n2);
+
+	printf("Informe a sua terceira média: \n");
+	scanf("%f", &n3);
+
+	printf("Informe a sua média das avaliações : \n");
+	scanf("%f", &me);
+
+	ma = (n1 + (n2 * 2) + (n3 * 3) + me) / 7;
+
+	if (ma >= 9.0)
+	{
+		printf("STATUS DO ALUNO \n Mat: %d \n Nota AV1: %.2f \n Nota AV2: %.2f \n Nota AV3: %.2f \n Média das Avaliações: %.2f \n Conceito: A \n Média de Aproveitamento: %.2f \n Situação: Aprovado \n",mat, n1, n2, n3, me, ma );
+
+	}else if (ma >= 7.5 && ma < 9.0)
+	{
+		printf("STATUS DO ALUNO \n Mat: %d \n Nota AV1: %.2f \n Nota AV2: %.2f \n Nota AV3: %.2f \n Média das Avaliações: %.2f \n Conceito: B \n Média de Aproveitamento: %.2f \n Situação: Aprovado \n",mat, n1, n2, n3, me, ma );
+
+	}else if (ma >= 6.0 && ma < 7.5)
+	{
+		printf("STATUS DO ALUNO \n Mat: %d \n Nota AV1: %.2f \n Nota AV2: %.2f \n Nota AV3: %.2f \n Média das Avaliações: %.2f \n Conceito: C \n Média de Aproveitamento: %.2f \n Situação: Aprovado \n",mat, n1, n2, n3, me, ma );
+
+	}else if (ma >= 4.0 && ma < 6.0)
+	{
+		printf("\t STATUS DO ALUNO \n Mat: %d \n Nota AV1: %.2f \n Nota AV2: %.2f \n Nota AV3: %.2f \n Média das Avaliações: %.2f \n Conceito: D \n Média de Aproveitamento: %.2f \n Situação: Reprovado \n",mat, n1, n2, n3, me, ma );
+
+	}else {
+		printf("STATUS DO ALUNO \n Mat: %d \n Nota AV1: %.2f \n Nota AV2: %.2f \n Nota AV3: %.2f \n Média das Avaliações: %.2f \n Conceito: E \n Média de Aproveitamento: %.2f \n Situação: Reprovado \n",mat, n1, n2, n3, me, ma );
+	}*/
+
+
 	/*
 	O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar
 	uma indicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2
@@ -143,7 +184,6 @@ int main(void)
 	Entre 18,5 e 25 Peso normal
 	Entre 25 e 30 Acima do peso
 	Acima de 30 obeso
-	<https://teams.microsoft.com/l/message/19:bb1620727d6845ba99429ec0902a06e9@thread.tacv2/1618358068284?tenantId=da49a844-e2e3-40af-86a6-c3819d704f49&amp;groupId=bd6eb2e2-69f5-4be2-b2a9-79689e6f9340&amp;parentMessageId=1614599117917&amp;teamName=INTRODUÇÃO À PROGRAMAÇÃO ESTRUTURADA EM C (ARA0017/3670399) 3001&amp;channelName=Geral&amp;createdTime=1618358068284>
 	*/
 
 	return 0;

@@ -12,8 +12,7 @@
 </head>
 <body>
 <?php
-  $data = mktime(14, 30, 58, 12, 31, 2012);
-  echo date("Y-m-d h:i:sa:", $data);
-?>
+  $d=strtotime("12:30pm June 02 2013");
+  echo "Created date is " . date("Y-m-d h:i:sa", $d);?>
 </body>
 </html>

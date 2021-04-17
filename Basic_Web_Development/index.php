@@ -1,5 +1,8 @@
 <?php
-setcookie("test_cookie", "test", time() + 3600, '/');
+	session_start();
+	$_SESSION['food'] = "Arroz com feijão já tá bom.";
+	//session_unset();
+	//session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -9,11 +12,7 @@ setcookie("test_cookie", "test", time() + 3600, '/');
 </head>
 <body>
 <?php
-if(count($_COOKIE) > 0) {
-  echo "Cookies are enabled.";
-} else {
-  echo "Cookies are disabled.";
-}
+	echo "Minha cor favorita: ". $_SESSION['favcolor']. "<br>";
 ?>
 </body>
-</html>
+</html> 

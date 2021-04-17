@@ -11,8 +11,10 @@
 	</style>
 </head>
 <body>
-<?php
-  $d=strtotime("12:30pm June 02 2013");
-  echo "Created date is " . date("Y-m-d h:i:sa", $d);?>
+  <?php
+    $myFile = fopen("textophp.txt", "r") or die ("Não deu certo!");
+    echo fread($myFile, filesize("textophp.txt"));
+    fclose($myFile);
+  ?>
 </body>
 </html>

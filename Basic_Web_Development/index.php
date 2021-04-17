@@ -1,3 +1,6 @@
+<?php
+setcookie("test_cookie", "test", time() + 3600, '/');
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,14 +8,12 @@
 	<title>Estudando PHP</title>
 </head>
 <body>
-  
-  <form action="upload.php" method="post">
-    <input type="text" name="fname" placeholder="Digite seu primeiro nome:">
-    <button type="śubmit" name="enviar">Enviar</button> 
-  </form>
-  
 <?php
-  echo 'Obrigado SENHOR! Sei q estudando eu vou conseguir!';
+if(count($_COOKIE) > 0) {
+  echo "Cookies are enabled.";
+} else {
+  echo "Cookies are disabled.";
+}
 ?>
 </body>
 </html>

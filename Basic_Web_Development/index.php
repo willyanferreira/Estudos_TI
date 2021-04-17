@@ -3,18 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Estudando PHP</title>
-	<style>
-		.error{
-			color: red;
-			border: 1px solid black;
-		}
-	</style>
 </head>
 <body>
-  <?php
-    $myFile = fopen("textophp.txt", "r") or die ("Não deu certo!");
-    echo fread($myFile, filesize("textophp.txt"));
-    fclose($myFile);
-  ?>
+  
+  <form action="upload.php" method="post">
+    <input type="text" name="fname" placeholder="Digite seu primeiro nome:">
+    <button type="śubmit" name="enviar">Enviar</button> 
+  </form>
+  
+<?php
+  echo 'Obrigado SENHOR! Sei q estudando eu vou conseguir!';
+?>
 </body>
 </html>

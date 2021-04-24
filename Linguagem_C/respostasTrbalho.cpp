@@ -17,9 +17,12 @@ int main(void)
 	printf("Informe a quantidade de horas trabalhadas: \n");
 	scanf("%d", &numAulas);
 
-	printf("Informe o valor do desconto do INSS(entre 7,5%% à 14%%): \n");
+	printf("Informe o valor do desconto do INSS(entre 7.5%% à 14%%): \n");
 	scanf("%f", &descINSS);
 
+	saLiquido = valor_A_H * numAulas - (((valor_A_H * numAulas) / 100) * descINSS);
+	
+	printf("Seu salário é R$c%.2f",saLiquido);
 
 
 	//printf("O valor da hora aula é: %.2f\n", valor_A_H);

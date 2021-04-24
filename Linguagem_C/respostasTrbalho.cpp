@@ -141,7 +141,7 @@ int main(void)
 
 	/*Questão 5: Um comerciante comprou um produto e quer vendê-lo com lucro de 45% se o valor da compra for menor que 20,00; caso contrário, o lucro será de 30%. Entrar com o valor do produto e imprimir o valor da venda.*/
 
-	float valorCompra, valorVenda, lucro;
+	/*float valorCompra, valorVenda, lucro;
 
 	printf("Digite o valor que você comprou o produto\n");
 	scanf("%f", &valorCompra);
@@ -155,7 +155,33 @@ int main(void)
 		lucro = valorCompra * 0.3;
 		valorVenda = valorCompra + lucro;
 		printf("O valor da vendo do produto será de R$%.2f\n", valorVenda);
-	}
+	}*/
+
+	/*Questão 6: Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.*/
+
+	 float saldo, debito, credito, saldo_atual;
+	 int num_conta;
+	   
+	   printf("Qual o número da conta?\n");
+	   scanf("%d", &num_conta);
+	   
+	   printf("Qual seu saldo?\n");
+	   scanf("%f",&saldo);
+	   
+	   printf("Qual valor do débito?\n");
+	   scanf("%f",&debito);
+	   
+	   printf("Qual seu crédito?\n");
+	   scanf("%f",&credito);
+	   
+	   saldo_atual = (saldo - debito) + credito;
+	   
+	  
+	   if(saldo_atual>=0){
+	   	printf("Seu saldo atual é:\n %.2f \nSituação da conta: \n Saldo Positivo \n", saldo_atual);
+	   } else{ 
+	   	printf("Seu saldo atual é:\n %.2f \nSituação da conta: \n Saldo Negativo \n", saldo_atual);
+	   }
 	
 		
 

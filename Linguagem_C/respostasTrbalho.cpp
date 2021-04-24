@@ -1,7 +1,6 @@
 #include <iostream>
 #include <locale.h>
 
-
 int main(void)  
 {
 	setlocale(LC_ALL,"Portuguese");
@@ -98,7 +97,7 @@ int main(void)
 
 	/*Questão 4: Escreva um algoritmo que leia as idades de 2 homens e de 2 mulheres (considere que as idades dos homens serão sempre diferentes entre si, bem como as das mulheres). Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova, e o produto das idades do homem mais novo com a mulher mais velha.*/
 
-	int idadeH1, idadeH2, idadeM1, idadeM2, soma, produto;
+	/*int idadeH1, idadeH2, idadeM1, idadeM2, soma, produto;
 
 	printf("Digite a idade do primeiro homem:\n");
 	scanf("%d",&idadeH1);
@@ -138,6 +137,27 @@ int main(void)
 		printf("...A soma da idade do homem mais velho com a mulher mais nova é: %d\n e o produto da idade do homem mais novo com a mulher mais velha é: %d\n",soma, produto );
 	}else {
 		printf("Você declarou idades iguais e isso não é permitido!\n");
+	}*/
+
+	/*Questão 5: Um comerciante comprou um produto e quer vendê-lo com lucro de 45% se o valor da compra for menor que 20,00; caso contrário, o lucro será de 30%. Entrar com o valor do produto e imprimir o valor da venda.*/
+
+	float valorCompra, valorVenda, lucro;
+
+	printf("Digite o valor que você comprou o produto\n");
+	scanf("%f", &valorCompra);
+
+	if (valorCompra <= 20)
+	{
+		lucro = valorCompra * 0.45;
+		valorVenda = valorCompra + lucro;
+		printf("O valor da vendo do produto será de R$%.2f\n", valorVenda);
+	}else {
+		lucro = valorCompra * 0.3;
+		valorVenda = valorCompra + lucro;
+		printf("O valor da vendo do produto será de R$%.2f\n", valorVenda);
 	}
+	
+		
+
 	return 0;
 }

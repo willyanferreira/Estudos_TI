@@ -1,9 +1,4 @@
-<?php
-	session_start();
-	$_SESSION['food'] = "Arroz com feijão já tá bom.";
-	//session_unset();
-	//session_destroy();
-?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +7,23 @@
 </head>
 <body>
 <?php
-	echo "Minha cor favorita: ". $_SESSION['favcolor']. "<br>";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+
+try {
+  $conn = new PDO("mysql:host=$servername", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $sql = "CREATE DATABASE myDBPDO";
+  // use exec() because no results are returned
+  $conn->exec($sql);
+  echo "Database created successfully<br>";
+} catch(PDOException $e) {
+  echo $sql . "<br>" . $e->getMessage();
+}
+
+$conn = null;
 ?>
 </body>
 </html> 

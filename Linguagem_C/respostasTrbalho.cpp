@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include <locale.h>
 
 
@@ -69,7 +69,7 @@ int main(void)
 	- Ter no mínimo 60 anos e ter trabalhado no mínimo 25 anos. 
 	Com base nas informações acima, faça um algoritmo que leia: o número do empregado (código), o ano de seu nascimento e o ano de seu ingresso na empresa. O programa deverá escrever a idade e o tempo de trabalho do empregado e a mensagem 'Requerer aposentadoria' ou 'Não requerer'.*/
 
-	int matricula, anoNascimento, anoAdmissao, idade, tempoDeServico;
+	/*int matricula, anoNascimento, anoAdmissao, idade, tempoDeServico;
 
 	printf("Informe sua matrícula: \n");
 	scanf("%d", &matricula);
@@ -94,8 +94,50 @@ int main(void)
 		printf("Sua idade é %da e você contribuiu %da -\n Requerer aposentadoria\n", idade, tempoDeServico);
 	}else {
 		printf("Sua idade é %da e você contribuiu %da -\n Não requerer aposentadoria\n", idade, tempoDeServico);
+	}*/
+
+	/*Questão 4: Escreva um algoritmo que leia as idades de 2 homens e de 2 mulheres (considere que as idades dos homens serão sempre diferentes entre si, bem como as das mulheres). Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova, e o produto das idades do homem mais novo com a mulher mais velha.*/
+
+	int idadeH1, idadeH2, idadeM1, idadeM2, soma, produto;
+
+	printf("Digite a idade do primeiro homem:\n");
+	scanf("%d",&idadeH1);
+
+	printf("Digite a idade do segundo homem:\n");
+	scanf("%d",&idadeH2);
+
+	printf("Digite a idade da primeira mulher:\n");
+	scanf("%d",&idadeM1);
+
+	printf("Digite a idade da segunda mulher:\n");
+	scanf("%d",&idadeM2);
+
+	if (idadeH1 > idadeH2 && idadeM1 > idadeM2)
+	{
+		printf("O primeiro homem é mais velho que o segundo homem e a primeira mulher é mais velha que a segunda mulher, logo...\n");
+		soma = idadeH1 + idadeM2;
+		produto = idadeH2 * idadeM1;
+		printf("...A soma da idade do homem mais velho com a mulher mais nova é: %d\n e o produto da idade do homem mais novo com a mulher mais velha é: %d\n",soma, produto );
+	}else if (idadeH1 > idadeH2 && idadeM1 < idadeM2)
+	{
+		printf("O primeiro homem é mais velho que o segundo homem e a primeira mulher é mais nova que a segunda mulher, logo...\n");
+		soma = idadeH1 + idadeM1;
+		produto = idadeH2 * idadeM2;
+		printf("...A soma da idade do homem mais velho com a mulher mais nova é: %d\n e o produto da idade do homem mais novo com a mulher mais velha é: %d\n",soma, produto );
+	}else if (idadeH1 < idadeH2 && idadeM1 > idadeM2)
+	{
+		printf("O primeiro homem é mais novo que o segundo homem e a primeira mulher é mais velha que a segunda mulher, logo...\n");
+		soma = idadeH2 + idadeM2;
+		produto = idadeH1 * idadeM1;
+		printf("...A soma da idade do homem mais velho com a mulher mais nova é: %d\n e o produto da idade do homem mais novo com a mulher mais velha é: %d\n",soma, produto );
+	}else if (idadeH1 < idadeH2 && idadeM1 < idadeM2)
+	{
+		printf("O primeiro homem é mais novo que o segundo homem e a primeira mulher é mais nova que a segunda mulher, logo...\n");
+		soma = idadeH2 + idadeM1;
+		produto = idadeH1 * idadeM2;
+		printf("...A soma da idade do homem mais velho com a mulher mais nova é: %d\n e o produto da idade do homem mais novo com a mulher mais velha é: %d\n",soma, produto );
+	}else {
+		printf("Você declarou idades iguais e isso não é permitido!\n");
 	}
-
-
 	return 0;
 }

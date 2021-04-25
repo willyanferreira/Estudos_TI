@@ -296,7 +296,7 @@ int main(void)
 	
 	/*Questão 9: Faça um algoritmo para ler um número que é um código de usuário. Caso este código seja diferente de um código armazenado internamente no algoritmo (igual a 1234) deve ser apresentada a mensagem ‘Usuário inválido!’. Caso o Código seja correto, deve ser lido outro valor que é a senha. Se esta senha estiver incorreta (a certa é 9999) deve ser mostrada a mensagem ‘senha incorreta’. Caso a senha esteja correta, deve ser mostrada a mensagem ‘Acesso permitido’.*/
 		
-		int codUsuarioBD = 1234, senhaUsuarioBD = 9999, codUsuarioAcesso,
+		/*int codUsuarioBD = 1234, senhaUsuarioBD = 9999, codUsuarioAcesso,
 		senhaUsuarioAcesso;
 
 		while(codUsuarioAcesso != 0){
@@ -316,6 +316,38 @@ int main(void)
 				printf("Acesso permitido\n");
 			}
 		}
+		}*/
+
+		/*Questão 10: Faça um algoritmo para ler: a descrição do produto (nome), a quantidade adquirida e o preço unitário. Calcular e escrever o total (total = quantidade adquirida * preço unitário), o desconto e o total a pagar (total a pagar = total - desconto), sabendo-se que:
+		Se quantidade <= 5 o desconto será de 2%.
+		Se quantidade > 5 e <= 10 o desconto será de 3%.
+		Se a quantidade > 10 o desconto será de 5%.*/
+
+		char descricaoProduto[50];
+		int qtdProduto;
+		float valorUniProduto, valorTotalProduto, valorApagar, desconto;
+
+		printf("Qual nome do produto?\n");
+		fgets(descricaoProduto,50,stdin);
+
+		printf("Quantas unidades do mesmo produto?\n");
+		scanf("%d", &qtdProduto);
+
+		printf("Qual o valor da unidade do produto?\n");
+		scanf("%f", &valorUniProduto);
+
+		valorTotalProduto = qtdProduto * valorUniProduto;
+
+		if (qtdProduto <= 5){
+			valorApagar = valorTotalProduto - (valorTotalProduto*0.02);
+			desconto = valorTotalProduto * 0.02;
+		}else if (qtdProduto > 5 && qtdProduto <= 10){
+			valorApagar = valorTotalProduto - (valorTotalProduto*0.03);
+			desconto = valorTotalProduto * 0.03;
+		}else {
+			valorApagar = valorTotalProduto - (valorTotalProduto*0.05);
+			desconto = valorTotalProduto * 0.05;
 		}
+		printf("\t***Cupom Fiscal***\nDescrição do produto:\n%s\nQuantidade(s):\n%d\nValor bruto:\nR$%.2f\nDesconto:\n-R$%.2f\nTotal a pagar:\nR$%.2f\n",descricaoProduto, qtdProduto, valorTotalProduto, desconto, valorApagar);
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <locale.h>
+#include <math.h>
 
 int main(void)  
 {
@@ -159,7 +160,7 @@ int main(void)
 
 	/*Questão 6: Faça um algoritmo para ler: número da conta do cliente, saldo, débito e crédito. Após, calcular e escrever o saldo atual (saldo atual = saldo - débito + crédito). Também testar se saldo atual for maior ou igual a zero escrever a mensagem 'Saldo Positivo', senão escrever a mensagem 'Saldo Negativo'.*/
 
-	 float saldo, debito, credito, saldo_atual;
+	 /*float saldo, debito, credito, saldo_atual;
 	 int num_conta;
 	   
 	   printf("Qual o número da conta?\n");
@@ -181,7 +182,49 @@ int main(void)
 	   	printf("Seu saldo atual é:\n %.2f \nSituação da conta: \n Saldo Positivo \n", saldo_atual);
 	   } else{ 
 	   	printf("Seu saldo atual é:\n %.2f \nSituação da conta: \n Saldo Negativo \n", saldo_atual);
-	   }
+	   }*/
+
+	/*Questão 7: Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima em estoque e quantidade mínima em estoque de um produto. Calcular e escrever a quantidade média ((quantidade média = quantidade máxima + quantidade mínima)/2). Se a quantidade em estoque for maior ou igual a quantidade média escrever a mensagem 'Não efetuar compra', senão escrever a mensagem 'Efetuar compra'. Elaborar um programa que efetue a leitura de valores positivos inteiros até que um valor negativo seja informado. Ao final devem ser apresentados o maior e menor valores informados pelo usuário. */
+
+	/*int estoqueAtual, estoqueMaximo, estoqueMinimo, estoqueMedio;
+
+	printf("Qual a quantida atual em estoque?\n");
+	scanf("%d", &estoqueAtual);
+
+	printf("Qual a capacidade máxima do estoque?\n");
+	scanf("%d", &estoqueMaximo);
+
+	printf("Qual a capacidade mínima do estoque?\n");
+	scanf("%d", &estoqueMinimo);
+
+	estoqueMedio = (estoqueMaximo + estoqueMinimo) / 2;
+
+	if (estoqueAtual >= estoqueMedio)
+	{
+		printf("Quantidade em estoque:\n%d\nMédia do estoque:\n%d\nEstoque está dentro da média.\nNão efetuar compra.\n",estoqueAtual, estoqueMedio);
+	}else {
+		printf("\t ***ATENÇÂO!***\nQuantidade em estoque:\n%d\nMédia do estoque:\n%d\nQuantidade em estoque abaixo da média.\nEfetuar compra.\n",estoqueAtual, estoqueMedio);
+	}*/
+
+	/* int x,numero=0, maior=0, menor=0;
+ 	// Tem que inicializar as variaveis maior e menor com zero
+ 	// Inicializa a variavel numero com zero para entrar no loop while
+	 while (numero >= 0)
+	 {
+	 printf("Informe um valor positivo: ");
+	 scanf("%d", &numero);
+	 if (numero > 0)
+	 // se o numero for positivo
+	 if (numero > maior)
+	 // se o numero informado for maior que o conteudo atual
+	 // da variavel maior, esta variavel recebe o numero informado
+	 maior = numero;
+	 else
+	 // senão a variavel menor recebe o numero informado
+	 menor = numero;
+	 }
+	 printf("O maior é %d e o menor é %d\n", maior, menor);*/
+
 	
 		
 

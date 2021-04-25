@@ -234,7 +234,7 @@ int main(void)
 	Acima de 20l, desconto de 6% por litro.
 	Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.*/
 
-	float qtdLitrosVendidos, gasolina = 3.30, alcool = 2.90, totalAPagar; 
+	/*float qtdLitrosVendidos, gasolina = 3.30, alcool = 2.90, totalAPagar; 
 	char tipoCombustivel;
 
 	printf("Qual o combustível que você escolheu?\nDigite: A - para álcool / G - gasolina\n");
@@ -292,9 +292,30 @@ int main(void)
 		{
 			printf("O tipo de combustível é:\nGasolina\nA quantidade abastecidade é:\n%.2fl\nSeu desconto é de:\n6%%\nO total a pagar é:\nR$%.2f\n", qtdLitrosVendidos, totalAPagar);
 		}
-	}
+	}*/
 	
+	/*Questão 9: Faça um algoritmo para ler um número que é um código de usuário. Caso este código seja diferente de um código armazenado internamente no algoritmo (igual a 1234) deve ser apresentada a mensagem ‘Usuário inválido!’. Caso o Código seja correto, deve ser lido outro valor que é a senha. Se esta senha estiver incorreta (a certa é 9999) deve ser mostrada a mensagem ‘senha incorreta’. Caso a senha esteja correta, deve ser mostrada a mensagem ‘Acesso permitido’.*/
 		
+		int codUsuarioBD = 1234, senhaUsuarioBD = 9999, codUsuarioAcesso,
+		senhaUsuarioAcesso;
 
+		while(codUsuarioAcesso != 0){
+		printf("Código usuário:\n");
+		scanf("%d", &codUsuarioAcesso);
+
+		if (codUsuarioAcesso != codUsuarioBD)
+		{
+			printf("Código inválido.\n");
+		}else {
+			printf("Senha usuário:\n");
+			scanf("%d", &senhaUsuarioAcesso);
+			if (senhaUsuarioAcesso != senhaUsuarioBD)
+			{
+				printf("Senha incorreta\n");
+			}else {
+				printf("Acesso permitido\n");
+			}
+		}
+		}
 	return 0;
 }

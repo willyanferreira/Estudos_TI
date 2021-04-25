@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 #include <locale.h>
 #include <math.h>
 
@@ -225,6 +225,74 @@ int main(void)
 	 }
 	 printf("O maior é %d e o menor é %d\n", maior, menor);*/
 
+	/*Questão 8: Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+	Álcool: 
+	Até 20l, desconto de 3% por litro.
+	Acima de 20l, desconto de 5% por litro.
+	Gasolina:
+	Até 20l, desconto de 4% por litro.
+	Acima de 20l, desconto de 6% por litro.
+	Escreva um algoritmo que leia o número de litros vendidos e o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 3,30 e o preço do litro do álcool é R$ 2,90.*/
+
+	float qtdLitrosVendidos, gasolina = 3.30, alcool = 2.90, totalAPagar; 
+	char tipoCombustivel;
+
+	printf("Qual o combustível que você escolheu?\nDigite: A - para álcool / G - gasolina\n");
+	scanf("%c", &tipoCombustivel);
+
+	printf("Quantos litros você abasteceu?\n");
+	scanf("%f", &qtdLitrosVendidos);
+
+	if (qtdLitrosVendidos <= 20)
+	{
+		switch(tipoCombustivel){
+		case 'A':
+			totalAPagar = qtdLitrosVendidos * 2.90 - (0.087 * qtdLitrosVendidos);
+			break;
+		case 'a':
+			totalAPagar = qtdLitrosVendidos * 2.90 - (0.087 * qtdLitrosVendidos);
+			break;
+		case 'G':
+			totalAPagar = qtdLitrosVendidos * 3.30 - (0.132 * qtdLitrosVendidos);
+			break;
+		case 'g':
+			totalAPagar = qtdLitrosVendidos * 3.30 - (0.132 * qtdLitrosVendidos);
+			break;
+		default:
+			printf("Tipo de combustível inválido.\n");
+	}
+		if (tipoCombustivel == 'A' || tipoCombustivel == 'a')
+		{
+			printf("O tipo de combustível é:\nÁlcool\nA quantidade abastecidade é:\n%.2fl\nSeu desconto é de:\n3%%\nO total a pagar é:\nR$%.2f\n", qtdLitrosVendidos, totalAPagar);
+		}else if (tipoCombustivel == 'G' || tipoCombustivel == 'g')
+		{
+			printf("O tipo de combustível é:\nGasolina\nA quantidade abastecidade é:\n%.2fl\nSeu desconto é de:\n4%%\nO total a pagar é:\nR$%.2f\n", qtdLitrosVendidos, totalAPagar);
+		}
+	}else {
+		switch(tipoCombustivel){
+		case 'A':
+			totalAPagar = qtdLitrosVendidos * 2.90 - (0.145 * qtdLitrosVendidos);
+			break;
+		case 'a':
+			totalAPagar = qtdLitrosVendidos * 2.90 - (0.145 * qtdLitrosVendidos);
+			break;
+		case 'G':
+			totalAPagar = qtdLitrosVendidos * 3.30 - (0.198 * qtdLitrosVendidos);
+			break;
+		case 'g':
+			totalAPagar = qtdLitrosVendidos * 3.30 - (0.198 * qtdLitrosVendidos);
+			break;
+		default:
+			printf("Tipo de combustível inválido.\n");
+	}
+		if (tipoCombustivel == 'A' || tipoCombustivel == 'a')
+		{
+			printf("O tipo de combustível é:\nÁlcool\nA quantidade abastecidade é:\n%.2fl\nSeu desconto é de:\n5%%\nO total a pagar é:\nR$%.2f\n", qtdLitrosVendidos, totalAPagar);
+		}else if (tipoCombustivel == 'G' || tipoCombustivel == 'g')
+		{
+			printf("O tipo de combustível é:\nGasolina\nA quantidade abastecidade é:\n%.2fl\nSeu desconto é de:\n6%%\nO total a pagar é:\nR$%.2f\n", qtdLitrosVendidos, totalAPagar);
+		}
+	}
 	
 		
 

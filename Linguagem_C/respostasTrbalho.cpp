@@ -323,7 +323,7 @@ int main(void)
 		Se quantidade > 5 e <= 10 o desconto será de 3%.
 		Se a quantidade > 10 o desconto será de 5%.*/
 
-		char descricaoProduto[50];
+		/*char descricaoProduto[50];
 		int qtdProduto;
 		float valorUniProduto, valorTotalProduto, valorApagar, desconto;
 
@@ -348,6 +348,7 @@ int main(void)
 			valorApagar = valorTotalProduto - (valorTotalProduto*0.05);
 			desconto = valorTotalProduto * 0.05;
 		}
-		printf("\t***Cupom Fiscal***\nDescrição do produto:\n%s\nQuantidade(s):\n%d\nValor bruto:\nR$%.2f\nDesconto:\n-R$%.2f\nTotal a pagar:\nR$%.2f\n",descricaoProduto, qtdProduto, valorTotalProduto, desconto, valorApagar);
+		printf("\t***Cupom Fiscal***\nDescrição do produto:\n%s\nQuantidade(s):\n%d\nValor bruto:\nR$%.2f\nDesconto:\n-R$%.2f\nTotal a pagar:\nR$%.2f\n",descricaoProduto, qtdProduto, valorTotalProduto, desconto, valorApagar);*/
+	
 	return 0;
 }

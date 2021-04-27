@@ -186,7 +186,7 @@ int main(void)
 	Acima de 30 obeso
 	*/
 
-	float imc, altura, peso;
+	/*float imc, altura, peso;
 
 	printf("Informe sua Altura: \n");
 	scanf("%f", &altura);
@@ -207,7 +207,71 @@ int main(void)
 		printf("Com o IMC de %.2f você está acima do peso\n", imc );
 	}else {
 		printf("Com o IMC de %.2f você está obeso\n", imc );
+	}*/
+
+
+	/* Aula de Revisão - 27-04-21
+	3. Escreva um programa solicita o nome do usuário, sua idade e seu sexo (M/F). Se o sexo
+	for F (feminino) escreva o nome do usuário, sua idade e a palavra Feminino. Caso seja
+	M (masculino) escreva o nome do usuário, sua idade e a palavra Masculino. Faça o
+	programa usando a estrutura do SE.*/
+
+	int idade;
+	char sexo; 
+	char nome[30];
+
+	printf("Qual o seu nome? \n");
+	//scanf("%s", &nome[100]);
+	fgets(nome,30,stdin); 
+
+	printf("Qual o seu sexo (F ou M)? \n");
+	scanf("%c", &sexo);
+
+	printf("Qual a sua idade? \n");
+	scanf("%d", &idade);
+
+	if (sexo == 'M' || sexo == 'm')
+	{
+		printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nMasculino\n",nome, idade);
+	}else if (sexo == 'F' || sexo == 'f') {
+		printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nFeminino\n",nome, idade);
+	}else {
+		printf("Sexo inválido\n");
 	}
+
+	/* Aula de Revisão - 27-04-21
+	4. Refaça a questão acima usando a estrutura do Switch (escolha).*/
+
+	/*int idade;
+	char sexo; 
+	char nome[30];
+
+	printf("Qual o seu nome? \n");
+	//scanf("%s", &nome[100]);
+	fgets(nome,30,stdin); 
+
+	printf("Qual o seu sexo (F ou M)? \n");
+	scanf("%s", &sexo);
+
+	printf("Qual a sua idade? \n");
+	scanf("%d", &idade);
+
+	switch(sexo) {
+		case 'M':
+			printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nMasculino\n",nome, idade);
+			break;
+		case 'm':
+			printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nMasculino\n",nome, idade);
+			break;
+		case 'F':
+			printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nFeminino\n",nome, idade);
+			break;
+		case 'f':
+			printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nFeminino\n",nome, idade);
+			break;
+		default:
+		printf("Sexo inválido.\n");
+	}*/
 
 	return 0;
 }

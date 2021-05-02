@@ -8,6 +8,13 @@ print("O valor digitado foi {} e sua porção inteira é {}".format(num, trunc(n
 
 #Outra forma de resolver o mesmo exercício
 
-num = float(input("Digite um número:"))
-print("O valor digitado foi {} e sua porção inteira é {}".format(num, int(num)))
+"""num = float(input("Digite um número:"))
+print("O valor digitado foi {} e sua porção inteira é {}".format(num, int(num)))"""
 
+#Exercíco 17
+"""Um programa que ler o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, 
+calcula e mostra o comprimento da hipotenusa"""
+"""co = float(input('Comprimento do cateto oposto: '))
+ca = float(input('Comprimento do cateto adjacente: '))
+hi = hypot(co, ca)
+print('A hipotenusa vai medir {:.2f}'.format(hi))"""

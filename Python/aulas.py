@@ -1,5 +1,5 @@
 #Criando um programa que ler um número real qualquer e mostre sua porção inteira
-import math
+#import math
 # Outra forma de importar a biblíoteca é:
 #from math import trunc dessa forma n é preciso usar math.trunc(), basta usar trunc()
 
@@ -18,3 +18,19 @@ calcula e mostra o comprimento da hipotenusa"""
 ca = float(input('Comprimento do cateto adjacente: '))
 hi = hypot(co, ca)
 print('A hipotenusa vai medir {:.2f}'.format(hi))"""
+
+"""Exercício 18 - Um programa que ler um ângulo qualquer e mostra na tela o seno, cosseno e tangente desse ângulo"""
+
+#import math
+#Outra forma de fazer
+from math import radians, cos, sin, tan
+angulo = float(input('Digite o ângulo que você deseja: '))
+#seno = math.sin(math.radians(angulo))
+seno = sin(radians(angulo))
+print('O ângulo de {} tem o seno de {:.2f}'.format(angulo, seno))
+#cosseno = math.cos(math.radians(angulo))
+cosseno = cos(radians(angulo))
+print("O ângulo de {} tem o cosseno de {:.2f}".format(angulo, cosseno))
+#tangente = math.tan(math.radians(angulo))
+tangente = tan(radians(angulo))
+print('O ângulo de {} tem a tangente de {:.2f}'.format(angulo, tangente))

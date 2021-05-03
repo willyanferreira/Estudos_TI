@@ -19,7 +19,7 @@ ca = float(input('Comprimento do cateto adjacente: '))
 hi = hypot(co, ca)
 print('A hipotenusa vai medir {:.2f}'.format(hi))"""
 
-"""Exercício 18 - Um programa que ler um ângulo qualquer e mostra na tela o seno, cosseno e tangente desse ângulo"""
+"""Exercício 18 - Um programa que ler um ângulo qualquer e mostra na tela o seno, cosseno e tangente desse ângulo
 
 #import math
 #Outra forma de fazer
@@ -33,4 +33,14 @@ cosseno = cos(radians(angulo))
 print("O ângulo de {} tem o cosseno de {:.2f}".format(angulo, cosseno))
 #tangente = math.tan(math.radians(angulo))
 tangente = tan(radians(angulo))
-print('O ângulo de {} tem a tangente de {:.2f}'.format(angulo, tangente))
+print('O ângulo de {} tem a tangente de {:.2f}'.format(angulo, tangente))"""
+
+"""Exercíco 19 - Sorteando um item em uma lista
+import random
+n1 = str(input('Primeiro aluno: '))
+n2 = str(input('Segundo aluno: '))
+n3 = str(input('Terceiro aluno: '))
+n4 = str(input('Quarto aluno: '))
+lista = [n1, n2, n3, n4]
+escolhido = random.choice(lista)
+print('O aluno escolhido foi {}'.format(escolhido))"""

@@ -7,6 +7,7 @@
 print("O valor digitado foi {} e sua porção inteira é {}".format(num, trunc(num)))"""
 
 #Outra forma de resolver o mesmo exercício
+import random
 
 """num = float(input("Digite um número:"))
 print("O valor digitado foi {} e sua porção inteira é {}".format(num, int(num)))"""
@@ -44,3 +45,13 @@ n4 = str(input('Quarto aluno: '))
 lista = [n1, n2, n3, n4]
 escolhido = random.choice(lista)
 print('O aluno escolhido foi {}'.format(escolhido))"""
+
+"""Exercíco 20 - Sorteando um item em uma lista
+n1 = str(input('Primeiro aluno: '))
+n2 = str(input('Segundo aluno: '))
+n3 = str(input('Terceiro aluno: '))
+n4 = str(input('Quarto aluno: '))
+lista = [n1, n2, n3, n4]
+random.shuffle(lista)
+print('A ordem de apresentação será {}'.format(lista))"""
+

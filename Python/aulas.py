@@ -57,8 +57,8 @@ print('A ordem de apresentação será {}'.format(lista))"""
 
 """Exercício 21 - Tocando um MP3
 import pygame
-pygame.init()
-pygame.mixer.music.load('aulas.mp3')
+pygame.mixer.init()
+pygame.mixer.music.load('musica.mp3')
 pygame.mixer.music.play()
 pygame.event.wait()"""
 

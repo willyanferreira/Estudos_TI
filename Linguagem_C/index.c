@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
 
-
-int main(void)  
+int main(char arg, char * args[])  
 {
 	setlocale(LC_ALL,"Portuguese");
 	/*int x, y;
@@ -216,7 +216,7 @@ int main(void)
 	M (masculino) escreva o nome do usuário, sua idade e a palavra Masculino. Faça o
 	programa usando a estrutura do SE.*/
 
-	int idade;
+	/*int idade;
 	char sexo; 
 	char nome[30];
 
@@ -237,7 +237,7 @@ int main(void)
 		printf("\t***Status da pessoa***\n Seu nome:\n%s\nSua idade:\n%d\nSeu sexo:\nFeminino\n",nome, idade);
 	}else {
 		printf("Sexo inválido\n");
-	}
+	}*/
 
 	/* Aula de Revisão - 27-04-21
 	4. Refaça a questão acima usando a estrutura do Switch (escolha).*/
@@ -271,6 +271,139 @@ int main(void)
 			break;
 		default:
 		printf("Sexo inválido.\n");
+	}*/
+
+    /*int t = 5;
+	switch (t)
+	{
+	case t < 10:
+		printf("Hoje ta fazendo muito frio");
+		break;
+	case t < 25:
+		printf("A temperatura está agradavel");
+		break;
+	default:
+		printf("Hoje ta quente pra chuchu");
+	}*/
+
+	/*int base, altura;
+	float area;
+	printf("Digite o valor da base\n");
+	scanf("%d", &base);
+
+	printf("Digite o valor da altura\n");
+	scanf("%d", &altura);
+
+	area = (base*altura)/2;
+
+	printf("Area do triângulo = %1.f \n", area);*/
+
+	/*Você foi ao mercantil e viu que um determinado produto, se comprado em quantias de até 20 unidades, o preço é R$ 1,80. Caso seja comprado de 21 acima, o valor ficará por R$ 1,40. Faça um algoritmo que leia a quantidade de produto que o cliente queira comprar, calcule a conta final de acordo com os valores praticados e mostre a quantia escolhida e o valor final da conta.*/
+
+	/*int qtdProdutos;
+	float preco, valorFinal;
+
+	printf("Quantas quantidades do produto escolhido você deseja levar? \n");
+	scanf("%d", &qtdProdutos);
+
+	if (qtdProdutos <= 20)
+	{
+		preco = 1.80;
+	}else {
+		preco = 1.40;
+	}
+
+	valorFinal = qtdProdutos * preco;
+
+	printf("A quantidade escolhida foi:\n%d\nO preço cobrado por produto foi:\nR$%.2f\nO  valor a ser pago é:\nR$%.2f\n", qtdProdutos, preco, valorFinal);*/
+
+	/*Faça  um  algoritmo  em C  que  simula  uma  calculadora  com  as seguintes  operações:  somar, subtrair, multiplicar, dividir, potência ao quadrado e resto da divisão. O algoritmo deve mostrar as  opções  de  operações  para  o usuárioe  em  seguida  solicitar  os  valores  quee  a  opção  do usuário. Por fimdeve mostrar o resultado.*/
+
+	/*int operacao, a, b, result;
+	
+
+	printf("Escolha uma das seguintes operações: 1-Somar; 2-Subtrair; 3-Multiplicar; 4-Dividir; 5-Potência; 6-Resto da divisão: \n");
+	scanf("%d",&operacao);
+
+	switch(operacao){
+		case 1:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a + b;
+			printf("A operação escolhida foi soma e o resultado é:\n%d\n", result);
+			break;
+		case 2:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a - b;
+			printf("A operação escolhida foi subtração e o resultado é:\n%d\n", result);
+			break;
+		case 3:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a * b;
+			printf("A operação escolhida foi multipliação e o resultado é:\n%d\n", result);
+			break;
+		case 4:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a / b;
+			printf("A operação escolhida foi divisão e o resultado é:\n%d\n", result);
+			break;
+		case 5:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a ** b;
+			printf("A operação escolhida foi potenciação e o resultado é:\n%d\n", result);
+			break;
+		case 6:
+			printf("Digite um valor\n");
+			scanf("%d", &a);
+			printf("Digite outro valor\n");
+			scanf("%d", &b);
+			result = a % b;
+			printf("A operação escolhida foi resto da divisão e o resultado é:\n%d\n", result);
+			break;
+		default:
+			printf("Opção inválida\n");
+	}*/
+
+	/*Faça  um  algoritmo  em C que  solicita  um número do  usuário,caso  seja maior ou  igual a 50 verificar se é par ou ímpar. Caso seja menor verificar se é divisível por 3.*/
+
+	/*int num, parImpar, divPor3;
+
+	printf("Digite um número: \n");
+	scanf("%d", &num);
+
+	if (num >= 50)
+	{
+		parImpar = num % 2;
+		if (parImpar == 0)
+		{
+			printf("O número digitado foi %d e é PAR\n", num);
+		}else {
+			printf("O número digitado foi %d é IMPAR\n", num);
+		}
+	}else {
+		divPor3 = num % 3;
+		if (divPor3 == 0)
+		{	
+			divPor3 = num / 3;
+			printf("O número digitado foi %d e é divisível por 3 e o resultado é %d\n", num , divPor3);
+		}else {
+			divPor3 = num / 3;
+			printf("O número digitado foi %d e não é divisível por 3\n", num);
+		}
 	}*/
 
 	return 0;

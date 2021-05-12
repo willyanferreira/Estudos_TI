@@ -406,5 +406,41 @@ int main(char arg, char * args[])
 		}
 	}*/
 
+	int sexo, qtdM = 0, qtdF = 0, qtdSexo;
+	float altura, somaAlturaF = 0, somaAlturaM = 0;
+
+	for (int x = 0; x < 10 ; x++){
+		printf("Digite sua altura:\n");
+		scanf("%f", &altura);
+
+		printf("Digite seu sexo(0=masculino, 1=feminino\n");
+		scanf("%d", &sexo);
+
+		if (sexo == 0)
+		{
+			qtdM = qtdM + 1;
+			somaAlturaM = somaAlturaM + altura;
+		}else{
+			qtdF = qtdF + 1;
+			somaAlturaF = somaAlturaF + altura;
+		}
+	}
+	if (qtdM > qtdF)
+	{
+		printf("Tem mais homens do que mulheres e o total de homens é %d\n", qtdM );
+	}else if (qtdF > qtdM){
+		printf("Tem mais mulheres do que homens e o total de mulheres é %d\n", qtdF );
+	}else {
+		printf("EMPATOU\n");
+	}
+	if (somaAlturaM > somaAlturaF)
+	{
+		printf("Os homens são maiores que as mulheres e a altura total deles é %.2f\n", somaAlturaM);
+	}else if (somaAlturaF > somaAlturaM) {
+		printf("As mulheres são maiores que os homens e a altura total delas é %.2f\n", somaAlturaF);
+	}else {
+		printf("EMPATOU\n");
+	}
+
 	return 0;
 }

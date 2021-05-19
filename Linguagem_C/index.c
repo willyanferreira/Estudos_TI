@@ -406,7 +406,7 @@ int main(char arg, char * args[])
 		}
 	}*/
 
-	int sexo, qtdM = 0, qtdF = 0, qtdSexo;
+	/*int sexo, qtdM = 0, qtdF = 0, qtdSexo;
 	float altura, somaAlturaF = 0, somaAlturaM = 0;
 
 	for (int x = 0; x < 10 ; x++){
@@ -440,6 +440,52 @@ int main(char arg, char * args[])
 		printf("As mulheres são maiores que os homens e a altura total delas é %.2f\n", somaAlturaF);
 	}else {
 		printf("EMPATOU\n");
+	}*/
+
+	/*Aula do dia 18-05-21*/
+
+	int op, val_1, val_2, res;
+
+	while(op != 4){
+	  printf("Escolha uma opção:\n");
+	  printf("1 - Somar:\n");
+	  printf("2 - Subtrair:\n");
+	  printf("3 - Multiplicar:\n");
+	  printf("4 - Sair:\n");
+	  scanf("%d", &op);
+
+	switch(op){
+	case 1:
+	printf("Digite o primeiro valor\n");
+	scanf("%d", &val_1);
+	printf("Digite o segundo valor\n");
+	scanf("%d", &val_2);
+	res = val_1+val_2;
+	printf("Resultado = %d\n", res);
+	break;
+	case 2:
+	printf("Digite o primeiro valor\n");
+	scanf("%d", &val_1);
+	printf("Digite o segundo valor\n");
+	scanf("%d", &val_2);
+	res = val_1-val_2;
+	printf("Resultado = %d\n", res);
+	break;
+	case 3:
+	printf("Digite o primeiro valor\n");
+	scanf("%d", &val_1);
+	printf("Digite o segundo valor\n");
+	scanf("%d", &val_2);
+	res = val_1*val_2;
+	printf("Resultado = %d\n", res);
+	break;
+	case 4:
+	printf("Você está saindo\n");
+	break;
+	default:
+	printf("Opção inválida!!!\n");
+	break;
+	}
 	}
 
 	return 0;

@@ -8,9 +8,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="exemplo">Tõ aq!</div>
     <script>
-        console.log($('#exemplo'));
+        //console.log($('#exemplo'));
+        $(document).ready(function(){
+            $('#exemplo').html('Ainda tô aqui!');
+            $('#exemplo2').html('Eu posso usar uma função que espera a página carregar os elementos para depois ser executada.');
+            })        
     </script>
+    <div id="exemplo">Tõ aq!</div>
+    <div id="exemplo2"></div>
 </body>
 </html>

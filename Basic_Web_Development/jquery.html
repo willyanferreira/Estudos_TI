@@ -13,7 +13,16 @@
         $(document).ready(function(){
             $('#exemplo').html('Ainda tô aqui!');
             $('#exemplo2').html('Eu posso usar uma função que espera a página carregar os elementos para depois ser executada.');
-            })*/        
+            })*/  
+            $(document).ready(function(){
+                $('#ready').html('Página carregada');
+            })
+            $(window).scroll(()=>{
+                $('#scroll').html('Rolagem ativada')
+            })
+            $(window).resize(() => {
+                $('p').html('JQuery').css({'background':'grey', 'color':'blue', 'display':'inline-block', 'width':'50%', 'text-align':'center'})
+            })
     </script>
     <!--<div id="exemplo">Tõ aq!</div>
     <div id="exemplo2"></div>-->
@@ -38,5 +47,16 @@
             <span id="opcao1"></span>
         </div>
     </div>-->
+    <h3>Eventos do browser</h3>
+    <span>Onload: <span id="ready"></span></span><br>
+    <span>Scroll: <span id="scroll"></span></span><br>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+
 </body>
 </html>

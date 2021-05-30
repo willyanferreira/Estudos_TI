@@ -29,6 +29,26 @@
                     $('#x').html(value.offsetX)
                     $('#y').html(value.offsetY)
                 })
+                $('#teclado').keydown(()=>{
+                    $('#eventosTCD').html('Telcada pressionada')
+                    console.log('tecla sendo pressionada')
+                })
+                $('#teclado').keyup((w)=>{
+                    /*$('#eventosTCD').html('Telcada liberada')
+                    if(w.keyCode == 13){
+                        var txt = $(w.target).val()
+                        $('#eventosTCD').html(txt)
+                        $(w.target).val('')
+                    }*/
+                    if(w.keyCode < 87 || w.keyCode > 90){
+                        var txt = $(w.target).val()
+                        txt = txt.slice(0, -1)
+                        $(w.target).val(txt)
+                        console.log(w.keyCode)
+                    }
+                    
+                })
+                
             })
             $(window).scroll(()=>{
                 $('#scroll').html('Rolagem ativada')
@@ -72,5 +92,7 @@
     <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
+    <input id="teclado" type="text">
+    <span id="eventosTCD"></span>
 </body>
 </html>

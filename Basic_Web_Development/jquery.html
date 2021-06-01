@@ -62,7 +62,7 @@
                     }
                     
                 })
-                $('#teclado').focus(()=>{
+                /*$('#teclado').focus(()=>{
                     $('#teclado').addClass('emFoco')
                     if($('#teclado').blur(()=>{
                         $('#teclado').removeClass('emFoco')
@@ -75,7 +75,10 @@
                 $('body').off('blur', 'input', (w)=>{
                     $(w.target).addClass('semFoco')
                 })
-                $('body').append("<br> <br> <input type='text' class='semFoco'>")
+                $('body').append("<br> <br> <input type='text' class='semFoco'>")*/
+                $('input').hover((e)=>
+                    $(e.target).toggleClass('semFoco')
+                )
                 
             })
             $(window).scroll(()=>{
@@ -85,7 +88,7 @@
                 $('p').html('JQuery').css({'background':'grey', 'color':'blue', 'display':'inline-block', 'width':'50%', 'text-align':'center'})
             })
     </script>
-    <input type="text" class="semFoco">
+    <input type="text" class="emFoco">
     <!--<div id="exemplo">Tõ aq!</div>
     <div id="exemplo2"></div>-->
 

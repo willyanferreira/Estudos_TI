@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        .emFoco{
+            background-color: crimson;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -15,7 +21,7 @@
             $('#exemplo2').html('Eu posso usar uma função que espera a página carregar os elementos para depois ser executada.');
             })*/  
             $(document).ready(function(){
-                $('#ready').html('Página carregada');
+               $('#ready').html('Página carregada');
                 $('#btn').mousedown(() => {
                 $('#p1').css('background','green')
                 })
@@ -45,8 +51,18 @@
                         txt = txt.slice(0, -1)
                         $(w.target).val(txt)
                         console.log(w.keyCode)
+                        if(w.keyCode == 13){
+                            $('#eventosTCD').html(txt)
+                        }
+                        
                     }
                     
+                })
+                $('#teclado').focus(()=>{
+                    $('#teclado').addClass('emFoco')
+                    if($('#teclado').blur(()=>{
+                        $('#teclado').removeClass('emFoco')
+                    })){}
                 })
                 
             })

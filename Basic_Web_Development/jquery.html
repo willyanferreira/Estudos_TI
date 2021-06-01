@@ -11,6 +11,10 @@
             background-color: crimson;
             border-radius: 10px;
         }
+        .semFoco{
+            background-color: lightblue;
+            border-radius: 0px;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +68,14 @@
                         $('#teclado').removeClass('emFoco')
                     })){}
                 })
+                $('body').on('focus', 'input', (R)=>{
+                    $(R.target).addClass('emFoco')
+                    $(R.target).removeClass('semFoco')
+                })
+                $('body').off('blur', 'input', (w)=>{
+                    $(w.target).addClass('semFoco')
+                })
+                $('body').append("<br> <br> <input type='text' class='semFoco'>")
                 
             })
             $(window).scroll(()=>{
@@ -73,6 +85,7 @@
                 $('p').html('JQuery').css({'background':'grey', 'color':'blue', 'display':'inline-block', 'width':'50%', 'text-align':'center'})
             })
     </script>
+    <input type="text" class="semFoco">
     <!--<div id="exemplo">Tõ aq!</div>
     <div id="exemplo2"></div>-->
 
@@ -95,7 +108,7 @@
             <p>Willyan Carlos</p>
             <span id="opcao1"></span>
         </div>
-    </div>-->
+    </div>
     <h3>Eventos do browser</h3>
     <span>Onload: <span id="ready"></span></span><br>
     <span>Scroll: <span id="scroll"></span></span><br>
@@ -109,6 +122,6 @@
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illo vel placeat doloremque asperiores distinctio enim laboriosam nisi et quam reprehenderit deserunt adipisci dolores excepturi perspiciatis, ullam harum iste accusamus.</p>
     <input id="teclado" type="text">
-    <span id="eventosTCD"></span>
+    <span id="eventosTCD"></span>-->
 </body>
 </html>

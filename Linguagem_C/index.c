@@ -513,5 +513,22 @@ int main(char arg, char * args[])
     scanf("%d", &num);
   }
   printf("A soma dos números múltiplos de 5 é: %d \n", soma);*/
+
+  /*int cpf, tel;
+  char nome[50];
+
+  printf("Digite seu CPF: \n");
+  scanf("%d", &cpf);
+
+  while(cpf != 0){
+    printf("Digite seu Nome: \n");
+    scanf("%s", &nome);
+
+    printf("Digite seu Tel: \n");
+    scanf("%d", &tel);
+
+    printf("Digite seu CPF: \n");
+    scanf("%d", &cpf);
+  }*/
 	return 0;
 }

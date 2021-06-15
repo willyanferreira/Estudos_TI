@@ -444,49 +444,74 @@ int main(char arg, char * args[])
 
 	/*Aula do dia 18-05-21*/
 
-	int op, val_1, val_2, res;
+	// int op, val_1, val_2, res;
 
-	while(op != 4){
-	  printf("Escolha uma opção:\n");
-	  printf("1 - Somar:\n");
-	  printf("2 - Subtrair:\n");
-	  printf("3 - Multiplicar:\n");
-	  printf("4 - Sair:\n");
-	  scanf("%d", &op);
+	// while(op != 4){
+	//   printf("Escolha uma opção:\n");
+	//   printf("1 - Somar:\n");
+	//   printf("2 - Subtrair:\n");
+	//   printf("3 - Multiplicar:\n");
+	//   printf("4 - Sair:\n");
+	//   scanf("%d", &op);
 
-	switch(op){
-	case 1:
-	printf("Digite o primeiro valor\n");
-	scanf("%d", &val_1);
-	printf("Digite o segundo valor\n");
-	scanf("%d", &val_2);
-	res = val_1+val_2;
-	printf("Resultado = %d\n", res);
-	break;
-	case 2:
-	printf("Digite o primeiro valor\n");
-	scanf("%d", &val_1);
-	printf("Digite o segundo valor\n");
-	scanf("%d", &val_2);
-	res = val_1-val_2;
-	printf("Resultado = %d\n", res);
-	break;
-	case 3:
-	printf("Digite o primeiro valor\n");
-	scanf("%d", &val_1);
-	printf("Digite o segundo valor\n");
-	scanf("%d", &val_2);
-	res = val_1*val_2;
-	printf("Resultado = %d\n", res);
-	break;
-	case 4:
-	printf("Você está saindo\n");
-	break;
-	default:
-	printf("Opção inválida!!!\n");
-	break;
-	}
-	}
+	// switch(op){
+	// case 1:
+	// printf("Digite o primeiro valor\n");
+	// scanf("%d", &val_1);
+	// printf("Digite o segundo valor\n");
+	// scanf("%d", &val_2);
+	// res = val_1+val_2;
+	// printf("Resultado = %d\n", res);
+	// break;
+	// case 2:
+	// printf("Digite o primeiro valor\n");
+	// scanf("%d", &val_1);
+	// printf("Digite o segundo valor\n");
+	// scanf("%d", &val_2);
+	// res = val_1-val_2;
+	// printf("Resultado = %d\n", res);
+	// break;
+	// case 3:
+	// printf("Digite o primeiro valor\n");
+	// scanf("%d", &val_1);
+	// printf("Digite o segundo valor\n");
+	// scanf("%d", &val_2);
+	// res = val_1*val_2;
+	// printf("Resultado = %d\n", res);
+	// break;
+	// case 4:
+	// printf("Você está saindo\n");
+	// break;
+	// default:
+	// printf("Opção inválida!!!\n");
+	// break;
+	// }
+	// }
 
+	// int valor;
+// valor = 0;
+// while (valor < 5) {
+// printf("O valor é: %d \n", valor);
+// valor++;
+// }
+
+// for(int i = 0; i < 50; i ++){
+//       printf("ALGORITMOS - %d \n", i);
+//  }
+/*int main(void){
+  setlocale(LC_ALL, "Portuguese");
+  
+  int num, soma=0;
+
+  printf("Digite um número:\n");
+  scanf("%d", &num);
+  while(num != 0){
+    if((num % 5) == 0){
+      soma += num;
+    }
+    printf("Digite um número:\n");
+    scanf("%d", &num);
+  }
+  printf("A soma dos números múltiplos de 5 é: %d \n", soma);*/
 	return 0;
-}./
+}

@@ -1,8 +1,8 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <locale.h>
 #include <math.h>
 
-int main(char arg, char * args[])  
+int main(void)  
 {
 	setlocale(LC_ALL,"Portuguese");
 	/*int x, y;

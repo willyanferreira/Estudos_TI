@@ -5,10 +5,16 @@
 	<title>Estudando PHP</title>
 </head>
 <body>
-<h1>Eu estou estudando!</h1>
+<h1>Hoje são: <span id="date"><?php echo date('Y-m-d h:i:s');?></span></h1>
 <?php
-  echo 'Editei esse arquivo em uma máquina windows usando o VS Code...';
+	$a = 98;
+	$b = &$a;
+	$b += 71;
 ?>
-<h3>... e enviei para um servidor linux usando scp e dps vou enviar para o Github</h3>
+<pre>
+	O valor de A é: <?php echo $a;?>
+	<br>
+	O valor de B é: <?php echo $b;?>
+</pre>
 </body>
 </html> 

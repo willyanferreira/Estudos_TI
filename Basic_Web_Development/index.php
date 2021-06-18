@@ -10,14 +10,16 @@
 	// $a = 98;
 	// $b = &$a;
 	// $b += 71;
-	
+
 	// $prof = 'Estagiario';
 	// $$prof = 'ADS';
+
+	// $valor = $_GET['v'];
+	// $raizQdd = sqrt($valor);
+	// echo number_format($raizQdd,2);
 ?>
 <pre>
-	Sua função é: <?php echo $prof;?>
-	<br>
-	A área é: <?php echo $Estagiario;?>
+	A raiz quadrada de <?php echo $valor;?> é: <?php echo number_format($raizQdd,2);?>
 </pre>
 </body>
 </html> 

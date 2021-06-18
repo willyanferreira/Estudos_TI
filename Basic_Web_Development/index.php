@@ -7,14 +7,17 @@
 <body>
 <h1>Hoje são: <span id="date"><?php echo date('Y-m-d h:i:s');?></span></h1>
 <?php
-	$a = 98;
-	$b = &$a;
-	$b += 71;
+	// $a = 98;
+	// $b = &$a;
+	// $b += 71;
+	
+	// $prof = 'Estagiario';
+	// $$prof = 'ADS';
 ?>
 <pre>
-	O valor de A é: <?php echo $a;?>
+	Sua função é: <?php echo $prof;?>
 	<br>
-	O valor de B é: <?php echo $b;?>
+	A área é: <?php echo $Estagiario;?>
 </pre>
 </body>
 </html> 

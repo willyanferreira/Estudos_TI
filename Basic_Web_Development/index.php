@@ -74,14 +74,42 @@
 
 	// print_r($newtxt); str_split - cria um array colocando cada letra em um indice - implode() junta palavras em uma unica string ex: um array com uma palavra em cada indice - join() igual ao implode()
 	
-		$caracter = chr(167);
+		// $caracter = chr(167);
 		// ord() diz qual é o código de um caractere
-		echo "O caractere de códgio 67 é $caracter";
+		// echo "O caractere de códgio 67 é $caracter";
 
-		$letra = ord('W');
+		// $letra = ord('W');
 
-		echo "<br> o código da letra D(maiúscula) é $letra";
-	
+		// echo "<br> o código da letra D(maiúscula) é $letra";
+
+		$texto = 'essa';
+
+		// echo strtolower($texto); todas em minúsculas
+		// echo strtoupper($texto); todas em maiúsculas
+		// echo ucfirst($texto); deixa apenas a primeira letra em maiúscula
+		// echo ucwords($texto); deixa a primeira letra de cada palavra em maiúsculo
+		 //$testedIF =  strpos($texto, 'Carlos'); //retorna o número q uma palavra é encontrada dentro de uma sting - retorna nada se não houver pq no PHP o valor FALSO é impresso como vazio
+		
+		//  if($testedIF){
+		// 	 echo 'Essa palavra se encontra dentro da string e está na posição ' .$testedIF;
+		//  }else{
+		// 	 echo 'Essa palavra não foi encontrada. <br> Certifique-se de que escreveu corretamente.';
+		//  }
+
+		// echo stripos($texto, 'caRloS'); retorna a posição q uma palavra é encontrada dentro de uma sytring msm se independente da caixa(maiúscula ou minúscula)
+
+		// echo substr_count($texto, 'uma'); essa função diz qnts vezes uma palavra foi encontrada dentro d uma string
+
+		// echo substr($texto, 0, 4); faz uma substring d uma string, onde posso dizer onde começar e qnts letras pegar e tbm posso usar valores negativos
+
+		// echo str_pad($texto, 10,"-", STR_PAD_LEFT);
+		
+		// for($x = 0; $x < 10; $x++){
+		// 	echo str_repeat($texto.'<br>', $x).'<hr>';
+		// }
+		
+		echo str_replace("essa", "Dicas massa", $texto);
+		
 
 	
 ?>

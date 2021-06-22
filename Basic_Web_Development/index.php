@@ -82,7 +82,7 @@
 
 		// echo "<br> o código da letra D(maiúscula) é $letra";
 
-		$texto = 'essa';
+		// $texto = 'essa';
 
 		// echo strtolower($texto); todas em minúsculas
 		// echo strtoupper($texto); todas em maiúsculas
@@ -108,9 +108,14 @@
 		// 	echo str_repeat($texto.'<br>', $x).'<hr>';
 		// }
 		
-		echo str_replace("essa", "Dicas massa", $texto);
-		
+		// echo str_replace("essa", "Dicas massa", $texto); troca uma palavra em uma string por outra caso ela exista - str_ireplace() ignora se é maiúsculo ou minúscula
+		// echo'<pre>';	
+		// print_r(range(0, 100, 5));
+		// echo '</pre>';
 
+		foreach(range(0,100,5) as $z){
+			echo $z.'<hr>';
+		}
 	
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->

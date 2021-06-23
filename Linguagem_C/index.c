@@ -545,5 +545,14 @@ for(int i = 0; i < 5;  i++){
 }
 
 printf("A equipe vencedora é: %2.f", code);*/
+
+/*int a =10;
+int b = 2;
+int j = a/2;
+for (int i=0; i< j; i++){
+	// echo $i.'<br>';
+	if (i % b == 1) 
+		printf("%d \n", i) ;
+	}*/
 	return 0;
 }

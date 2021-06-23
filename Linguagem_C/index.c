@@ -530,5 +530,20 @@ int main(void)
     printf("Digite seu CPF: \n");
     scanf("%d", &cpf);
   }*/
+
+  /*int result[5][2] = {{1001, 500}, {1002, 450}, {1003, 700}, {1004, 550}, {1005, 650}};
+
+float highestScore, code;
+
+for(int i = 0; i < 5;  i++){
+  for(int j = 0; j < 2; j++){
+    if(j == 1 && result[i][j] > highestScore){
+      highestScore = result[i][j];
+      code = result[i][0];
+    }
+  }
+}
+
+printf("A equipe vencedora é: %2.f", code);*/
 	return 0;
 }

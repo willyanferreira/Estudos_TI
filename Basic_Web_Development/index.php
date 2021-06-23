@@ -113,9 +113,25 @@
 		// print_r(range(0, 100, 5));
 		// echo '</pre>';
 
-		foreach(range(0,100,5) as $z){
-			echo $z.'<hr>';
-		}
+		// foreach(range(0,100,5) as $z){
+		// 	echo $z.'<hr>';
+		// }
+
+		$registro = array('nome' => 'Willyan Carlos', 'idade' => 32 , 'peso' => 84.5, 'profissao' => 'Estagiário');
+		
+		// $registro['nome'] = array('Willyan Carlos', 'Raquel Soares');
+		// $registro['idade'] = array(32, 36);
+		// $registro['peso'] = array(84.5, 81.0);
+		// $registro['profissao'] = array('Estagiário', 'Modelista');
+		
+			foreach($registro as $k => $v){
+				echo " $k é: $v <br>";
+				// echo '<pre>';
+				// print_r($registro['nome'][1]);
+				// echo '</pre>';
+			}
+		
+
 	
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->

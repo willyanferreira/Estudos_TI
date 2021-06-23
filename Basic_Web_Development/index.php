@@ -117,22 +117,54 @@
 		// 	echo $z.'<hr>';
 		// }
 
-		$registro = array('nome' => 'Willyan Carlos', 'idade' => 32 , 'peso' => 84.5, 'profissao' => 'Estagiário');
+		// $registro = array(1 => 41, 3 => 52, 9 => 13, 5 => 34, 13 => 5, 101 => 96, 210 => 77, 18 => 28, 51 => 9);
 		
-		// $registro['nome'] = array('Willyan Carlos', 'Raquel Soares');
-		// $registro['idade'] = array(32, 36);
-		// $registro['peso'] = array(84.5, 81.0);
-		// $registro['profissao'] = array('Estagiário', 'Modelista');
-		
-			foreach($registro as $k => $v){
-				echo " $k é: $v <br>";
-				// echo '<pre>';
-				// print_r($registro['nome'][1]);
-				// echo '</pre>';
-			}
-		
+		// // $registro['nome'] = array('Willyan Carlos', 'Raquel Soares');
+		// // $registro['idade'] = array(32, 36);
+		// // $registro['peso'] = array(84.5, 81.0);
+		// // $registro['profissao'] = array('Estagiário', 'Modelista');
+		// array_pop($registro);
+		// // unset($registro[0]);
+		// 	foreach($registro as $k => $v){
+		// 		echo " O índice $k tem o valor: $v <br>";
+		// 		// echo '<pre>';
+		// 		// print_r($registro['nome'][1]);
+		// 		// echo '</pre>';
+		// 	}
+		// echo '<hr>';
+		// // $registro[] = 10;
+		// // array_unshift($registro, 12);
+		// foreach($registro as $k => $v){
+		// 	echo " O índice $k tem o valor: $v <br>";
+		// }
+		// echo '<hr>';
+		// // array_shift($registro);
+		// // array_push($registro, 11);
+		// // sort($registro); ordena um array
+		// // rsort($registro); // ordena reversamente
+		// // asort($registro); // ordena um vetor mas mantem os índices
+		// // arsort($registro); // ordena um vetor reversamente mas mantem os índices
+		// // ksort($registro); // ordena as chaves d um vetor n seus valores
+		// krsort($registro); // ordena reversamente as chaves d um vetor n seus valores
+		// foreach($registro as $k => $v){
+		// 	echo " O índice $k tem o valor: $v <br>";
+		// }
 
-	
+		// $a=10;
+		// $b=2;
+		// $j=$a/2;
+		// for ($i=0;$i<$j;$i++){
+		// 	// echo $i.'<br>';
+		// if ($i % $b == 1) 
+		// 	echo "$i";
+		// }
+
+		// for($i=0; $i<=10; $i++){
+		// 	if($i % 3 == 0)
+		// 			continue;
+		// 	echo $i."-";
+ 		// 	}
+ 		// echo "Fim"
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

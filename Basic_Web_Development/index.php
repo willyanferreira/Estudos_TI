@@ -164,7 +164,64 @@
 		// 			continue;
 		// 	echo $i."-";
  		// 	}
- 		// echo "Fim"
+		 // echo "Fim"
+		 
+		 
+		 /* Classes em PHP - Relembrando e Exercitando - 25/06/21 - Curso em Vídeo */
+
+		//  class Caneta{
+		// 	public $cor;
+		// 	public $ponta;
+		// 	public $tampada;
+
+		// 	function escrever(){
+		// 		if($this->tampada == true){
+		// 			echo 'Retire a tampa para me utilizar';
+		// 		}else{
+		// 			echo 'Estou pronta para ser usada';
+		// 		}
+		// 	}
+
+		// 	function tampar(){
+		// 		$this->tampada = true;
+		// 	}
+
+		// 	function destampar(){
+		// 		$this->tampada = false;
+		// 	}
+		//  }
+
+		//  $cnt = new Caneta();
+		//  $cnt->cor = 'azul';
+		//  $cnt->ponta = 'fina';
+		//  $cnt->tampada = true;
+		//  $cnt->escrever();
+		//  echo '<br>';
+		//  $cnt->destampar();
+		//  $cnt->escrever();
+		 
+
+		//  echo'<hr>';
+		//  echo '<pre>';
+		//  print_r($cnt);
+		//  echo '</pre>';
+
+		//  echo '<hr>';
+
+		//  $cnt2 = new Caneta();
+		//  $cnt2->cor = 'preta';
+		//  $cnt2->ponta = 'grossa';
+		//  $cnt2->tampada = false;
+		//  $cnt2->escrever();
+		//  echo '<br>';
+		//  $cnt2->tampar();
+		//  $cnt2->escrever();
+		 
+
+		//  echo'<hr>';
+		//  echo '<pre>';
+		//  print_r($cnt2);
+		//  echo '</pre>';
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

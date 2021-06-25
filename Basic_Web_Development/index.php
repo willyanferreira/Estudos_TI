@@ -165,64 +165,105 @@
 		// 	echo $i."-";
  		// 	}
 		 // echo "Fim"
-		 
+
 		 
 		 /* Classes em PHP - Relembrando e Exercitando - 25/06/21 - Curso em Vídeo */
 
-		//  class Caneta{
-		// 	public $cor;
-		// 	public $ponta;
-		// 	public $tampada;
+// 		 class Caneta{
+// 			public $cor;
+// 			private $ponta;
+// 			protected $tampada;
 
-		// 	function escrever(){
-		// 		if($this->tampada == true){
-		// 			echo 'Retire a tampa para me utilizar';
-		// 		}else{
-		// 			echo 'Estou pronta para ser usada';
-		// 		}
-		// 	}
+// 			public function __construct($c){ // constructor é utilizado para instanciar uma classe sempre com os mesmos atributos e mesmo assim com atributos padrões eu posso alterá-los quando iniciar uma instância
+// 				// $this->cor = 'vermelha';
+// 				$this->ponta = 'média';
+// 				$this->cor = $c;
+// 				// $this->setPonta($p);
+// 				$this->tampar();
+// 				// $this->tampada = true;
+// 				//$this->escrever();
+// 			}
 
-		// 	function tampar(){
-		// 		$this->tampada = true;
-		// 	}
+// 			public function getPonta(){
+// 				return $this->ponta;
+// 			}
+// 			public function setPonta($ponta){
+// 				$this->ponta = $ponta;
+// 			}
 
-		// 	function destampar(){
-		// 		$this->tampada = false;
-		// 	}
-		//  }
+// 			public function getTampa(){
+// 				return $this->tampada;
+// 			}
+// 			public function setTampa($tampada){
+// 				$this->tampada = $tampada;
+// 			}
+// 			public function escrever(){
+// 				if($this->tampada == true){
+// 					echo 'Retire a tampa para me utilizar';
+// 				}else{
+// 					echo 'Estou pronta para ser usada';
+// 				}
+// 			}
 
-		//  $cnt = new Caneta();
-		//  $cnt->cor = 'azul';
-		//  $cnt->ponta = 'fina';
-		//  $cnt->tampada = true;
-		//  $cnt->escrever();
-		//  echo '<br>';
-		//  $cnt->destampar();
-		//  $cnt->escrever();
+// 			public function tampar(){
+// 				$this->tampada = true;
+// 			}
+
+// 			public function destampar(){
+// 				$this->tampada = false;
+// 			}
+// 		 }
+
+// 		 $cnt = new Caneta('azul'); // instanciando uma classe com parâmetros passados pelo constructor 
+// 		//  $cnt->cor = 'azul';
+// 		//  $cnt->ponta = 'fina'; // sem usar getters e sem usar setters
+// 		$cnt->setPonta('fina'); // usando getters e usando setters
+// 		//  $cnt->tampada = true; // sem usar getters e sem usar setters
+// 		$cnt->setTampa(true); // usando getters e usando setters
+// 		 $cnt->escrever();
+// 		 echo '<br>';
+// 		 $cnt->destampar();
+// 		 $cnt->escrever();
 		 
 
-		//  echo'<hr>';
-		//  echo '<pre>';
-		//  print_r($cnt);
-		//  echo '</pre>';
+// 		 echo'<hr>';
+// 		 echo '<pre>';
+// 		 print_r($cnt);
+// 		 echo '</pre>';
 
-		//  echo '<hr>';
+// 		 echo '<hr>';
 
-		//  $cnt2 = new Caneta();
-		//  $cnt2->cor = 'preta';
-		//  $cnt2->ponta = 'grossa';
-		//  $cnt2->tampada = false;
-		//  $cnt2->escrever();
-		//  echo '<br>';
-		//  $cnt2->tampar();
-		//  $cnt2->escrever();
+// 		 $cnt2 = new Caneta('preta');
+// 		//  $cnt2->cor = 'preta';
+// 		//  $cnt2->ponta = 'grossa'; // sem usar getters e sem usar setters
+// 		$cnt2->setPonta('grossa'); // usando getters e usando setters
+// 		//  $cnt2->tampada = false; // sem usar getters e sem usar setters
+// 		$cnt2->setTampa(false); // usando getters e usando setters
+// 		 $cnt2->escrever();
+// 		 echo '<br>';
+// 		 $cnt2->tampar();
+// 		 $cnt2->escrever();
 		 
 
-		//  echo'<hr>';
-		//  echo '<pre>';
-		//  print_r($cnt2);
-		//  echo '</pre>';
-?>
+// 		 echo'<hr>';
+// 		 echo '<pre>';
+// 		 print_r($cnt2);
+// 		 echo '</pre>';
+
+// 		 echo "<br> Eu tenho duas canetas: uma <span style='color: blue;'>$cnt->cor</span> de ponta {$cnt->getPonta()} e uma <span style='font-weight: bold;'>$cnt2->cor</span> de ponta {$cnt2->getPonta()}";
+
+// 		 echo '<br>';
+
+// 		 $cnt3 = new Caneta('vermelha'); // mesmo esperando dois parâmetros eu posso passar apenas um e finalizar com ou sem uma vírgula, não dará erro 
+
+// 		 echo '<pre>';
+// 		 print_r($cnt3);
+// 		 echo '</pre>';
+
+// 		 echo '<br>';
+// 		 $cnt3->setTampa(false);
+// 		 $cnt3->escrever();
+// ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>
 </html> 

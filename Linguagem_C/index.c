@@ -554,5 +554,126 @@ for (int i=0; i< j; i++){
 	if (i % b == 1) 
 		printf("%d \n", i) ;
 	}*/
+
+	// int num, maior=0, ind;
+
+// for(ind=0; ind<10; ind+=1){
+//   printf("Digite um número: \n");
+//   scanf("%d", &num);
+//   if(num > maior){
+//     maior = num;
+//   }
+// }
+// printf("O maior número digitado foi: \n %d", maior);
+  
+// int teste[10], posicao, valor;
+
+//   for(posicao=0; posicao<10; posicao++){
+//     printf("Digite um número:\n");
+//     scanf("%d", &valor);
+//     teste[posicao] = valor;
+//   }
+//   // imprimindo os valores de trás pra frente
+//   for(posicao=9; posicao>=0; posicao--){
+//     printf("Na posição %d o valor é: %d\n", posicao, teste[posicao]);
+//   }
+
+ 
+
+// // lendo os dados e dps exibindo de trás para frente
+// char nome[8];
+// int ind;
+// printf("Digite uma palavra com o máximo de 8 letras:\n");
+// scanf("%s", nome);
+// for(ind=8; ind>=0; ind--){
+//   printf("%c",nome[ind]);
+// }
+
+
+// float soma=0, media[10];
+
+// for(int ind=0; ind<10; ind++){
+//   printf("Digite a média dos alunos\n");
+//   scanf("%f", &media[ind]);
+//   soma+=media[ind];
+// }
+// printf("A média da turma é: %.2f", (soma/10));
+
+
+
+//progra que ler uma sequencia de letras enquanto a letra z n for digitada e diz quantas vezes as vogais foram digitadas
+// int vet [5] = {0,0,0,0,0},posicao;
+
+// char letra;
+
+// scanf ("%c",&letra);
+
+// while (letra != 'z')
+// {
+// switch (letra)
+// {
+// case 'a':
+// vet[0]++;
+// break;
+// case 'e':
+// vet[1]++;
+// break;
+// case 'i':
+// vet[2]++;
+// break;
+// case 'o':
+// vet[3]++;
+// break;
+// case 'u':
+// vet[4]++;
+// break;
+// }
+
+// scanf("%c",&letra);
+
+// }
+
+// printf ("Quantidade de cada vogal, em ordem \n");
+
+// for (posicao=0;posicao<5;posicao++)
+// {
+// printf("%d ",vet[posicao]);
+// }
+
+//progra que pega 20 notas de alunos e diz quantas são maiores que a média da turma
+// float vet[20],soma=0,media; int posicao;
+
+// for (posicao=0;posicao<20;posicao++)
+// {
+// scanf ("%f",&vet[posicao]);
+// soma=soma+vet[posicao];
+// }
+
+// media=soma/20;
+
+// printf ("numeros maiores quemedia %.2f \n",media);
+
+// for (posicao=0;posicao<20;posicao++)
+// {
+// if (vet[posicao] >= media)
+// printf ("%.2f \n",vet[posicao]);
+// }
+
+//programa q ler números do teclado e add ao um vetor e o sucessor ou antecessor desse número a outro vetor
+// int vet1[5], vet2[5], posicao;
+
+// for(posicao=0; posicao<5; posicao=posicao+1){
+//   printf("Digite um número inteiro\n");
+//   scanf("%d", &vet1[posicao]);
+//   if(vet1[posicao] % 2 == 0){
+//     vet2[posicao] = vet1[posicao] + 1;
+//   }else{
+//     vet2[posicao] = vet1[posicao] - 1;
+//   }
+// }
+
+// for(posicao=0; posicao<5; posicao++){
+//   printf("Os valore do primeiro vetor na posicao %d é %d\n e do segundo vetor na posicao %d é %d\n", posicao, vet1[posicao], posicao, vet2[posicao]);
+// }
 	return 0;
 }

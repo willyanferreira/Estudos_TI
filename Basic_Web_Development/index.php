@@ -263,7 +263,138 @@
 // 		 echo '<br>';
 // 		 $cnt3->setTampa(false);
 // 		 $cnt3->escrever();
-// ?>
+
+/*Praticando POO 28-06-21 - Curso em Vídeo*/
+
+class ContaBancaria{
+	//Atributos
+	public $numConta;
+	protected $tipo;
+	private $dono;
+	private $saldo;
+	private $status;
+
+	//Métodos Especiais
+	function __construct($nc, $dono, $tc){
+		$this->setSaldo(0);
+		$this->setStatus(false);
+		$this->setNumConta($nc);
+		$this->setDono($dono);
+		$this->abrirConta($tc);
+	}
+	function setNumConta($nc){
+		$this->numConta = $nc;
+	}
+	function getNumConta(){
+		return $this->numConta;
+	}
+	function setTipo($tc){
+		$this->tipo = $tc;
+	}
+	function getTipo(){
+		return $this->tipo;
+	}
+	function setDono($dono){
+		$this->dono = $dono;
+	}
+	function getDono(){
+		return $this->dono;
+	}
+	function setSaldo($saldo){
+		$this->saldo = $saldo;
+	}
+	function getSaldo(){
+		return $this->saldo;
+	}
+	function setStatus($status){
+		$this->status = $status;
+	}
+	function getStatus(){
+		return $this->status;
+	}
+
+	//Métodos
+	public function abrirConta($tc){
+		$this->setTipo($tc);
+		$this->setStatus(true);
+		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
+			$this->setSaldo(50);
+		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp") {
+			$this->setSaldo(150);
+		}else{
+			echo "<p>Tipo de conta inválido.</p>";
+			$this->setStatus(false);
+		}
+		if($this->getStatus()){
+			echo "<p>Conta de número: ". $this->getNumConta() ." aberta com sucesso para: ". $this->getDono() .".</p>";
+		}else{
+			echo "<p>Erro ao tentar abrir conta de número: ". $this->getNumConta() ." para: ". $this->getDono() .".</p>";
+		}
+	}
+	public function fecharConta(){
+		if($this->getSaldo() > 0){
+			echo "<p>Você precisa zerar a conta antes de fechá-la.</p>";
+		}elseif($this->getSaldo() < 0){
+			echo "<p>A conta possui algumas pendências.<br>Não pode ser encerrada.</p>";
+		}else{
+			$this->setStatus(false);
+			echo "<p>Conta de número: ".$this->getNumConta()." encerrada com sucesso.</p>";
+		}
+	}
+	public function depositar($deposito){
+		if($this->getStatus()){
+			$this->setSaldo($this->getSaldo() + $deposito);
+		}else{
+			echo "<p>Não foi possível depositar.<br>Conta encerrada.</p>";
+		}
+	}
+	public function sacar($saque){
+		if($this->getStatus()){
+			if($this->getSaldo() >= $saque){
+				$this->setSaldo($this->getSaldo() - $saque);
+			}else{
+				echo "<p>Saque não realizado.<br><span style='color: red'>Saldo insuficiente</span>.</p>";
+				echo "SALDO: ". $this->getSaldo();
+			}
+		}else{
+			echo "<p>Saque não realizado.<br>Conta encerrada.</p>";	
+		}
+	}
+	public function pagarMensalidade(){
+		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
+			$taxa = 12;
+		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp"){
+			$taxa = 20;
+		}
+		if($this->getStatus()){
+			$this->setSaldo($this->getSaldo() - $taxa);
+			echo "<p>Taxa de R$ $taxa,00 cobrada com sucesso.</p>";
+		}else{
+			echo "<p>Erro ao cobrar taxa.<br>Problemas com a conta.</p>";
+		}
+	}
+}
+$p1 = new ContaBancaria(1001, "Willyan Carlos", 'cc');
+$p2 = new ContaBancaria(1002, "Ferreira Da Silva", 'cp');
+
+$p1->depositar(300);
+$p2->depositar(500);
+
+$p1->sacar(1000);
+$p2->pagarMensalidade();
+
+$p1->fecharConta();
+$p2->sacar(630);
+$p2->fecharConta();
+	
+	echo "<pre>";
+	print_r($p1);
+	echo "</pre>";
+
+	echo "<pre>";
+	print_r($p2);
+	echo "</pre>";
+ ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>
 </html> 

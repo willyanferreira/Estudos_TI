@@ -266,134 +266,265 @@
 
 /*Praticando POO 28-06-21 - Curso em Vídeo*/
 
-class ContaBancaria{
+// class ContaBancaria{
+// 	//Atributos
+// 	public $numConta;
+// 	protected $tipo;
+// 	private $dono;
+// 	private $saldo;
+// 	private $status;
+
+// 	//Métodos Especiais
+// 	function __construct($nc, $dono, $tc){
+// 		$this->setSaldo(0);
+// 		$this->setStatus(false);
+// 		$this->setNumConta($nc);
+// 		$this->setDono($dono);
+// 		$this->abrirConta($tc);
+// 	}
+// 	function setNumConta($nc){
+// 		$this->numConta = $nc;
+// 	}
+// 	function getNumConta(){
+// 		return $this->numConta;
+// 	}
+// 	function setTipo($tc){
+// 		$this->tipo = $tc;
+// 	}
+// 	function getTipo(){
+// 		return $this->tipo;
+// 	}
+// 	function setDono($dono){
+// 		$this->dono = $dono;
+// 	}
+// 	function getDono(){
+// 		return $this->dono;
+// 	}
+// 	function setSaldo($saldo){
+// 		$this->saldo = $saldo;
+// 	}
+// 	function getSaldo(){
+// 		return $this->saldo;
+// 	}
+// 	function setStatus($status){
+// 		$this->status = $status;
+// 	}
+// 	function getStatus(){
+// 		return $this->status;
+// 	}
+
+// 	//Métodos
+// 	public function abrirConta($tc){
+// 		$this->setTipo($tc);
+// 		$this->setStatus(true);
+// 		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
+// 			$this->setSaldo(50);
+// 		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp") {
+// 			$this->setSaldo(150);
+// 		}else{
+// 			echo "<p>Tipo de conta inválido.</p>";
+// 			$this->setStatus(false);
+// 		}
+// 		if($this->getStatus()){
+// 			echo "<p>Conta de número: ". $this->getNumConta() ." aberta com sucesso para: ". $this->getDono() .".</p>";
+// 		}else{
+// 			echo "<p>Erro ao tentar abrir conta de número: ". $this->getNumConta() ." para: ". $this->getDono() .".</p>";
+// 		}
+// 	}
+// 	public function fecharConta(){
+// 		if($this->getSaldo() > 0){
+// 			echo "<p>Você precisa zerar a conta antes de fechá-la.</p>";
+// 		}elseif($this->getSaldo() < 0){
+// 			echo "<p>A conta possui algumas pendências.<br>Não pode ser encerrada.</p>";
+// 		}else{
+// 			$this->setStatus(false);
+// 			echo "<p>Conta de número: ".$this->getNumConta()." encerrada com sucesso.</p>";
+// 		}
+// 	}
+// 	public function depositar($deposito){
+// 		if($this->getStatus()){
+// 			$this->setSaldo($this->getSaldo() + $deposito);
+// 		}else{
+// 			echo "<p>Não foi possível depositar.<br>Conta encerrada.</p>";
+// 		}
+// 	}
+// 	public function sacar($saque){
+// 		if($this->getStatus()){
+// 			if($this->getSaldo() >= $saque){
+// 				$this->setSaldo($this->getSaldo() - $saque);
+// 			}else{
+// 				echo "<p>Saque não realizado.<br><span style='color: red'>Saldo insuficiente</span>.</p>";
+// 				echo "SALDO: ". $this->getSaldo();
+// 			}
+// 		}else{
+// 			echo "<p>Saque não realizado.<br>Conta encerrada.</p>";	
+// 		}
+// 	}
+// 	public function pagarMensalidade(){
+// 		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
+// 			$taxa = 12;
+// 		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp"){
+// 			$taxa = 20;
+// 		}
+// 		if($this->getStatus()){
+// 			$this->setSaldo($this->getSaldo() - $taxa);
+// 			echo "<p>Taxa de R$ $taxa,00 cobrada com sucesso.</p>";
+// 		}else{
+// 			echo "<p>Erro ao cobrar taxa.<br>Problemas com a conta.</p>";
+// 		}
+// 	}
+// }
+// $p1 = new ContaBancaria(1001, "Willyan Carlos", 'cc');
+// $p2 = new ContaBancaria(1002, "Ferreira Da Silva", 'cp');
+
+// $p1->depositar(300);
+// $p2->depositar(500);
+
+// $p1->sacar(1000);
+// $p2->pagarMensalidade();
+
+// $p1->fecharConta();
+// $p2->sacar(630);
+// $p2->fecharConta();
+	
+// 	echo "<pre>";
+// 	print_r($p1);
+// 	echo "</pre>";
+
+// 	echo "<pre>";
+// 	print_r($p2);
+// 	echo "</pre>";
+
+/*Praticando POO/Encapsulamento - 29/06/21 - Curso em vídeo*/
+interface Controlador{
+	//Métodos abstratos - abstrato indica que os métodos não serão implementados/desenvolvidos aqui
+	public function liga();
+	public function desliga();
+	public function abrirMenu();
+	public function fecharMenu();
+	public function maisVolume();
+	public function menosVolume();
+	public function ligarMudo();
+	public function desligarMudo();
+	public function play();
+	public function pause();
+}
+
+class ControleRemoto implements Controlador{
 	//Atributos
-	public $numConta;
-	protected $tipo;
-	private $dono;
-	private $saldo;
-	private $status;
+	private $volume;
+	private $ligar;
+	private $reproducao;
 
 	//Métodos Especiais
-	function __construct($nc, $dono, $tc){
-		$this->setSaldo(0);
-		$this->setStatus(false);
-		$this->setNumConta($nc);
-		$this->setDono($dono);
-		$this->abrirConta($tc);
+	function __construct(){
+		$this->volume = 25;
+		$this->ligar = false;
+		$this->reproducao = false;
 	}
-	function setNumConta($nc){
-		$this->numConta = $nc;
+	function setVolume($vol){
+		$this->volume = $vol;
 	}
-	function getNumConta(){
-		return $this->numConta;
+	function getVolume(){
+		return $this->volume;
 	}
-	function setTipo($tc){
-		$this->tipo = $tc;
+	function setLigar($liga){
+		$this->ligar = $liga;
 	}
-	function getTipo(){
-		return $this->tipo;
+	function getLigar(){
+		return $this->ligar;
 	}
-	function setDono($dono){
-		$this->dono = $dono;
+	function setReproducao($reproduzir){
+		$this->reproducao = $reproduzir;
 	}
-	function getDono(){
-		return $this->dono;
-	}
-	function setSaldo($saldo){
-		$this->saldo = $saldo;
-	}
-	function getSaldo(){
-		return $this->saldo;
-	}
-	function setStatus($status){
-		$this->status = $status;
-	}
-	function getStatus(){
-		return $this->status;
+	function getReproducao(){
+		return $this->reproducao;
 	}
 
 	//Métodos
-	public function abrirConta($tc){
-		$this->setTipo($tc);
-		$this->setStatus(true);
-		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
-			$this->setSaldo(50);
-		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp") {
-			$this->setSaldo(150);
-		}else{
-			echo "<p>Tipo de conta inválido.</p>";
-			$this->setStatus(false);
-		}
-		if($this->getStatus()){
-			echo "<p>Conta de número: ". $this->getNumConta() ." aberta com sucesso para: ". $this->getDono() .".</p>";
-		}else{
-			echo "<p>Erro ao tentar abrir conta de número: ". $this->getNumConta() ." para: ". $this->getDono() .".</p>";
-		}
+	public function liga(){
+		$this->setLigar(true);
 	}
-	public function fecharConta(){
-		if($this->getSaldo() > 0){
-			echo "<p>Você precisa zerar a conta antes de fechá-la.</p>";
-		}elseif($this->getSaldo() < 0){
-			echo "<p>A conta possui algumas pendências.<br>Não pode ser encerrada.</p>";
-		}else{
-			$this->setStatus(false);
-			echo "<p>Conta de número: ".$this->getNumConta()." encerrada com sucesso.</p>";
-		}
+	public function desliga(){
+		$this->setLigar(false);
 	}
-	public function depositar($deposito){
-		if($this->getStatus()){
-			$this->setSaldo($this->getSaldo() + $deposito);
+	public function abrirMenu(){
+		echo "<div style='border: 1px solid black; background: grey; text-align: center; color: white; padding-bottom: 20px;'><h1 style='color: yellowgreen;'>- MENU -</h1>";
+		echo "<br>Está ligado?<br>". ($this->getLigar()?"<span style='color: blue;'>SIM</span><br>" : "<span style='color: red;'>NÃO.</span><br>");
+		echo "<br>Está tocando?<br>";
+		if($this->getReproducao()){
+			echo "<span style='color: blue;'>SIM</span><br>";
+		}elseif(!$this->getReproducao() && $this->getLigar()){
+			echo "<span style='color: red;'>NÃO.</span> Mas está ligado.<br>";
 		}else{
-			echo "<p>Não foi possível depositar.<br>Conta encerrada.</p>";
+			echo "<span style='color: red;'>NÃO.</span> Pois está desligado.<br>";
 		}
-	}
-	public function sacar($saque){
-		if($this->getStatus()){
-			if($this->getSaldo() >= $saque){
-				$this->setSaldo($this->getSaldo() - $saque);
-			}else{
-				echo "<p>Saque não realizado.<br><span style='color: red'>Saldo insuficiente</span>.</p>";
-				echo "SALDO: ". $this->getSaldo();
+		echo "<br>Volume:<br>";
+		if($this->getLigar()){
+			echo "<span style='color: black;'>".$this->getVolume()."</span>";
+			for($x=0; $x<$this->getVolume(); $x+=5){
+				echo "|";
 			}
 		}else{
-			echo "<p>Saque não realizado.<br>Conta encerrada.</p>";	
+			$this->setVolume(0);
+			echo "<span style='color: black;'>".$this->getVolume()."</span>";
+		}
+		// for($i=0; $i<=$this->getVolume(); $i+=10){
+		// 	echo "|";
+		// }
+		// echo "<br>";
+		echo "</div>";
+	}
+	public function fecharMenu(){
+		echo "<br>Fechando o menu...";
+	}
+	public function maisVolume(){
+		if($this->getLigar()){
+			$this->setVolume($this->getVolume()+5);
 		}
 	}
-	public function pagarMensalidade(){
-		if($this->tipo == "CC" || $this->tipo == "Cc" || $this->tipo == "cC" || $this->tipo == "cc"){
-			$taxa = 12;
-		}elseif($this->tipo == "CP" || $this->tipo == "Cp" || $this->tipo == "cP" || $this->tipo == "cp"){
-			$taxa = 20;
+	public function menosVolume(){
+		if($this->getLigar() && $this->getVolume() > 0){
+			$this->setVolume($this->getVolume()-5);
 		}
-		if($this->getStatus()){
-			$this->setSaldo($this->getSaldo() - $taxa);
-			echo "<p>Taxa de R$ $taxa,00 cobrada com sucesso.</p>";
-		}else{
-			echo "<p>Erro ao cobrar taxa.<br>Problemas com a conta.</p>";
+	}
+	public function ligarMudo(){
+		if($this->getLigar() && $this->getVolume()>0){
+			$this->setVolume(0);
 		}
+	}	
+	public function desligarMudo(){
+		if($this->getLigar() && $this->getVolume()==0){
+			$this->setVolume(50);
+	}
+	}
+	public function play(){
+		if(!$this->getLigar()){
+			echo strtoupper("<span style='color: orange; font-weight: bold;'>Ligue antes de apertar o play.</span>");
+	}else{
+		$this->setReproducao(true);
+	}
+	}
+	public function pause(){
+		if($this->getLigar() && $this->getReproducao()){
+			$this->setReproducao(false);
+	}
 	}
 }
-$p1 = new ContaBancaria(1001, "Willyan Carlos", 'cc');
-$p2 = new ContaBancaria(1002, "Ferreira Da Silva", 'cp');
 
-$p1->depositar(300);
-$p2->depositar(500);
+$cntrl_LG = new ControleRemoto();
+$cntrl_LG->liga();
+$cntrl_LG->play();
+// $cntrl_LG->pause();
+// $cntrl_LG->desliga();
+// $cntrl_LG->ligarMudo();
+// $cntrl_LG->desligarMudo();
+// $cntrl_LG->menosVolume();
+$cntrl_LG->abrirMenu();
 
-$p1->sacar(1000);
-$p2->pagarMensalidade();
-
-$p1->fecharConta();
-$p2->sacar(630);
-$p2->fecharConta();
-	
-	echo "<pre>";
-	print_r($p1);
-	echo "</pre>";
-
-	echo "<pre>";
-	print_r($p2);
-	echo "</pre>";
+echo "<pre>";
+print_r($cntrl_LG);
+echo "</pre>";
  ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

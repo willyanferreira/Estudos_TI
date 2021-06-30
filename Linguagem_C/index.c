@@ -675,5 +675,44 @@ for (int i=0; i< j; i++){
 // for(posicao=0; posicao<5; posicao++){
 //   printf("Os valore do primeiro vetor na posicao %d é %d\n e do segundo vetor na posicao %d é %d\n", posicao, vet1[posicao], posicao, vet2[posicao]);
 // }
+
+/*Uma questão da AV3 de Programação em C - 29/06/21*/
+// float n1, n2, n3, media;
+
+// printf("Digite a primeira nota\n");
+// scanf("%f", &n1);
+
+// printf("Digite a segunda nota\n");
+// scanf("%f", &n2);
+
+// printf("Digite a terceira nota\n");
+// scanf("%f", &n3);
+
+// if(n1 < 4){
+//   n1 = 0;
+// }
+// if(n2 < 4){
+//   n2 = 0;
+// }
+// if(n3 < 4){
+//   n3 = 0;
+// }
+// if(n1 <= n2 && n1 <= n3){
+//   media = (n2 + n3) / 2;
+//   printf("Entrei no primeiro bloco\n");
+// }else if(n2 <= n1 && n2 <= n3){
+//   media = (n1 + n3) / 2;
+//   printf("Entrei no segundo bloco\n");
+// }else if(n3 <= n1 && n3 <= n2){
+//   media = (n1 + n2) / 2;
+//   printf("Entrei no terceiro bloco\n");
+// }
+// printf("N1: %.1f\nN2: %.1f\nN3: %.1f\n", n1, n2, n3);
+// printf("A média do aluno é: %.1f\n", media);
+// if(media >= 6){
+//   printf("Estudante aprovado.\nMédia final: %.1f\n", media);
+// }else{
+//   printf("Estudante reprovado.\nMédia final: %.1f\n", media);
+// }
 	return 0;
 }

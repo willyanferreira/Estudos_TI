@@ -395,137 +395,279 @@
 // 	print_r($p2);
 // 	echo "</pre>";
 
-/*Praticando POO/Encapsulamento - 29/06/21 - Curso em vídeo*/
-interface Controlador{
-	//Métodos abstratos - abstrato indica que os métodos não serão implementados/desenvolvidos aqui
-	public function liga();
-	public function desliga();
-	public function abrirMenu();
-	public function fecharMenu();
-	public function maisVolume();
-	public function menosVolume();
-	public function ligarMudo();
-	public function desligarMudo();
-	public function play();
-	public function pause();
-}
+// /*Praticando POO/Encapsulamento - 29/06/21 - Curso em vídeo*/
+// interface Controlador{
+// 	//Métodos abstratos - abstrato indica que os métodos não serão implementados/desenvolvidos aqui
+// 	public function liga();
+// 	public function desliga();
+// 	public function abrirMenu();
+// 	public function fecharMenu();
+// 	public function maisVolume();
+// 	public function menosVolume();
+// 	public function ligarMudo();
+// 	public function desligarMudo();
+// 	public function play();
+// 	public function pause();
+// }
 
-class ControleRemoto implements Controlador{
-	//Atributos
-	private $volume;
-	private $ligar;
-	private $reproducao;
+// class ControleRemoto implements Controlador{
+// 	//Atributos
+// 	private $volume;
+// 	private $ligar;
+// 	private $reproducao;
 
-	//Métodos Especiais
-	function __construct(){
-		$this->volume = 25;
-		$this->ligar = false;
-		$this->reproducao = false;
-	}
-	function setVolume($vol){
-		$this->volume = $vol;
-	}
-	function getVolume(){
-		return $this->volume;
-	}
-	function setLigar($liga){
-		$this->ligar = $liga;
-	}
-	function getLigar(){
-		return $this->ligar;
-	}
-	function setReproducao($reproduzir){
-		$this->reproducao = $reproduzir;
-	}
-	function getReproducao(){
-		return $this->reproducao;
-	}
+// 	//Métodos Especiais
+// 	function __construct(){
+// 		$this->volume = 25;
+// 		$this->ligar = false;
+// 		$this->reproducao = false;
+// 	}
+// 	function setVolume($vol){
+// 		$this->volume = $vol;
+// 	}
+// 	function getVolume(){
+// 		return $this->volume;
+// 	}
+// 	function setLigar($liga){
+// 		$this->ligar = $liga;
+// 	}
+// 	function getLigar(){
+// 		return $this->ligar;
+// 	}
+// 	function setReproducao($reproduzir){
+// 		$this->reproducao = $reproduzir;
+// 	}
+// 	function getReproducao(){
+// 		return $this->reproducao;
+// 	}
 
-	//Métodos
-	public function liga(){
-		$this->setLigar(true);
-	}
-	public function desliga(){
-		$this->setLigar(false);
-	}
-	public function abrirMenu(){
-		echo "<div style='border: 1px solid black; background: grey; text-align: center; color: white; padding-bottom: 20px;'><h1 style='color: yellowgreen;'>- MENU -</h1>";
-		echo "<br>Está ligado?<br>". ($this->getLigar()?"<span style='color: blue;'>SIM</span><br>" : "<span style='color: red;'>NÃO.</span><br>");
-		echo "<br>Está tocando?<br>";
-		if($this->getReproducao()){
-			echo "<span style='color: blue;'>SIM</span><br>";
-		}elseif(!$this->getReproducao() && $this->getLigar()){
-			echo "<span style='color: red;'>NÃO.</span> Mas está ligado.<br>";
-		}else{
-			echo "<span style='color: red;'>NÃO.</span> Pois está desligado.<br>";
-		}
-		echo "<br>Volume:<br>";
-		if($this->getLigar()){
-			echo "<span style='color: black;'>".$this->getVolume()."</span>";
-			for($x=0; $x<$this->getVolume(); $x+=5){
-				echo "|";
-			}
-		}else{
-			$this->setVolume(0);
-			echo "<span style='color: black;'>".$this->getVolume()."</span>";
-		}
-		// for($i=0; $i<=$this->getVolume(); $i+=10){
-		// 	echo "|";
-		// }
-		// echo "<br>";
-		echo "</div>";
-	}
-	public function fecharMenu(){
-		echo "<br>Fechando o menu...";
-	}
-	public function maisVolume(){
-		if($this->getLigar()){
-			$this->setVolume($this->getVolume()+5);
-		}
-	}
-	public function menosVolume(){
-		if($this->getLigar() && $this->getVolume() > 0){
-			$this->setVolume($this->getVolume()-5);
-		}
-	}
-	public function ligarMudo(){
-		if($this->getLigar() && $this->getVolume()>0){
-			$this->setVolume(0);
-		}
-	}	
-	public function desligarMudo(){
-		if($this->getLigar() && $this->getVolume()==0){
-			$this->setVolume(50);
-	}
-	}
-	public function play(){
-		if(!$this->getLigar()){
-			echo strtoupper("<span style='color: orange; font-weight: bold;'>Ligue antes de apertar o play.</span>");
-	}else{
-		$this->setReproducao(true);
-	}
-	}
-	public function pause(){
-		if($this->getLigar() && $this->getReproducao()){
-			$this->setReproducao(false);
-	}
-	}
-}
+// 	//Métodos
+// 	public function liga(){
+// 		$this->setLigar(true);
+// 	}
+// 	public function desliga(){
+// 		$this->setLigar(false);
+// 	}
+// 	public function abrirMenu(){
+// 		echo "<div style='border: 1px solid black; background: grey; text-align: center; color: white; padding-bottom: 20px;'><h1 style='color: yellowgreen;'>- MENU -</h1>";
+// 		echo "<br>Está ligado?<br>". ($this->getLigar()?"<span style='color: blue;'>SIM</span><br>" : "<span style='color: red;'>NÃO.</span><br>");
+// 		echo "<br>Está tocando?<br>";
+// 		if($this->getReproducao()){
+// 			echo "<span style='color: blue;'>SIM</span><br>";
+// 		}elseif(!$this->getReproducao() && $this->getLigar()){
+// 			echo "<span style='color: red;'>NÃO.</span> Mas está ligado.<br>";
+// 		}else{
+// 			echo "<span style='color: red;'>NÃO.</span> Pois está desligado.<br>";
+// 		}
+// 		echo "<br>Volume:<br>";
+// 		if($this->getLigar()){
+// 			echo "<span style='color: black;'>".$this->getVolume()."</span>";
+// 			for($x=0; $x<$this->getVolume(); $x+=5){
+// 				echo "|";
+// 			}
+// 		}else{
+// 			$this->setVolume(0);
+// 			echo "<span style='color: black;'>".$this->getVolume()."</span>";
+// 		}
+// 		// for($i=0; $i<=$this->getVolume(); $i+=10){
+// 		// 	echo "|";
+// 		// }
+// 		// echo "<br>";
+// 		echo "</div>";
+// 	}
+// 	public function fecharMenu(){
+// 		echo "<br>Fechando o menu...";
+// 	}
+// 	public function maisVolume(){
+// 		if($this->getLigar()){
+// 			$this->setVolume($this->getVolume()+5);
+// 		}
+// 	}
+// 	public function menosVolume(){
+// 		if($this->getLigar() && $this->getVolume() > 0){
+// 			$this->setVolume($this->getVolume()-5);
+// 		}
+// 	}
+// 	public function ligarMudo(){
+// 		if($this->getLigar() && $this->getVolume()>0){
+// 			$this->setVolume(0);
+// 		}
+// 	}	
+// 	public function desligarMudo(){
+// 		if($this->getLigar() && $this->getVolume()==0){
+// 			$this->setVolume(50);
+// 	}
+// 	}
+// 	public function play(){
+// 		if(!$this->getLigar()){
+// 			echo strtoupper("<span style='color: orange; font-weight: bold;'>Ligue antes de apertar o play.</span>");
+// 	}else{
+// 		$this->setReproducao(true);
+// 	}
+// 	}
+// 	public function pause(){
+// 		if($this->getLigar() && $this->getReproducao()){
+// 			$this->setReproducao(false);
+// 	}
+// 	}
+// }
 
-$cntrl_LG = new ControleRemoto();
-$cntrl_LG->liga();
-$cntrl_LG->play();
-// $cntrl_LG->pause();
-// $cntrl_LG->desliga();
-// $cntrl_LG->ligarMudo();
-// $cntrl_LG->desligarMudo();
-// $cntrl_LG->menosVolume();
-$cntrl_LG->abrirMenu();
+// $cntrl_LG = new ControleRemoto();
+// $cntrl_LG->liga();
+// $cntrl_LG->play();
+// // $cntrl_LG->pause();
+// // $cntrl_LG->desliga();
+// // $cntrl_LG->ligarMudo();
+// // $cntrl_LG->desligarMudo();
+// // $cntrl_LG->menosVolume();
+// $cntrl_LG->abrirMenu();
 
-echo "<pre>";
-print_r($cntrl_LG);
-echo "</pre>";
- ?>
+// echo "<pre>";
+// print_r($cntrl_LG);
+// echo "</pre>";
+
+// /*Poo - Relacioanmento entre classes/Objetos compostos em PHP - 01/07/21 - Curso em Vídeo*/
+// class Lutador{
+// 	//Atributos
+// 	private $nome;
+// 	private $nacionalidade;
+// 	private $idade;
+// 	private $altura, $peso, $categoria, $vitorias, $derrotas, $empates;
+
+// 	//Métodos especiais
+// 	function __construct($nome, $nacionalidade, $idade, $altura, $peso, $vitorias, $derrotas, $empates){
+// 		$this->nome = $nome;
+// 		$this->nacionalidade = $nacionalidade;
+// 		$this->idade = $idade;
+// 		$this->altura = $altura;
+// 		$this->setPeso($peso);
+// 		// $this->peso = $peso;
+// 		$this->vitorias = $vitorias;
+// 		$this->derrotas = $derrotas;
+// 		$this->empates = $empates;
+// 	}
+// 	function setNome($nome){
+// 		$this->nome = $nome;
+// 	}
+// 	function getNome(){
+// 		return $this->nome;
+// 	}
+// 	function setNacionalidade($nacionalidade){
+// 		$this->nacionalidade = $nacionalidade;
+// 	}
+// 	function getNacionalidade(){
+// 		return $this->nacionalidade;
+// 	}
+// 	function setIdade($idade){
+// 		$this->idade = $idade;
+// 	}
+// 	function getIdade(){
+// 		return $this->Idade;
+// 	}
+// 	function setAltura($altura){
+// 		$this->altura = $altura;
+// 	}
+// 	function getAltura(){
+// 		return $this->altura;
+// 	}
+// 	function setPeso($peso){
+// 		$this->peso = $peso;
+// 		$this->setCategoria();
+// 	}
+// 	function getPeso(){
+// 		return $this->peso;
+// 	}
+// 	function setCategoria(){
+// 		if($this->peso < 52.2){
+// 			$this->categoria = "Inválido: Lutador abaixo do peso mínimo permitido para lutadores.";
+// 		}elseif($this->peso < 56.7){
+// 			$this->categoria = "Mosca";
+// 		}elseif($this->peso < 61.2){
+// 			$this->categoria = "Galo";
+// 		}elseif($this->peso <= 70.3){
+// 			$this->categoria = "Leve";
+// 		}elseif($this->peso < 77.1){
+// 			$this->categoria = "Meio-Médio";
+// 		}elseif($this->peso <= 83.9){
+// 			$this->categoria = "Médio";
+// 		}elseif($this->peso < 92.9){
+// 			$this->categoria = "Meio-Pesado";
+// 		}elseif($this->peso <= 120.2){
+// 			$this->categoria = "Pesado";
+// 		}else{
+// 			$this->categoria = "Inválido: Lutador acima do peso máximo permitido para lutadores.";
+// 		}
+// 	}
+// 	function getCategoria(){
+// 		return $this->categoria;
+// 	}
+// 	function setVitorias($vitorias){
+// 		$this->vitorias = $vitorias;
+// 	}
+// 	function getVitorias(){
+// 		return $this->vitorias;
+// 	}
+// 	function setDerrotas($derrotas){
+// 		$this->derrotas = $derrotas;
+// 	}
+// 	function getDerrotas(){
+// 		return $this->derrotas;
+// 	}
+// 	function setEmpates($empates){
+// 		$this->empates = $empates;
+// 	}
+// 	function getEmpates(){
+// 		return $this->empates;
+// 	}
+
+// 	//Métodos
+// 	public function apresentar(){
+// 		echo "<div style='border: 1px solid black;'> Nome:" .$this->getNome() ."<br>". "Nacionalidade: ". $this->getNacionalidade() ."<br>"."Peso: " . $this->getPeso(). "<br>" . "Altura: ". $this->getAltura() ."<br>";
+// 	}
+// 	public function status(){
+// 		echo $this->getCategoria();
+// 		echo "<br>";
+// 		echo $this->getVitorias();
+// 		echo "<br>";
+// 		echo $this->getDerrotas();
+// 		echo "<br>";
+// 		echo $this->getEmpates();
+// 		echo "</div><br>";
+// 	}
+// 	public function ganharLuta(){
+// 		// $this->setVitorias($this->getVitorias() + 1);
+// 		$this->vitorias += 1; //Outra forma de fazer
+// 	}
+// 	public function perderLuta(){
+// 		// $this->setDerrotas($this->getDerrotas() + 1);
+// 		$this->derrotas += 1; //Outra forma de fazer
+// 	}
+// 	public function empatarLuta(){
+// 		// $this->setEmpates($this->getEmpates() + 1);
+// 		$this->empates += 1; //Outra forma de fazer
+// 	}
+
+//  }
+// $l = array();
+// $l[0] = new Lutador("Pretty Boy", "França", 30, 1.75, 90.9, 11, 2, 1);
+// $l[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
+// $l[2] = new Lutador("Snapshadow", "EUA", 35, 1.65, 80.9, 12, 2, 1);
+// $l[3] = new Lutador("Dead Code", "Austrália", 28, 1.93, 81.6, 13, 0, 2);
+// $l[4] = new Lutador("Ufocobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
+// $l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
+
+//  //  echo $l1->getCategoria();
+// // $l[0]->apresentar();
+// // $l[0]->status();
+// // $l[1]->apresentar();
+// // $l[1]->status();
+
+// echo "<pre>";
+// print_r($l);
+// echo "</pre>";
+
+
+?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>
 </html> 

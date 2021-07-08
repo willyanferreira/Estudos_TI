@@ -527,224 +527,224 @@
 // echo "</pre>";
 
 /*Poo - Relacioanmento entre classes/Objetos compostos em PHP - 01/07/21 - Curso em Vídeo*/
-class Lutador{
-	//Atributos
-	private $nome;
-	private $nacionalidade;
-	private $idade;
-	private $altura, $peso, $categoria, $vitorias, $derrotas, $empates;
+// class Lutador{
+// 	//Atributos
+// 	private $nome;
+// 	private $nacionalidade;
+// 	private $idade;
+// 	private $altura, $peso, $categoria, $vitorias, $derrotas, $empates;
 
-	//Métodos especiais
-	function __construct($nome, $nacionalidade, $idade, $altura, $peso, $vitorias, $derrotas, $empates){
-		$this->nome = $nome;
-		$this->nacionalidade = $nacionalidade;
-		$this->idade = $idade;
-		$this->altura = $altura;
-		$this->setPeso($peso);
-		// $this->peso = $peso;
-		$this->vitorias = $vitorias;
-		$this->derrotas = $derrotas;
-		$this->empates = $empates;
-	}
-	function setNome($nome){
-		$this->nome = $nome;
-	}
-	function getNome(){
-		return $this->nome;
-	}
-	function setNacionalidade($nacionalidade){
-		$this->nacionalidade = $nacionalidade;
-	}
-	function getNacionalidade(){
-		return $this->nacionalidade;
-	}
-	function setIdade($idade){
-		$this->idade = $idade;
-	}
-	function getIdade(){
-		return $this->Idade;
-	}
-	function setAltura($altura){
-		$this->altura = $altura;
-	}
-	function getAltura(){
-		return $this->altura;
-	}
-	function setPeso($peso){
-		$this->peso = $peso;
-		$this->setCategoria();
-	}
-	function getPeso(){
-		return $this->peso;
-	}
-	function setCategoria(){
-		if($this->peso < 52.2){
-			$this->categoria = "Inválido: Lutador abaixo do peso mínimo permitido para lutadores.";
-		}elseif($this->peso < 56.7){
-			$this->categoria = "Mosca";
-		}elseif($this->peso < 61.2){
-			$this->categoria = "Galo";
-		}elseif($this->peso <= 70.3){
-			$this->categoria = "Leve";
-		}elseif($this->peso < 77.1){
-			$this->categoria = "Meio-Médio";
-		}elseif($this->peso <= 83.9){
-			$this->categoria = "Médio";
-		}elseif($this->peso < 92.9){
-			$this->categoria = "Meio-Pesado";
-		}elseif($this->peso <= 120.2){
-			$this->categoria = "Pesado";
-		}else{
-			$this->categoria = "Inválido: Lutador acima do peso máximo permitido para lutadores.";
-		}
-	}
-	function getCategoria(){
-		return $this->categoria;
-	}
-	function setVitorias($vitorias){
-		$this->vitorias = $vitorias;
-	}
-	function getVitorias(){
-		return $this->vitorias;
-	}
-	function setDerrotas($derrotas){
-		$this->derrotas = $derrotas;
-	}
-	function getDerrotas(){
-		return $this->derrotas;
-	}
-	function setEmpates($empates){
-		$this->empates = $empates;
-	}
-	function getEmpates(){
-		return $this->empates;
-	}
+// 	//Métodos especiais
+// 	function __construct($nome, $nacionalidade, $idade, $altura, $peso, $vitorias, $derrotas, $empates){
+// 		$this->nome = $nome;
+// 		$this->nacionalidade = $nacionalidade;
+// 		$this->idade = $idade;
+// 		$this->altura = $altura;
+// 		$this->setPeso($peso);
+// 		// $this->peso = $peso;
+// 		$this->vitorias = $vitorias;
+// 		$this->derrotas = $derrotas;
+// 		$this->empates = $empates;
+// 	}
+// 	function setNome($nome){
+// 		$this->nome = $nome;
+// 	}
+// 	function getNome(){
+// 		return $this->nome;
+// 	}
+// 	function setNacionalidade($nacionalidade){
+// 		$this->nacionalidade = $nacionalidade;
+// 	}
+// 	function getNacionalidade(){
+// 		return $this->nacionalidade;
+// 	}
+// 	function setIdade($idade){
+// 		$this->idade = $idade;
+// 	}
+// 	function getIdade(){
+// 		return $this->Idade;
+// 	}
+// 	function setAltura($altura){
+// 		$this->altura = $altura;
+// 	}
+// 	function getAltura(){
+// 		return $this->altura;
+// 	}
+// 	function setPeso($peso){
+// 		$this->peso = $peso;
+// 		$this->setCategoria();
+// 	}
+// 	function getPeso(){
+// 		return $this->peso;
+// 	}
+// 	function setCategoria(){
+// 		if($this->peso < 52.2){
+// 			$this->categoria = "Inválido: Lutador abaixo do peso mínimo permitido para lutadores.";
+// 		}elseif($this->peso < 56.7){
+// 			$this->categoria = "Mosca";
+// 		}elseif($this->peso < 61.2){
+// 			$this->categoria = "Galo";
+// 		}elseif($this->peso <= 70.3){
+// 			$this->categoria = "Leve";
+// 		}elseif($this->peso < 77.1){
+// 			$this->categoria = "Meio-Médio";
+// 		}elseif($this->peso <= 83.9){
+// 			$this->categoria = "Médio";
+// 		}elseif($this->peso < 92.9){
+// 			$this->categoria = "Meio-Pesado";
+// 		}elseif($this->peso <= 120.2){
+// 			$this->categoria = "Pesado";
+// 		}else{
+// 			$this->categoria = "Inválido: Lutador acima do peso máximo permitido para lutadores.";
+// 		}
+// 	}
+// 	function getCategoria(){
+// 		return $this->categoria;
+// 	}
+// 	function setVitorias($vitorias){
+// 		$this->vitorias = $vitorias;
+// 	}
+// 	function getVitorias(){
+// 		return $this->vitorias;
+// 	}
+// 	function setDerrotas($derrotas){
+// 		$this->derrotas = $derrotas;
+// 	}
+// 	function getDerrotas(){
+// 		return $this->derrotas;
+// 	}
+// 	function setEmpates($empates){
+// 		$this->empates = $empates;
+// 	}
+// 	function getEmpates(){
+// 		return $this->empates;
+// 	}
 
-	//Métodos
-	public function apresentar(){
-		echo "Nome:" .$this->getNome() ."<br>". "Nacionalidade: ". $this->getNacionalidade() ."<br>"."Peso: " . $this->getPeso(). "<br>" . "Altura: ". $this->getAltura() ."<br>";
-	}
-	public function status(){
-		echo $this->getCategoria();
-		echo "<br>";
-		echo $this->getVitorias();
-		echo "<br>";
-		echo $this->getDerrotas();
-		echo "<br>";
-		echo $this->getEmpates();
-		echo "<br>";
-	}
-	public function ganharLuta(){
-		$this->setVitorias($this->getVitorias() + 1);
-		// $this->vitorias += 1; //Outra forma de fazer
-	}
-	public function perderLuta(){
-		$this->setDerrotas($this->getDerrotas() + 1);
-		// $this->derrotas += 1; //Outra forma de fazer
-	}
-	public function empatarLuta(){
-		$this->setEmpates($this->getEmpates() + 1);
-		// $this->empates += 1; //Outra forma de fazer
-	}
+// 	//Métodos
+// 	public function apresentar(){
+// 		echo "Nome:" .$this->getNome() ."<br>". "Nacionalidade: ". $this->getNacionalidade() ."<br>"."Peso: " . $this->getPeso(). "<br>" . "Altura: ". $this->getAltura() ."<br>";
+// 	}
+// 	public function status(){
+// 		echo $this->getCategoria();
+// 		echo "<br>";
+// 		echo $this->getVitorias();
+// 		echo "<br>";
+// 		echo $this->getDerrotas();
+// 		echo "<br>";
+// 		echo $this->getEmpates();
+// 		echo "<br>";
+// 	}
+// 	public function ganharLuta(){
+// 		$this->setVitorias($this->getVitorias() + 1);
+// 		// $this->vitorias += 1; //Outra forma de fazer
+// 	}
+// 	public function perderLuta(){
+// 		$this->setDerrotas($this->getDerrotas() + 1);
+// 		// $this->derrotas += 1; //Outra forma de fazer
+// 	}
+// 	public function empatarLuta(){
+// 		$this->setEmpates($this->getEmpates() + 1);
+// 		// $this->empates += 1; //Outra forma de fazer
+// 	}
 
- }
-$l = array();
-$l[0] = new Lutador("Pretty Boy", "França", 30, 1.75, 90.9, 11, 2, 1);
-$l[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
-$l[2] = new Lutador("Snapshadow", "EUA", 35, 1.65, 80.9, 12, 2, 1);
-$l[3] = new Lutador("Dead Code", "Austrália", 28, 1.93, 81.6, 13, 0, 2);
-$l[4] = new Lutador("Ufocobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
-$l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
+//  }
+// $l = array();
+// $l[0] = new Lutador("Pretty Boy", "França", 30, 1.75, 90.9, 11, 2, 1);
+// $l[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
+// $l[2] = new Lutador("Snapshadow", "EUA", 35, 1.65, 80.9, 12, 2, 1);
+// $l[3] = new Lutador("Dead Code", "Austrália", 28, 1.93, 81.6, 13, 0, 2);
+// $l[4] = new Lutador("Ufocobol", "Brasil", 37, 1.70, 119.3, 5, 4, 3);
+// $l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81, 105.7, 12, 2, 4);
 
- //  echo $l1->getCategoria();
-// $l[0]->apresentar();
-// $l[0]->status();
-// $l[1]->apresentar();
-// $l[1]->status();
+//  //  echo $l1->getCategoria();
+// // $l[0]->apresentar();
+// // $l[0]->status();
+// // $l[1]->apresentar();
+// // $l[1]->status();
 
-// echo "<pre>";
-// print_r($l);
-// echo "</pre>";
+// // echo "<pre>";
+// // print_r($l);
+// // echo "</pre>";
 
-/*Agregação entre objetos em PHP - 02/07/21 - Curso em Vídeo*/
-class Luta{
-	//Atributos
-	private $desafiado;
-	private $desafiante;
-	private $rounds;
-	private $aprovado;
+// /*Agregação entre objetos em PHP - 02/07/21 - Curso em Vídeo*/
+// class Luta{
+// 	//Atributos
+// 	private $desafiado;
+// 	private $desafiante;
+// 	private $rounds;
+// 	private $aprovado;
 
-	//Métodos públicos
-	public function marcarLuta($l1, $l2){
-		if($l1->getCategoria() == $l2->getCategoria() && ($l1 != $l2)){
-			$this->aprovado = true;
-			$this->desafiado = $l1;
-			$this->desafiante = $l2;
-		}else{
-			$this->aprovado = false;
-			$this->desafiado = null;
-			$this->desafiante = null;
-		}
-	}
-	public function lutar(){
-		if($this->aprovado){
-			$this->desafiado->apresentar();
-			$this->desafiante->apresentar();
-			$vencedor = rand(0,2);
-			switch($vencedor){
-				case 0: // Empate
-					echo "<p>Empate!</p>";
-					$this->desafiado->empatarLuta();
-					$this->desafiante->empatarLuta();
-					break;
-				case 1: // Desafiado vence
-					echo "<p>O Vencedor é: ". $this->desafiado->getNome() ."</p>";
-					$this->desafiado->ganharLuta();
-					$this->desafiante->perderLuta();
-					break;
-				case 2: // Desafiante vence
-					echo "<p>O Vencedor é: ". $this->desafiante->getNome() ."</p>";
-					$this->desafiante->ganharLuta();
-					$this->desafiado->perderLuta();
-					break;
-			}
-		}else{
-			echo "<p>A luta não pode acontecer</p>";
-		}
-	}
+// 	//Métodos públicos
+// 	public function marcarLuta($l1, $l2){
+// 		if($l1->getCategoria() == $l2->getCategoria() && ($l1 != $l2)){
+// 			$this->aprovado = true;
+// 			$this->desafiado = $l1;
+// 			$this->desafiante = $l2;
+// 		}else{
+// 			$this->aprovado = false;
+// 			$this->desafiado = null;
+// 			$this->desafiante = null;
+// 		}
+// 	}
+// 	public function lutar(){
+// 		if($this->aprovado){
+// 			$this->desafiado->apresentar();
+// 			$this->desafiante->apresentar();
+// 			$vencedor = rand(0,2);
+// 			switch($vencedor){
+// 				case 0: // Empate
+// 					echo "<p>Empate!</p>";
+// 					$this->desafiado->empatarLuta();
+// 					$this->desafiante->empatarLuta();
+// 					break;
+// 				case 1: // Desafiado vence
+// 					echo "<p>O Vencedor é: ". $this->desafiado->getNome() ."</p>";
+// 					$this->desafiado->ganharLuta();
+// 					$this->desafiante->perderLuta();
+// 					break;
+// 				case 2: // Desafiante vence
+// 					echo "<p>O Vencedor é: ". $this->desafiante->getNome() ."</p>";
+// 					$this->desafiante->ganharLuta();
+// 					$this->desafiado->perderLuta();
+// 					break;
+// 			}
+// 		}else{
+// 			echo "<p>A luta não pode acontecer</p>";
+// 		}
+// 	}
 	
-	//Métodos especiais
-	function setDesafiado($desafiado){
-		$this->desafiado = $desafiado;
-	}
-	function getDesafiado(){
-		return $this->desafiado;
-	}
-	function setDesafiante($desafiante){
-		$this->desafiante = $desafiante;
-	}
-	function getDesafiante(){
-		return $this->desafiante;
-	}
-	function setRounds($rounds){
-		$this->rounds = $rounds;
-	}
-	function getRounds(){
-		return $this->rounds;
-	}
-	function setAprovado($aprovado){
-		$this->aprovado = $aprovado;
-	}
-	function getAprovado(){
-		return $this->aprovado;
-	}
-}
-$UEC = new Luta();
-$UEC->marcarLuta($l[5], $l[4]);
-$UEC->lutar();
-echo "<pre>";
-print_r($UEC); 
-echo "</pre>";
+// 	//Métodos especiais
+// 	function setDesafiado($desafiado){
+// 		$this->desafiado = $desafiado;
+// 	}
+// 	function getDesafiado(){
+// 		return $this->desafiado;
+// 	}
+// 	function setDesafiante($desafiante){
+// 		$this->desafiante = $desafiante;
+// 	}
+// 	function getDesafiante(){
+// 		return $this->desafiante;
+// 	}
+// 	function setRounds($rounds){
+// 		$this->rounds = $rounds;
+// 	}
+// 	function getRounds(){
+// 		return $this->rounds;
+// 	}
+// 	function setAprovado($aprovado){
+// 		$this->aprovado = $aprovado;
+// 	}
+// 	function getAprovado(){
+// 		return $this->aprovado;
+// 	}
+// }
+// $UEC = new Luta();
+// $UEC->marcarLuta($l[5], $l[4]);
+// $UEC->lutar();
+// echo "<pre>";
+// print_r($UEC); 
+// echo "</pre>";
 
 
 
@@ -793,7 +793,181 @@ echo "</pre>";
 // 	unset($_SESSION['numero']); session_destroy(); 
 // } 
 
+/*Exercíco prático de POO - Curso em Vídeo - aula#09b - 07/07/21 */
+interface Publicacao{
+	public function abrir();
+	public function fechar();
+	public function folhear($p);
+	public function avancarPagina();
+	public function voltarPagina();
+	}
 
+class Pessoa{
+	private $nome;
+	private $idade;
+	private $sexo;
+
+	function __construct($nome, $idade, $sexo){
+		$this->nome = $nome;
+		$this->idade = $idade;
+		$this->sexo = $sexo;
+	}
+
+	public function setNome($nome){
+		$this->nome = $nome;
+	}
+	public function getNome(){
+		return $this->nome;
+	}
+	public function setIdade($idade){
+		$this->idade = $idade;
+	}
+	public function getIdade(){
+		return $this->idade;
+	}
+	public function setSexo($sexo){
+		$this->sexo = $sexo;
+	}
+	public function getSexo(){
+		return $this->sexo;
+	}
+
+	public function niver(){
+		$this->idade++;
+	}
+}
+
+class Livro implements Publicacao{
+	private $titulo;
+	private $autor;
+	private $totalPaginas;
+	private $paginaAtual;
+	private $aberto;
+	private $leitor;
+
+	function __construct($titulo, $autor, $totPag, $leitor){
+		$this->titulo = $titulo;
+		$this->autor = $autor;
+		$this->totalPaginas = $totPag;
+		$this->leitor = $leitor;
+		$this->paginaAtual = 0;
+		$this->aberto = false;
+	}
+
+	public function setTitulo($titulo){
+		$this->titulo = $titulo;
+	}
+	public function getTitulo(){
+		return $this->titulo;
+	}
+	public function setAutor($autor){
+		$this->autor = $autor;
+	}
+	public function getAutor(){
+		return $this->autor;
+	}
+	public function setTotPag($totPag){
+		$this->totalPaginas = $totPag;
+	}
+	public function getTotPag(){
+		return $this->totalPaginas;
+	}
+	public function setPagAtual($pagAtual){
+		$this->paginaAtual = $pagAtual;
+	}
+	public function getPagAtual(){
+		return $this->paginaAtual;
+	}
+	public function setAberto($aberto){
+		$this->aberto = $aberto;
+	}
+	public function getAberto(){
+		return $this->aberto;
+	}
+	public function setLeitor($leitor){
+		$this->leitor = $leitor;
+	}
+	public function getLeitor(){
+		return $this->leitor;
+	}
+
+	public function detalhes(){
+		echo "O livro: ".$this->titulo;
+		echo "<br>Está sendo lido por: ".$this->leitor->getNome();
+		EcHo "<br>Tem um total de ".$this->getTotPag()." páginas e está na página ".$this->getPagAtual();
+		echo "<hr>";
+	}
+
+	public function abrir(){
+		$this->aberto = true;
+	}
+	public function fechar(){
+		$this->aberto = false;
+	}
+	public function folhear($p){
+		if($p <= $this->totalPaginas){
+			$this->paginaAtual = $p;
+		}else{
+			return $this->paginaAtual;
+		}
+	}
+	public function avancarPagina(){
+		if ($this->aberto) {
+			if ($this->paginaAtual < $this->totalPaginas){
+				$this->paginaAtual++;
+			}else{
+				echo "O livro chegou ao final e por isso não pode passar para uma página que não existe.";
+			}
+		}else{
+			echo "O livro precisa está aberto para avançar páginas.<br>";
+		}
+	}
+	public function voltarPagina(){
+		if ($this->aberto) {
+			if($this->getPagAtual() > 0){
+				$this->paginaAtual--;
+			}
+		}else {
+			echo "O livro precisa está aberto para voltar páginas.<br>";
+		}
+	}
+}
+
+$p = array();
+$l = array();
+
+$p[0] = new Pessoa('Willyan Ferreira', 32, 'M');
+$p[1] = new Pessoa('Carlos Ferreira', 32, 'M');
+
+$l[0] = new Livro('Javascrip', 'Devs', 900, $p[0]);
+$l[1] = new Livro('PHP', 'Devs', 700, $p[1]);
+
+$l[1]->abrir();
+$l[0]->abrir();
+$l[0]->folhear(800);
+// $l[1]->avancarPagina();
+// $l[1]->avancarPagina();
+// $l[1]->avancarPagina();
+$l[0]->voltarPagina();
+$l[0]->avancarPagina();
+$l[0]->avancarPagina();
+$l[0]->avancarPagina();
+$l[0]->avancarPagina();
+// $l[1]->voltarPagina();
+// $l[1]->avancarPagina();
+$l[1]->folhear(699);
+// $l[1]->folhear(809);
+$l[1]->avancarPagina();
+$l[1]->avancarPagina();
+
+echo "<pre>";
+print_r($l);
+echo "</pre>";
+
+echo "<hr>";
+
+echo $l[1]->detalhes();
+echo $l[0]->detalhes();
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

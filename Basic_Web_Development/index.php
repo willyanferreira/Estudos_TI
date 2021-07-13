@@ -794,25 +794,199 @@
 // } 
 
 /*Exercíco prático de POO - Curso em Vídeo - aula#09b - 07/07/21 */
-interface Publicacao{
-	public function abrir();
-	public function fechar();
-	public function folhear($p);
-	public function avancarPagina();
-	public function voltarPagina();
-	}
+// interface Publicacao{
+// 	public function abrir();
+// 	public function fechar();
+// 	public function folhear($p);
+// 	public function avancarPagina();
+// 	public function voltarPagina();
+// 	}
+
+// class Pessoa{
+// 	private $nome;
+// 	private $idade;
+// 	private $sexo;
+
+// 	function __construct($nome, $idade, $sexo){
+// 		$this->nome = $nome;
+// 		$this->idade = $idade;
+// 		$this->sexo = $sexo;
+// 	}
+
+// 	public function setNome($nome){
+// 		$this->nome = $nome;
+// 	}
+// 	public function getNome(){
+// 		return $this->nome;
+// 	}
+// 	public function setIdade($idade){
+// 		$this->idade = $idade;
+// 	}
+// 	public function getIdade(){
+// 		return $this->idade;
+// 	}
+// 	public function setSexo($sexo){
+// 		$this->sexo = $sexo;
+// 	}
+// 	public function getSexo(){
+// 		return $this->sexo;
+// 	}
+
+// 	public function niver(){
+// 		$this->idade++;
+// 	}
+// }
+
+// class Livro implements Publicacao{
+// 	private $titulo;
+// 	private $autor;
+// 	private $totalPaginas;
+// 	private $paginaAtual;
+// 	private $aberto;
+// 	private $leitor;
+
+// 	function __construct($titulo, $autor, $totPag, $leitor){
+// 		$this->titulo = $titulo;
+// 		$this->autor = $autor;
+// 		$this->totalPaginas = $totPag;
+// 		$this->leitor = $leitor;
+// 		$this->paginaAtual = 0;
+// 		$this->aberto = false;
+// 	}
+
+// 	public function setTitulo($titulo){
+// 		$this->titulo = $titulo;
+// 	}
+// 	public function getTitulo(){
+// 		return $this->titulo;
+// 	}
+// 	public function setAutor($autor){
+// 		$this->autor = $autor;
+// 	}
+// 	public function getAutor(){
+// 		return $this->autor;
+// 	}
+// 	public function setTotPag($totPag){
+// 		$this->totalPaginas = $totPag;
+// 	}
+// 	public function getTotPag(){
+// 		return $this->totalPaginas;
+// 	}
+// 	public function setPagAtual($pagAtual){
+// 		$this->paginaAtual = $pagAtual;
+// 	}
+// 	public function getPagAtual(){
+// 		return $this->paginaAtual;
+// 	}
+// 	public function setAberto($aberto){
+// 		$this->aberto = $aberto;
+// 	}
+// 	public function getAberto(){
+// 		return $this->aberto;
+// 	}
+// 	public function setLeitor($leitor){
+// 		$this->leitor = $leitor;
+// 	}
+// 	public function getLeitor(){
+// 		return $this->leitor;
+// 	}
+
+// 	public function detalhes(){
+// 		echo "O livro: ".$this->titulo;
+// 		echo "<br>Está sendo lido por: ".$this->leitor->getNome();
+// 		EcHo "<br>Tem um total de ".$this->getTotPag()." páginas e está na página ".$this->getPagAtual();
+// 		echo "<hr>";
+// 	}
+
+// 	public function abrir(){
+// 		$this->aberto = true;
+// 	}
+// 	public function fechar(){
+// 		$this->aberto = false;
+// 	}
+// 	public function folhear($p){
+// 		if($p <= $this->totalPaginas){
+// 			$this->paginaAtual = $p;
+// 		}else{
+// 			return $this->paginaAtual;
+// 		}
+// 	}
+// 	public function avancarPagina(){
+// 		if ($this->aberto) {
+// 			if ($this->paginaAtual < $this->totalPaginas){
+// 				$this->paginaAtual++;
+// 			}else{
+// 				echo "O livro chegou ao final e por isso não pode passar para uma página que não existe.";
+// 			}
+// 		}else{
+// 			echo "O livro precisa está aberto para avançar páginas.<br>";
+// 		}
+// 	}
+// 	public function voltarPagina(){
+// 		if ($this->aberto) {
+// 			if($this->getPagAtual() > 0){
+// 				$this->paginaAtual--;
+// 			}
+// 		}else {
+// 			echo "O livro precisa está aberto para voltar páginas.<br>";
+// 		}
+// 	}
+// }
+
+// $p = array();
+// $l = array();
+
+// $p[0] = new Pessoa('Willyan Ferreira', 32, 'M');
+// $p[1] = new Pessoa('Carlos Ferreira', 32, 'M');
+
+// $l[0] = new Livro('Javascrip', 'Devs', 900, $p[0]);
+// $l[1] = new Livro('PHP', 'Devs', 700, $p[1]);
+
+// $l[1]->abrir();
+// $l[0]->abrir();
+// $l[0]->folhear(800);
+// // $l[1]->avancarPagina();
+// // $l[1]->avancarPagina();
+// // $l[1]->avancarPagina();
+// $l[0]->voltarPagina();
+// $l[0]->avancarPagina();
+// $l[0]->avancarPagina();
+// $l[0]->avancarPagina();
+// $l[0]->avancarPagina();
+// // $l[1]->voltarPagina();
+// // $l[1]->avancarPagina();
+// $l[1]->folhear(699);
+// // $l[1]->folhear(809);
+// $l[1]->avancarPagina();
+// $l[1]->avancarPagina();
+
+// echo "<pre>";
+// print_r($l);
+// echo "</pre>";
+
+// echo "<hr>";
+
+// echo $l[1]->detalhes();
+// echo $l[0]->detalhes();
+
+/*POO/Herança - Curso em Vídeo - Aula 10b 13/07/21*/
 
 class Pessoa{
 	private $nome;
 	private $idade;
 	private $sexo;
 
-	function __construct($nome, $idade, $sexo){
-		$this->nome = $nome;
-		$this->idade = $idade;
-		$this->sexo = $sexo;
+	#Métodos simples
+	public function Aniv(){
+		$this->idade++;
 	}
-
+	
+	#Métodos especiasl
+	public function __construct($nome, $idade, $sexo){
+		$this->setNome($nome);
+		$this->setIdade($idade);
+		$this->setSexo($sexo);
+	}
 	public function setNome($nome){
 		$this->nome = $nome;
 	}
@@ -831,143 +1005,13 @@ class Pessoa{
 	public function getSexo(){
 		return $this->sexo;
 	}
-
-	public function niver(){
-		$this->idade++;
-	}
-}
-
-class Livro implements Publicacao{
-	private $titulo;
-	private $autor;
-	private $totalPaginas;
-	private $paginaAtual;
-	private $aberto;
-	private $leitor;
-
-	function __construct($titulo, $autor, $totPag, $leitor){
-		$this->titulo = $titulo;
-		$this->autor = $autor;
-		$this->totalPaginas = $totPag;
-		$this->leitor = $leitor;
-		$this->paginaAtual = 0;
-		$this->aberto = false;
-	}
-
-	public function setTitulo($titulo){
-		$this->titulo = $titulo;
-	}
-	public function getTitulo(){
-		return $this->titulo;
-	}
-	public function setAutor($autor){
-		$this->autor = $autor;
-	}
-	public function getAutor(){
-		return $this->autor;
-	}
-	public function setTotPag($totPag){
-		$this->totalPaginas = $totPag;
-	}
-	public function getTotPag(){
-		return $this->totalPaginas;
-	}
-	public function setPagAtual($pagAtual){
-		$this->paginaAtual = $pagAtual;
-	}
-	public function getPagAtual(){
-		return $this->paginaAtual;
-	}
-	public function setAberto($aberto){
-		$this->aberto = $aberto;
-	}
-	public function getAberto(){
-		return $this->aberto;
-	}
-	public function setLeitor($leitor){
-		$this->leitor = $leitor;
-	}
-	public function getLeitor(){
-		return $this->leitor;
-	}
-
-	public function detalhes(){
-		echo "O livro: ".$this->titulo;
-		echo "<br>Está sendo lido por: ".$this->leitor->getNome();
-		EcHo "<br>Tem um total de ".$this->getTotPag()." páginas e está na página ".$this->getPagAtual();
-		echo "<hr>";
-	}
-
-	public function abrir(){
-		$this->aberto = true;
-	}
-	public function fechar(){
-		$this->aberto = false;
-	}
-	public function folhear($p){
-		if($p <= $this->totalPaginas){
-			$this->paginaAtual = $p;
-		}else{
-			return $this->paginaAtual;
-		}
-	}
-	public function avancarPagina(){
-		if ($this->aberto) {
-			if ($this->paginaAtual < $this->totalPaginas){
-				$this->paginaAtual++;
-			}else{
-				echo "O livro chegou ao final e por isso não pode passar para uma página que não existe.";
-			}
-		}else{
-			echo "O livro precisa está aberto para avançar páginas.<br>";
-		}
-	}
-	public function voltarPagina(){
-		if ($this->aberto) {
-			if($this->getPagAtual() > 0){
-				$this->paginaAtual--;
-			}
-		}else {
-			echo "O livro precisa está aberto para voltar páginas.<br>";
-		}
-	}
 }
 
 $p = array();
-$l = array();
-
-$p[0] = new Pessoa('Willyan Ferreira', 32, 'M');
-$p[1] = new Pessoa('Carlos Ferreira', 32, 'M');
-
-$l[0] = new Livro('Javascrip', 'Devs', 900, $p[0]);
-$l[1] = new Livro('PHP', 'Devs', 700, $p[1]);
-
-$l[1]->abrir();
-$l[0]->abrir();
-$l[0]->folhear(800);
-// $l[1]->avancarPagina();
-// $l[1]->avancarPagina();
-// $l[1]->avancarPagina();
-$l[0]->voltarPagina();
-$l[0]->avancarPagina();
-$l[0]->avancarPagina();
-$l[0]->avancarPagina();
-$l[0]->avancarPagina();
-// $l[1]->voltarPagina();
-// $l[1]->avancarPagina();
-$l[1]->folhear(699);
-// $l[1]->folhear(809);
-$l[1]->avancarPagina();
-$l[1]->avancarPagina();
-
+$p[0] = new Pessoa('Willyan', 32, 'M');
 echo "<pre>";
-print_r($l);
+print_r($p[0]);
 echo "</pre>";
-
-echo "<hr>";
-
-echo $l[1]->detalhes();
-echo $l[0]->detalhes();
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

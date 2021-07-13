@@ -1017,6 +1017,29 @@ class Aluno extends Pessoa{
 	}
 }
 
+class Professor extends Pessoa{
+	private $especialidade;
+	private $salario;
+
+	#Métodos simples
+	public function receberAum(){
+		$this->salario = $this->salario + (($this->salario * 100) / 10);
+	}
+
+	public function setEspec($especialidade){
+		$this->especialidade = $especialidade;
+	}
+	public function getEspec(){
+		return $this->especialidade;
+	}
+	public function setSala($salario){
+		$this->especialidade = $especialidade;
+	}
+	public function getSala(){
+		return $this->salario;
+	}
+}
+
 $a = array();
 $a[0] = new Aluno("Betina", 19, "F");
 echo "<pre>";

@@ -1007,10 +1007,20 @@ class Pessoa{
 	}
 }
 
-$p = array();
-$p[0] = new Pessoa('Willyan', 32, 'M');
+class Aluno extends Pessoa{
+	private $matr;
+	private $curso;
+
+	#Métodos simples
+	public function cancelarMatr(){
+		$this->matr = false;
+	}
+}
+
+$a = array();
+$a[0] = new Aluno("Betina", 19, "F");
 echo "<pre>";
-print_r($p[0]);
+print_r($a[0]);
 echo "</pre>";
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->

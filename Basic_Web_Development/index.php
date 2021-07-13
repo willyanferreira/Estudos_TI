@@ -1015,6 +1015,19 @@ class Aluno extends Pessoa{
 	public function cancelarMatr(){
 		$this->matr = false;
 	}
+
+	public function setMatr($matr){
+		$this->matr = $matr;
+	}
+	public function getMatr(){
+		return $this->matr;
+	}
+	public function setCurso($curso){
+		$this->curso = $curso;
+	}
+	public function getCurso(){
+		return $this->curso;
+	}
 }
 
 class Professor extends Pessoa{

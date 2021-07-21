@@ -971,93 +971,132 @@
 
 /*POO/Herança - Curso em Vídeo - Aula 10b 13/07/21*/
 
-class Pessoa{
-	private $nome;
-	private $idade;
-	private $sexo;
+// class Pessoa{
+// 	private $nome;
+// 	private $idade;
+// 	private $sexo;
 
-	#Métodos simples
-	public function Aniv(){
-		$this->idade++;
-	}
+// 	#Métodos simples
+// 	public function Aniv(){
+// 		$this->idade++;
+// 	}
 	
-	#Métodos especiasl
-	public function __construct($nome, $idade, $sexo){
-		$this->setNome($nome);
-		$this->setIdade($idade);
-		$this->setSexo($sexo);
-	}
-	public function setNome($nome){
-		$this->nome = $nome;
-	}
-	public function getNome(){
-		return $this->nome;
-	}
-	public function setIdade($idade){
-		$this->idade = $idade;
-	}
-	public function getIdade(){
-		return $this->idade;
-	}
-	public function setSexo($sexo){
-		$this->sexo = $sexo;
-	}
-	public function getSexo(){
-		return $this->sexo;
-	}
-}
+// 	#Métodos especiais
+// 	public function __construct($nome, $idade, $sexo){
+// 		$this->setNome($nome);
+// 		$this->setIdade($idade);
+// 		$this->setSexo($sexo);
+// 	}
+// 	public function setNome($nome){
+// 		$this->nome = $nome;
+// 	}
+// 	public function getNome(){
+// 		return $this->nome;
+// 	}
+// 	public function setIdade($idade){
+// 		$this->idade = $idade;
+// 	}
+// 	public function getIdade(){
+// 		return $this->idade;
+// 	}
+// 	public function setSexo($sexo){
+// 		$this->sexo = $sexo;
+// 	}
+// 	public function getSexo(){
+// 		return $this->sexo;
+// 	}
+// }
 
-class Aluno extends Pessoa{
-	private $matr;
-	private $curso;
+// class Aluno extends Pessoa{
+// 	private $matr;
+// 	private $curso;
 
-	#Métodos simples
-	public function cancelarMatr(){
-		$this->matr = false;
-	}
+// 	#Métodos simples
+// 	public function cancelarMatr(){
+// 		$this->matr = false;
+// 	}
 
-	public function setMatr($matr){
-		$this->matr = $matr;
-	}
-	public function getMatr(){
-		return $this->matr;
-	}
-	public function setCurso($curso){
-		$this->curso = $curso;
-	}
-	public function getCurso(){
-		return $this->curso;
-	}
-}
+// 	#Métodos especiais
+// 	public function setMatr($matr){
+// 		$this->matr = $matr;
+// 	}
+// 	public function getMatr(){
+// 		return $this->matr;
+// 	}
+// 	public function setCurso($curso){
+// 		$this->curso = $curso;
+// 	}
+// 	public function getCurso(){
+// 		return $this->curso;
+// 	}
+// }
 
-class Professor extends Pessoa{
-	private $especialidade;
-	private $salario;
+// class Professor extends Pessoa{
+// 	private $especialidade;
+// 	private $salario;
 
-	#Métodos simples
-	public function receberAum(){
-		$this->salario = $this->salario + (($this->salario * 100) / 10);
-	}
+// 	#Métodos simples
+// 	public function receberAum(){
+// 		$this->salario = $this->salario + (($this->salario / 100) * 10);
+// 	}
 
-	public function setEspec($especialidade){
-		$this->especialidade = $especialidade;
-	}
-	public function getEspec(){
-		return $this->especialidade;
-	}
-	public function setSala($salario){
-		$this->especialidade = $especialidade;
-	}
-	public function getSala(){
-		return $this->salario;
-	}
-}
+// 	#Métodos especiais
+// 	public function setEspec($especialidade){
+// 		$this->especialidade = $especialidade;
+// 	}
+// 	public function getEspec(){
+// 		return $this->especialidade;
+// 	}
+// 	public function setSala($salario){
+// 		$this->salario = $salario;
+// 	}
+// 	public function getSala(){
+// 		return $this->salario;
+// 	}
+// }
 
-$a = array();
-$a[0] = new Aluno("Betina", 19, "F");
-echo "<pre>";
-print_r($a[0]);
-echo "</pre>";
+// class Funcionario extends Pessoa{
+// 	private $setor;
+// 	private $trabalhando;
+
+// 	#Métodos simples
+// 	public function mudarTrabalho(){
+// 		$this->trabalhando = ! $this->trabalhando;
+// 	}
+
+// 	#Métodos especiais
+// 	public function setSetor($setor){
+// 		$this->setor = $setor;
+// 	}
+// 	public function getSetor(){
+// 		return $this->setor;
+// 	}
+// 	public function setTrabalhando($trabalhando){
+// 		$this->trabalhando = $trabalhando;
+// 	}
+// 	public function getTrabalhando(){
+// 		return $this->trabalhando;
+// 	}
+
+// }
+
+// $pes = array();
+// $alu = array();
+// $pro = array();
+// $fun = array();
+
+// $pes[0] = new Pessoa('Pamela', 36, 'F');
+// $alu[0] = new Aluno('Willyan', 32, 'M');
+// $pro[0] = new Professor('Odecilia', 40, 'F');
+// $fun[0] = new Funcionario('Etevaldo', 49, 'M');
+// $fun[0]->setTrabalhando(False);
+// $fun[0]->mudarTrabalho();
+// echo "<pre>";
+// print_r($pes[0]);
+// print_r($alu[0]);
+// print_r($pro[0]);
+// print_r($fun[0]);
+// echo "</pre>";
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

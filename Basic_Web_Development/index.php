@@ -1130,6 +1130,7 @@ echo "</pre>";
 $alu[0]->pagarCurso();
 echo "<br>";
 $bol[0]->pagarCurso();
+
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->
 </body>

@@ -1258,8 +1258,14 @@ class Ave extends Animal{
 	}
 }
 
-class Cachorro extends Mamifero{}
+class Cachorro extends Mamifero{
+	#Métodos simples
+	public function emitirSom(){
+		echo "Latindo<br>";
+	}
+}
 class Canguru extends Mamifero{
+	#Métodos simples
 	public function locomover(){
 		echo "Pulando<br>";
 	}
@@ -1285,16 +1291,21 @@ $pd = new PeixeDourado();
 $arara = new Arara();
 
 $m->locomover();
+$m->emitirSom();
 $r->locomover();
 $p->locomover();
 $a->locomover();
 
 echo "<div style='border: 1px solid green;'>";
-echo "Cachorro: ".$ca->locomover();
+echo "Cachorro:<br>"; 
+$ca->locomover(); 
+$ca->emitirSom();
 echo "</div>";
 
 echo "<div style='border: 1px solid green;'>";
-echo "Canguru: ".$can->locomover();
+echo "Canguru:<br>";
+$can->locomover();
+$can->emitirSom();
 echo "</div>";
 
 echo "<div style='border: 1px solid green;'>";

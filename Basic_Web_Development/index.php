@@ -971,165 +971,347 @@
 
 /*POO/Herança - Curso em Vídeo - Aula 10b 13/07/21*/
 
-abstract class Pessoa{
-	private $nome;
-	private $idade;
-	private $sexo;
+// abstract class Pessoa{
+// 	private $nome;
+// 	private $idade;
+// 	private $sexo;
 
-	#Métodos simples
-	public final function aniv(){
-		$this->idade++;
-	}
+// 	#Métodos simples
+// 	public final function aniv(){
+// 		$this->idade++;
+// 	}
 	
+// 	#Métodos especiais
+// 	public function __construct($nome, $idade, $sexo){
+// 		$this->setNome($nome);
+// 		$this->setIdade($idade);
+// 		$this->setSexo($sexo);
+// 	}
+// 	public function setNome($nome){
+// 		$this->nome = $nome;
+// 	}
+// 	public function getNome(){
+// 		return $this->nome;
+// 	}
+// 	public function setIdade($idade){
+// 		$this->idade = $idade;
+// 	}
+// 	public function getIdade(){
+// 		return $this->idade;
+// 	}
+// 	public function setSexo($sexo){
+// 		$this->sexo = $sexo;
+// 	}
+// 	public function getSexo(){
+// 		return $this->sexo;
+// 	}
+// }
+
+// class Aluno extends Pessoa{
+// 	private $matr;
+// 	private $curso;
+
+// 	#Métodos simples
+// 	public function cancelarMatr(){
+// 		$this->matr = false;
+// 	}
+// 	public function pagarCurso(){
+// 		echo "Curso pago";
+// 	}
+
+// 	#Métodos especiais
+// 	public function setMatr($matr){
+// 		$this->matr = $matr;
+// 	}
+// 	public function getMatr(){
+// 		return $this->matr;
+// 	}
+// 	public function setCurso($curso){
+// 		$this->curso = $curso;
+// 	}
+// 	public function getCurso(){
+// 		return $this->curso;
+// 	}
+// }
+
+// class Professor extends Pessoa{
+// 	private $especialidade;
+// 	private $salario;
+
+// 	#Métodos simples
+// 	public function receberAum(){
+// 		$this->salario = $this->salario + (($this->salario / 100) * 10);
+// 	}
+
+// 	#Métodos especiais
+// 	public function setEspec($especialidade){
+// 		$this->especialidade = $especialidade;
+// 	}
+// 	public function getEspec(){
+// 		return $this->especialidade;
+// 	}
+// 	public function setSala($salario){
+// 		$this->salario = $salario;
+// 	}
+// 	public function getSala(){
+// 		return $this->salario;
+// 	}
+// }
+
+// class Funcionario extends Pessoa{
+// 	private $setor;
+// 	private $trabalhando;
+
+// 	#Métodos simples
+// 	public function mudarTrabalho(){
+// 		$this->trabalhando = ! $this->trabalhando;
+// 	}
+
+// 	#Métodos especiais
+// 	public function setSetor($setor){
+// 		$this->setor = $setor;
+// 	}
+// 	public function getSetor(){
+// 		return $this->setor;
+// 	}
+// 	public function setTrabalhando($trabalhando){
+// 		$this->trabalhando = $trabalhando;
+// 	}
+// 	public function getTrabalhando(){
+// 		return $this->trabalhando;
+// 	}
+
+// }
+
+// /*POO/PHP - Herança - Aula 11b parte 2 - Curso em Vídeo - 21/07/21 */
+// class Visitante extends Pessoa{}
+
+// class Bolsista extends Aluno{
+// 	private $bolsa;
+
+// 	#Métodos simples
+// 	public function renovarBolsa(){
+// 		echo "Bolsa renovada";
+// 	}
+// 	public function pagarCurso(){
+// 		echo "Bolsista tem desconto";
+// 	}
+
+
+// 	#Métodos especiais
+// 	public function setBolsa($bolsa){
+// 		$this->bolsa = $bolsa;
+// 	}
+// 	public function getBolsa(){
+// 		return $this->bolsa;
+// 	}
+// }
+
+// $pes = array();
+// $alu = array();
+// $pro = array();
+// $fun = array();
+// $bol = array();
+
+// $vis[0] = new Visitante('Pamela', 36, 'F');
+// $alu[0] = new Aluno('Willyan', 32, 'M');
+// $pro[0] = new Professor('Odecilia', 40, 'F');
+// $fun[0] = new Funcionario('Etevaldo', 49, 'M');
+// $bol[0] = new Bolsista('Jariene', 19, 'M');
+// $fun[0]->setTrabalhando(False);
+// $fun[0]->mudarTrabalho();
+// echo "<pre>";
+// print_r($vis[0]);
+// print_r($alu[0]);
+// print_r($pro[0]);
+// print_r($fun[0]);
+// print_r($bol[0]);
+// echo "</pre>";
+// $alu[0]->pagarCurso();
+// echo "<br>";
+// $bol[0]->pagarCurso();
+
+/*POO/PHP Polimorfismo - Aula 12b parte 1 - Curso em Vídeo - 23/07/21*/
+abstract class Animal{
+	protected $peso;
+	protected $idade;
+	protected $membros;
+	
+	#Métodos simples
+	abstract function locomover();
+	abstract function alimentar();
+	abstract function emitirSom();
+
 	#Métodos especiais
-	public function __construct($nome, $idade, $sexo){
-		$this->setNome($nome);
-		$this->setIdade($idade);
-		$this->setSexo($sexo);
-	}
-	public function setNome($nome){
-		$this->nome = $nome;
-	}
-	public function getNome(){
-		return $this->nome;
-	}
-	public function setIdade($idade){
+	protected function setIdade($idade){
 		$this->idade = $idade;
 	}
-	public function getIdade(){
+	protected function getIdade(){
 		return $this->idade;
 	}
-	public function setSexo($sexo){
-		$this->sexo = $sexo;
+	protected function setPeso($peso){
+		$this->peso = $peso;
 	}
-	public function getSexo(){
-		return $this->sexo;
+	protected function getPeso(){
+		return $this->peso;
+	}
+	protected function setMembros($membros){
+		$this->membros = $membros;
+	}
+	protected function getMembros(){
+		return $this->membros;
 	}
 }
 
-class Aluno extends Pessoa{
-	private $matr;
-	private $curso;
+class Mamifero extends Animal{
+	private $corPelo;
 
 	#Métodos simples
-	public function cancelarMatr(){
-		$this->matr = false;
+	public function locomover(){
+		echo "Caminhando<br>";
 	}
-	public function pagarCurso(){
-		echo "Curso pago";
+	public function alimentar(){
+		echo "mamar<br>";
+	}
+	public function emitirSom(){
+		echo "Som de mamífero<br>";
 	}
 
 	#Métodos especiais
-	public function setMatr($matr){
-		$this->matr = $matr;
+	public function setCorPelo($corPelo){
+		$this->corPelo = $corPelo;
 	}
-	public function getMatr(){
-		return $this->matr;
-	}
-	public function setCurso($curso){
-		$this->curso = $curso;
-	}
-	public function getCurso(){
-		return $this->curso;
+	public function getMembros(){
+		return $this->corPelo;
 	}
 }
-
-class Professor extends Pessoa{
-	private $especialidade;
-	private $salario;
+class Reptil extends Animal{
+	private $corEscama;
 
 	#Métodos simples
-	public function receberAum(){
-		$this->salario = $this->salario + (($this->salario / 100) * 10);
+	public function locomover(){
+		echo "Rastejando<br>";
+	}
+	public function alimentar(){
+		echo "Comer vegetais<br>";
+	}
+	public function emitirSom(){
+		echo "Som de réptil<br>";
 	}
 
 	#Métodos especiais
-	public function setEspec($especialidade){
-		$this->especialidade = $especialidade;
+	public function setCorEscama($corEscama){
+		$this->corEscama = $corEscama;
 	}
-	public function getEspec(){
-		return $this->especialidade;
-	}
-	public function setSala($salario){
-		$this->salario = $salario;
-	}
-	public function getSala(){
-		return $this->salario;
+	public function getCorEscama(){
+		return $this->corEscama;
 	}
 }
-
-class Funcionario extends Pessoa{
-	private $setor;
-	private $trabalhando;
+class Peixe extends Animal{
+	private $corEscama;
 
 	#Métodos simples
-	public function mudarTrabalho(){
-		$this->trabalhando = ! $this->trabalhando;
+	public function locomover(){
+		echo "Nadando<br>";
+	}
+	public function alimentar(){
+		echo "Comer substâncias<br>";
+	}
+	public function emitirSom(){
+		echo "Peixe não faz som<br>";
+	}
+	public function soltarBolhas(){
+		echo "Soltando bolhas<br>";
 	}
 
 	#Métodos especiais
-	public function setSetor($setor){
-		$this->setor = $setor;
+	public function setCorEscama($corEscama){
+		$this->corEscama = $corEscama;
 	}
-	public function getSetor(){
-		return $this->setor;
+	public function getCorEscama(){
+		return $this->corEscama;
 	}
-	public function setTrabalhando($trabalhando){
-		$this->trabalhando = $trabalhando;
-	}
-	public function getTrabalhando(){
-		return $this->trabalhando;
-	}
-
 }
-
-/*POO/PHP - Herança - Aula 11b parte 2 - Curso em Vídeo - 21/07/21 */
-class Visitante extends Pessoa{}
-
-class Bolsista extends Aluno{
-	private $bolsa;
+class Ave extends Animal{
+	private $corPena;
 
 	#Métodos simples
-	public function renovarBolsa(){
-		echo "Bolsa renovada";
+	public function locomover(){
+		echo "Voando<br>";
 	}
-	public function pagarCurso(){
-		echo "Bolsista tem desconto";
+	public function alimentar(){
+		echo "Comer Frutas<br>";
 	}
-
+	public function emitirSom(){
+		echo "Som de ave<br>";
+	}
+	public function fazerNinho(){
+		echo "Ninho feito<br>";
+	}
 
 	#Métodos especiais
-	public function setBolsa($bolsa){
-		$this->bolsa = $bolsa;
+	public function setCorPena($corPena){
+		$this->corPena = $corPena;
 	}
-	public function getBolsa(){
-		return $this->bolsa;
+	public function getCorPena(){
+		return $this->corPena;
 	}
 }
 
-$pes = array();
-$alu = array();
-$pro = array();
-$fun = array();
-$bol = array();
+class Cachorro extends Mamifero{}
+class Canguru extends Mamifero{
+	public function locomover(){
+		echo "Pulando<br>";
+	}
+}
+class Cobra extends Reptil{}
+class Tartaruga extends Reptil{
+	public function locomover(){
+		echo "Anda bem devagar<br>";
+	}
+}
+class PeixeDourado extends Peixe{}
+class Arara extends Ave{}
 
-$vis[0] = new Visitante('Pamela', 36, 'F');
-$alu[0] = new Aluno('Willyan', 32, 'M');
-$pro[0] = new Professor('Odecilia', 40, 'F');
-$fun[0] = new Funcionario('Etevaldo', 49, 'M');
-$bol[0] = new Bolsista('Jariene', 19, 'M');
-$fun[0]->setTrabalhando(False);
-$fun[0]->mudarTrabalho();
-echo "<pre>";
-print_r($vis[0]);
-print_r($alu[0]);
-print_r($pro[0]);
-print_r($fun[0]);
-print_r($bol[0]);
-echo "</pre>";
-$alu[0]->pagarCurso();
-echo "<br>";
-$bol[0]->pagarCurso();
+$m = new Mamifero();
+$r = new Reptil();
+$p = new Peixe();
+$a = new Ave();
+$ca = new Cachorro();
+$can = new Canguru();
+$co = new Cobra();
+$t = new Tartaruga();
+$pd = new PeixeDourado();
+$arara = new Arara();
+
+$m->locomover();
+$r->locomover();
+$p->locomover();
+$a->locomover();
+
+echo "<div style='border: 1px solid green;'>";
+echo "Cachorro: ".$ca->locomover();
+echo "</div>";
+
+echo "<div style='border: 1px solid green;'>";
+echo "Canguru: ".$can->locomover();
+echo "</div>";
+
+echo "<div style='border: 1px solid green;'>";
+echo "Cobra: ".$co->locomover();
+echo "</div>";
+
+echo "<div style='border: 1px solid green;'>";
+echo "Tartaruga: ".$t->locomover();
+echo "</div>";
+
+echo "<div style='border: 1px solid green;'>";
+echo "Peixe Dourado: ".$pd->locomover();
+echo "</div>";
+
+echo "<div style='border: 1px solid green;'>";
+echo "Arara: ".$arara->locomover();
+echo "</div>";
 
 ?>
 <!-- <h3 id="estilo"><?php //echo $txt;?></h3> -->

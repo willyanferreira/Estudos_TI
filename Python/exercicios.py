@@ -61,3 +61,11 @@ pygame.mixer.init()
 pygame.mixer.music.load('musica.mp3')
 pygame.mixer.music.play()
 pygame.event.wait()"""
+
+"""Exercício 22 - Programa que ler o nome do usuário e retorna em maiúsculo minúsculo, quantos letras tem sem os espaços em branco, quantas tem o primeiro nome"""
+nome = str(input("Digite seu nome: "))
+print("Analisando seu nome...")
+# print("Seu nome todo em letras maiúsculas: {}".format(nome.upper()))
+# print("Seu nome todo em letras minúsculas: {}".format(nome.lower()))
+# print("Seu nome tem ao todo {} letras".format(len(nome) - nome.count(' ')))
+# print("Seu primeiro nome tem {} letras".format(nome.find(' ')))

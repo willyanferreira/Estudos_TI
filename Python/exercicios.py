@@ -71,12 +71,13 @@ pygame.event.wait()"""
 # print("Seu primeiro nome tem {} letras".format(nome.find(' ')))
 
 """Exercício 23 - Separando os dígitos de uma sequência numérica"""
-num = int(input("Digite um número: "))
-u = num // 1 % 10
-d = num // 10 % 10
-c = num // 100 % 10
-m = num // 1000 % 10
-print('Esse número tem {} unidade(s)'.format(u))
-print('Esse número tem {} dezena(s)'.format(d))
-print('Esse número tem {} centena(s)'.format(c))
-print('Esse número tem {} milhar(es)'.format(m))
+# num = int(input("Digite um número: "))
+# u = num // 1 % 10
+# d = num // 10 % 10
+# c = num // 100 % 10
+# m = num // 1000 % 10
+# print('Esse número tem {} unidade(s)'.format(u))
+# print('Esse número tem {} dezena(s)'.format(d))
+# print('Esse número tem {} centena(s)'.format(c))
+# print('Esse número tem {} milhar(es)'.format(m))
+

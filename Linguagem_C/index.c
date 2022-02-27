@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <locale.h>
 #include <math.h>
 
@@ -714,5 +714,27 @@ for (int i=0; i< j; i++){
 // }else{
 //   printf("Estudante reprovado.\nMédia final: %.1f\n", media);
 // }
+
+// praticando 27/02/22
+/*int i = 1;
+  while(i < 10){
+    printf("%d\n", i);
+    i = i + 1;
+  }
+    printf("ainda lembro de alguma coisa?");*/
+
+  /*int i = 1;
+
+  printf("%d\n", i);
+  printf("Entrando no laço...\n");
+  
+  while(i<10){
+    printf("%d\n", i);
+    printf("contando...\n");
+    i = i+1;
+  }
+    printf("Aqui encerra o programa.\n");*/
+
+	
 	return 0;
 }

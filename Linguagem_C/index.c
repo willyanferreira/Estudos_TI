@@ -736,5 +736,15 @@ for (int i=0; i< j; i++){
     printf("Aqui encerra o programa.\n");*/
 
 	
+	// Praticando 04/03/22 Exponenciação
+
+	// int pot = 3;
+	// int total = 0;
+	// int exp = 2;
+
+	// total = pow(pot, exp);
+
+	// printf("O valor da exponenciação é: %d", total);
+
 	return 0;
 }

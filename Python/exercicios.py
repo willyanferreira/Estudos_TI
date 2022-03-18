@@ -81,3 +81,10 @@ pygame.event.wait()"""
 # print('Esse número tem {} centena(s)'.format(c))
 # print('Esse número tem {} milhar(es)'.format(m))
 
+"""lendo livro de algoritimos e praticando python 17/03/22"""
+
+# import math
+# PI = 3.14
+# r = float(input('Digite o valor do raio: \n'))
+# a = float(PI * (math.pow(r,2)))
+# print("O valor da área é:\n",a)

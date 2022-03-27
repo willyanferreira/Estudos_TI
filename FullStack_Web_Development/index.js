@@ -16,4 +16,34 @@ if(ht == ''){
     console.log('Você não informou o percentual de desconto')
 }else{
     console.log('Seu salário base é: ' + sb + ' e seu salário líquido é: ' + sl);
-}*/ // FIM
+}*/
+
+// FIM
+
+//Programa para converter de Celsius para Fahrenheit e vice-versa 27/03/22
+
+/*let c, f, escala = prompt('Digite 1 para converter para Fahrenheit e 2 para Celsius:');
+if (escala == '1') {
+    c = prompt('Digite a temperatura em Graus Celsius:');
+    f = c * 9 / 5 + 32;
+    console.log("A temperatura em Fahrenheit é: " + f);
+} else if (escala == '2') {
+    f = prompt('Digite a temperatura em Graus Fahrenheit:');
+    c = (f - 32) * 5 / 9;
+    console.log("A temperatura em Celsius é: " + c);
+}else {
+    console.log("Você não escolheu uma escala.");
+}*/
+
+//FIM
+
+// Programa que troca valores de duas variáveis 27/03/22
+
+/*let a = prompt('digite um valor:'), b = prompt('digite outro valor:'), c;
+c = a;
+a = b;
+b = c;
+console.log('Trocando os valores das variáveis...')
+console.log('O valor de A é: \n' + a + '\nO valor de B é: \n' + b);*/
+
+//FIM

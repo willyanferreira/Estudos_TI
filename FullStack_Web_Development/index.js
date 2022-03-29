@@ -37,7 +37,7 @@ if (escala == '1') {
 
 //FIM
 
-// Programa que troca valores de duas variáveis 27/03/22
+//Programa que troca valores de duas variáveis 27/03/22
 
 /*let a = prompt('digite um valor:'), b = prompt('digite outro valor:'), c;
 c = a;
@@ -48,7 +48,7 @@ console.log('O valor de A é: \n' + a + '\nO valor de B é: \n' + b);*/
 
 //FIM
 
-// Programa para calcular volume 28/03/22
+//Programa para calcular volume 28/03/22
 
 /*const PI = 3.14;
 let raio = prompt('Digite o raio');
@@ -58,7 +58,7 @@ console.log(volume);*/
 
 //FIM
 
-// Programa para calcular a qntd de lt de combustível gasto em uma viagem 28/03/22
+//Programa para calcular a qntd de lt de combustível gasto em uma viagem 28/03/22
 
 /*let tempo, distancia, velocidade, litros_usados;
 tempo = prompt('Digite o tempo gasto na viagem em minutos:')
@@ -73,7 +73,7 @@ km e utilizou ' + litros_usados + ' litros de combustível.'
 
 //FIM
 
-// Programa para calcular de uma prestação em atraso 28/03/22
+//Programa para calcular de uma prestação em atraso 28/03/22
 
 /*let prestacao, valor, taxa, tempo;
 valor = parseInt(prompt('Digite o valor original da prestação:'));
@@ -81,5 +81,21 @@ taxa = parseInt(prompt('Digite o percentual da taxa de juros:'));
 tempo = parseInt(prompt('Digite a quantidade de dias em atraso:'));
 prestacao = valor + (valor * ((taxa / 100) * tempo));
 console.log("O valor da prestção atualizada com juros é: R$" + prestacao);*/
+
+//FIM
+
+/*Programa que ler 4 valores numéricos e apresenta a multiplicação e a soma usando
+o mesmo raciocínio de propriedades distributivas*/
+
+/*let a = parseInt(prompt('Digite um número inteiro:')), 
+b = parseInt(prompt('Digite um número inteiro:')), 
+c = parseInt(prompt('Digite um número inteiro:')), 
+d = parseInt(prompt('Digite um número inteiro:'));
+let soma1 = a + b, soma2 = a + c, soma3 = a + d, soma4 = b + c, soma5 = b + d, soma6 = c + d;
+let multi1 = a * b, multi2 = a * c, multi3 = a * d, multi4 = b * c, multi5 = b * d, multi6 = c * d;
+console.log('SOMA');
+console.log("A + B é: " + soma1 + "\nA + C é: " + soma2 + "\nA + D é: " + soma3 + "\nB + C é: " + soma4 + "\nB + D é: " + soma5 + "\nC + D é: " + soma6);
+console.log('MULTIPLICAÇÃO');
+console.log("A x B é: " + multi1 + "\nA x C é: " + multi2 + "\nA x D é: " + multi3 + "\nB x C é: " + multi4 + "\nB x D é: " + multi5 + "\nC x D é: " + multi6);*/
 
 //FIM

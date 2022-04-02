@@ -117,4 +117,13 @@ console.log(volume);*/
 console.log('O valor de ' + number + ' ao quadrado é: ' + number * number);*/
 
 //FIM
-  
+
+//Programa que exibe o quadrado da diferença de um valor em relação a outro valor
+
+/*let num1, num2, valor_final;
+num1 = prompt('Digite um valor inteiro:');
+num2 = prompt('Digite outro valor inteiro:');
+valor_final = num1 % num2;
+console.log(valor_final**2);*/
+
+//FIM

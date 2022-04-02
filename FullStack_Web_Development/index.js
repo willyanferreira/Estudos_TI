@@ -99,3 +99,14 @@ console.log('MULTIPLICAÇÃO');
 console.log("A x B é: " + multi1 + "\nA x C é: " + multi2 + "\nA x D é: " + multi3 + "\nB x C é: " + multi4 + "\nB x D é: " + multi5 + "\nC x D é: " + multi6);*/
 
 //FIM
+
+//Programa que apresenta o volume de uma caixa retangular 01/04/22
+
+/*let volume, comprimento, largura, altura;
+comprimento = prompt("Digite o comprimento da caixa:");
+largura = prompt("Digite a largura da caixa:");
+altura = prompt("Digite a altura da caixa:");
+volume = comprimento * largura * altura;
+console.log(volume);*/
+
+//FIM

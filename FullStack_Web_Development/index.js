@@ -110,3 +110,11 @@ volume = comprimento * largura * altura;
 console.log(volume);*/
 
 //FIM
+
+//Programa que ler um número inteiro e exibe seu valor ao quadrado 01/04/22
+
+/*let number = prompt('Digite um número inteiro:');
+console.log('O valor de ' + number + ' ao quadrado é: ' + number * number);*/
+
+//FIM
+  

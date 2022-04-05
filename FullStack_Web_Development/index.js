@@ -127,3 +127,23 @@ valor_final = num1 % num2;
 console.log(valor_final**2);*/
 
 //FIM
+
+//Programa que converte Real pra Dólar e vice-versa 04/04/22
+
+/*let cotacao, real, dolar, conversao;
+conversao = prompt('Digite 1 para converter de Real para Dólar e 2 para converter de Dólar para real');
+if(conversao == '1'){
+    cotacao = prompt('Digite o valor da cotação do Dólar:');
+    real = prompt('Digite a quantida de Reais que você tem:');
+    conversao = real / cotacao;
+    console.log(conversao);
+}else if(conversao == 2){
+    cotacao = prompt('Digite o valor da cotação do Dólar:');
+    dolar = prompt('Digite a quantida de Dólares que você tem:');
+    conversao = dolar * cotacao;
+    console.log(conversao);
+}else{
+    console.log('Você não escolheu uma opção!');
+}*/
+
+//FIM

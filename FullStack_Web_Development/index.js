@@ -171,3 +171,16 @@ Resultado_Final = Soma**2;
 console.log(Resultado_Final);*/
 
 //FIM
+
+//Programa que ler 4 valores numéricos inteiros e apresenta o produto do 1° com o 3° e a soma do 2° com o 4° 12/04/22
+
+/*let A, B, C, D, P, S;
+A = parseInt(prompt('Digite o primeiro valor para multiplicação:'));
+B = parseInt(prompt('Digite o primeiro valor para adição:'));
+C = parseInt(prompt('Digite o segundo valor para multiplicação:'));
+D = parseInt(prompt('Digite o segundo valor para adição:'));
+P = A * C;
+S = B + D;
+console.log(`A multiplicação entre ${A} e ${C} é: ${P} e a soma entre ${B} e ${D} é: ${S}`);*/
+
+//FIM

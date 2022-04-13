@@ -147,3 +147,27 @@ if(conversao == '1'){
 }*/
 
 //FIM
+
+//Programa que ler três valores numéricos inteiros e apresenta o resultado da soma dos quadrados 12/04/22
+
+/*let A, B, C, Soma, Resultado_Final;
+A = parseInt(prompt('Digite um número inteiro: '))**2;
+B = parseInt(prompt('Digite um número inteiro: '))**2;
+C = parseInt(prompt('Digite um número inteiro: '))**2;
+Soma = A + B + C;
+Resultado_Final = Soma;
+console.log(Resultado_Final);*/
+
+//FIM
+
+//Programa que ler três valores numéricos inteiros e apresenta o resultado do quadrado da soma 12/04/22
+
+/*let A, B, C, Soma, Resultado_Final;
+A = parseInt(prompt('Digite um número inteiro: '));
+B = parseInt(prompt('Digite um número inteiro: '));
+C = parseInt(prompt('Digite um número inteiro: '));
+Soma = A + B + C;
+Resultado_Final = Soma**2;
+console.log(Resultado_Final);*/
+
+//FIM

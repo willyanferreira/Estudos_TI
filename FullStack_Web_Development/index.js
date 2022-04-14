@@ -194,3 +194,12 @@ NS = SM + ((PR / 100) * SM);
 console.log(`Seu novo salário é R$${NS.toFixed(2)}`);*/
 
 //FIM
+
+//Programa que calcula a área de uma circunferência 13/04/22
+
+/*let A, R;
+R = parseInt(prompt('Digite o valor do raio para o calculo da circunferência:'));
+A = 3.14 * (R**2);
+console.log(`O valor da circunferência é ${A}`);*/
+
+//FIM

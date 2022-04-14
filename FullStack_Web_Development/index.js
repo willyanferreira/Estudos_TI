@@ -203,3 +203,35 @@ A = 3.14 * (R**2);
 console.log(`O valor da circunferência é ${A}`);*/
 
 //FIM
+
+//Programa que exibe os dados de uma eleição sindical 13/04/22
+
+/*let candidato_A, candidato_B, candidato_C, votos_validos, votos_nulos, votos_em_branco, eleitores;
+candidato_A = parseInt(prompt('Digite a quantidade de votos do candidato A'));
+candidato_B = parseInt(prompt('Digite a quantidade de votos do candidato B'));
+candidato_C = parseInt(prompt('Digite a quantidade de votos do candidato C'));
+votos_nulos = parseInt(prompt('Digite a quantidade de votos nulos'));
+votos_em_branco = parseInt(prompt('Digite a quantidade de votos em brancos'));
+votos_validos = candidato_A + candidato_B + candidato_C;
+eleitores = votos_validos + votos_nulos + votos_em_branco;
+console.log("Votos válidos: " + votos_validos + "\nVotos nulos: " + votos_nulos + "\nVotos em branco: " + votos_em_branco + "\nTotal de eleitores: " + eleitores);
+
+let percentual_de_votos_validos = (votos_validos * 100) / eleitores;
+console.log("Votos válidos: "+percentual_de_votos_validos+"%\n");
+
+let percentual_de_votos_validos_candidatoA = (candidato_A * 100) / eleitores;
+console.log("Votos candidato A: "+percentual_de_votos_validos_candidatoA+"%\n");
+
+let percentual_de_votos_validos_candidatoB = (candidato_B * 100) / eleitores;
+console.log("Votos candidato B: "+percentual_de_votos_validos_candidatoB+"%\n");
+
+let percentual_de_votos_validos_candidatoC = (candidato_C * 100) / eleitores;
+console.log("Votos candidato C: "+percentual_de_votos_validos_candidatoC+"%\n");
+
+let percentual_de_votos_nulos = (votos_nulos * 100) / eleitores;
+console.log("Votos nulos: "+percentual_de_votos_nulos+"%\n");
+
+let percentual_de_votos_em_branco = (votos_em_branco * 100) / eleitores;
+console.log("Votos em branco: "+percentual_de_votos_em_branco+"%\n");/*
+
+//FIM

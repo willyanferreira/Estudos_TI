@@ -232,6 +232,6 @@ let percentual_de_votos_nulos = (votos_nulos * 100) / eleitores;
 console.log("Votos nulos: "+percentual_de_votos_nulos+"%\n");
 
 let percentual_de_votos_em_branco = (votos_em_branco * 100) / eleitores;
-console.log("Votos em branco: "+percentual_de_votos_em_branco+"%\n");/*
+console.log("Votos em branco: "+percentual_de_votos_em_branco+"%\n");*/
 
 //FIM

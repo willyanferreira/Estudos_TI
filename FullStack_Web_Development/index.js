@@ -184,3 +184,13 @@ S = B + D;
 console.log(`A multiplicação entre ${A} e ${C} é: ${P} e a soma entre ${B} e ${D} é: ${S}`);*/
 
 //FIM
+
+//Programa que ler o salário do usuário, o percentual de um reajuste e apresenta o valor do novo salário 13/04/22
+
+/*let SM, PR, NS;
+SM = parseInt(prompt('Digite o valor do seu salário:'));
+PR = parseInt(prompt('Digite o percentual do reajuste:'));
+NS = SM + ((PR / 100) * SM);
+console.log(`Seu novo salário é R$${NS.toFixed(2)}`);*/
+
+//FIM

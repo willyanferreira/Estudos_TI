@@ -284,3 +284,13 @@ potencia = base**expoente;
 document.write(`O valor de ${base}<sup>${expoente}</sup> é igual a ${potencia}`);*/
 
 //FIM
+
+//Programa que ler uma medida em PÉS, calcula, armazena e apresenta seu valor convertido em metros 15/04/22
+
+let pes, metros;
+const pes_metros = 0.3048;
+pes = parseFloat(prompt("Digite o valor de uma medida em PÉS:"));
+metros = pes * pes_metros;
+console.log(`${pes}pés = ${metros.toFixed(2)}metros`);
+
+//FIM

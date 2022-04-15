@@ -253,3 +253,14 @@ console.log(`
 `)*/
 
 //FIM
+
+//Programa que calcula, armazena e apresenta em m/s o valor da velocidade de um projétil que percorre uma distância em km a um espaço de tempo em minutos 15/04/22
+
+/*let distancia, tempo, velocidade;
+const quilometro = 1000, hora = 60;
+distancia = parseFloat(prompt("Digite a distância percorrida em quilômetros:"));
+tempo = parseFloat(prompt("Digite o tempo percorrido em minutos:"));
+velocidade = (distancia * quilometro) / (tempo * hora);
+console.log(`O projétl percorreu uma velocidade de ${velocidade.toFixed(2)}m/s`);*/
+
+//FIM

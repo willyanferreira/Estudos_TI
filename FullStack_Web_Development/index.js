@@ -235,3 +235,21 @@ let percentual_de_votos_em_branco = (votos_em_branco * 100) / eleitores;
 console.log("Votos em branco: "+percentual_de_votos_em_branco+"%\n");*/
 
 //FIM
+
+//Programa que ler 2 valores reais e apresenta as 4 operações aritméticas básicas 15/04/22
+
+/*let valor_a, valor_b, soma, subtracao, multiplicacao, divisao;
+valor_a = parseFloat(prompt("Digite um valor real:"));
+valor_b = parseFloat(prompt("Digite outro valor real:"));
+soma = valor_a + valor_b;
+subtracao = valor_a - valor_b;
+multiplicacao = valor_a * valor_b;
+divisao = valor_a / valor_b;
+console.log(`
+    O resultado da soma entre ${valor_a} e ${valor_b} é: ${soma.toFixed(1)} \n
+    O resultado da subtração entre ${valor_a} e ${valor_b} é: ${subtracao.toFixed(1)} \n
+    O resultado da multiplicação entre ${valor_a} e ${valor_b} é: ${multiplicacao.toFixed(1)} \n
+    O resultado da divisão entre ${valor_a} e ${valor_b} é: ${divisao.toFixed(1)} \n
+`)*/
+
+//FIM

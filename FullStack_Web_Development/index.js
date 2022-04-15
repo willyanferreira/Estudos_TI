@@ -264,3 +264,12 @@ velocidade = (distancia * quilometro) / (tempo * hora);
 console.log(`O projétl percorreu uma velocidade de ${velocidade.toFixed(2)}m/s`);*/
 
 //FIM
+
+//Programa que calcula e apresenta o valor do volume de um esfera 15/04/22
+
+/*let volume, raio;
+raio = parseFloat(prompt('Digite o valor do raio:'));
+volume = ((4/3) * 3.14) * (raio**3);
+console.log(`O volume do raio da esfera é ${volume.toFixed(2)}`);*/
+
+//FIM

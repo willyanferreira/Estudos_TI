@@ -265,11 +265,22 @@ console.log(`O projétl percorreu uma velocidade de ${velocidade.toFixed(2)}m/s`
 
 //FIM
 
-//Programa que calcula e apresenta o valor do volume de um esfera 15/04/22
+//Programa que calcula e apresenta o valor do volume de uma esfera 15/04/22
 
 /*let volume, raio;
 raio = parseFloat(prompt('Digite o valor do raio:'));
 volume = ((4/3) * 3.14) * (raio**3);
 console.log(`O volume do raio da esfera é ${volume.toFixed(2)}`);*/
+
+//FIM
+
+//Programa que ler dois números inteiros e apresenta a potência, utilizando um como base e outro como expoente 15/04/22
+
+/*let base, expoente, potencia;
+base = parseInt(prompt('Digite um número para ser utilizado como base para uma potência:'));
+expoente = parseInt(prompt('Digite um número para ser utilizado como expoente para uma potência:'));
+potencia = base**expoente;
+// console.log(`O valor de ${base} elevado ao ${expoente} é ${potencia}`);
+document.write(`O valor de ${base}<sup>${expoente}</sup> é igual a ${potencia}`);*/
 
 //FIM

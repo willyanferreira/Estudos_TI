@@ -287,10 +287,20 @@ document.write(`O valor de ${base}<sup>${expoente}</sup> é igual a ${potencia}`
 
 //Programa que ler uma medida em PÉS, calcula, armazena e apresenta seu valor convertido em metros 15/04/22
 
-let pes, metros;
+/*let pes, metros;
 const pes_metros = 0.3048;
 pes = parseFloat(prompt("Digite o valor de uma medida em PÉS:"));
 metros = pes * pes_metros;
-console.log(`${pes}pés = ${metros.toFixed(2)}metros`);
+console.log(`${pes}pés = ${metros.toFixed(2)}metros`);*/
+
+//FIM
+
+//Programa que ler um número inteiro e apresenta seu antecessor e sucessor 17/04/22
+
+/*let numero, antecessor, sucessor;
+numero = parseInt(prompt('Digite um número inteiro:'));
+antecessor = numero - 1;
+sucessor = numero + 1;
+console.log(`O antecessor de ${numero} é: ${antecessor}\nE o sucessor de ${numero} é: ${sucessor}`);*/
 
 //FIM

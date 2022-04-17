@@ -315,3 +315,14 @@ quadrado = divisao**2;
 console.log(`${valor1} dividido por ${valor2} é igual a ${divisao}\n${divisao} ao quadrado é igual a ${quadrado}`);*/
 
 //FIM
+
+//Programa que ler dois valores inteiros e armazena um como base e outro como índice de uma raiz 17/04/22
+//OBS: não consegui elaborar um programa que calculasse o valor da raiz. Apenas obtive o índice e a base.
+
+/*let indice, base, raiz;
+indice = parseInt(prompt('Digite o valor do índice:'));
+base = parseInt(prompt('Digite o valor da base:'));
+raiz = `O índice da raiz é ${indice} e sua base é ${base}`;
+console.log(raiz);*/
+
+//FIM

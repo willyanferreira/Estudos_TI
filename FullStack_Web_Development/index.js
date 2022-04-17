@@ -305,7 +305,7 @@ console.log(`O antecessor de ${numero} é: ${antecessor}\nE o sucessor de ${nume
 
 //FIM
 
-//Programa que ler 2 valores inteiros e apresenta o quadrado da divisão de um valor em relacão ao outro 17/04/22
+//Programa que ler 2 valores inteiros e apresenta o quadrado da divisão de um valor em relação ao outro 17/04/22
 
 /*let valor1, valor2, divisao, quadrado;
 valor1 = parseInt(prompt('Digite um valor numérico inteiro:'));

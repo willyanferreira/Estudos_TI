@@ -304,3 +304,14 @@ sucessor = numero + 1;
 console.log(`O antecessor de ${numero} é: ${antecessor}\nE o sucessor de ${numero} é: ${sucessor}`);*/
 
 //FIM
+
+//Programa que ler 2 valores inteiros e apresenta o quadrado da divisão de um valor em relacão ao outro 17/04/22
+
+/*let valor1, valor2, divisao, quadrado;
+valor1 = parseInt(prompt('Digite um valor numérico inteiro:'));
+valor2 = parseInt(prompt('Digite outro valor numérico inteiro:'));
+divisao = parseInt(valor1 / valor2);
+quadrado = divisao**2;
+console.log(`${valor1} dividido por ${valor2} é igual a ${divisao}\n${divisao} ao quadrado é igual a ${quadrado}`);*/
+
+//FIM

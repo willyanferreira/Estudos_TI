@@ -396,4 +396,19 @@ console.log(raiz);*/
 //     console.log("A variável está vazia.");
 // }
 
+// let A, B, C, X;
+// A = parseInt(prompt('Digite un número inteiro:'));
+// B = parseInt(prompt('Digite un número inteiro:'));
+// X = parseInt(prompt('Digite un número inteiro:'));
+// /*Usar o operador lógico de negação(!) próximo da condição, ex: !var1 > var2, produz erros. Usar o operador à frente da condição entre parênteses. ex: !(var1 > var2).*/
+// if(!(X > 5)){
+//     C = A + B;
+//     console.log(`O valor da variável C é o resultado da soma entre as variáves A(${A}) e B(${B}) que é igual a ${C}.\n`);
+//     console.log(`Valor de X: ${X}`);
+// }else{
+//     C = A - B;
+//     console.log(`O valor da variável C é o resultado da subtração entre as variáves A(${A}) e B(${B}) que é igual a ${C}.\n`);
+//     console.log(`Valor de X: ${X}`);
+// }
+
 //FIM

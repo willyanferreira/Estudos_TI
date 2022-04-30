@@ -374,12 +374,26 @@ console.log(raiz);*/
 
 //FIM
 
-//Lendo o livro de Algoritmos e praticando operador de disjunção inclusiva 25/04/22
+//Lendo o livro de Algoritmos e praticando operador lógico de disjunção inclusiva 25/04/22
 
-let sexo = prompt('Digite M para masculino e F para feminino:');
+// let sexo = prompt('Digite M para masculino e F para feminino:');
 
-if(sexo.toUpperCase() == 'M' || sexo.toUpperCase() == 'F'){
-    console.log('Sexo válido');
-}else{
-    console.log('Sexo inválido');
-}
+// if(sexo.toUpperCase() == 'M' || sexo.toUpperCase() == 'F'){
+//     console.log('Sexo válido');
+// }else{
+//     console.log('Sexo inválido');
+// }
+
+//FIM
+
+//Lendo o livro de Algoritmos e praticando operador lógico de negação 30/04/22
+
+// let nome = '';
+
+// if(!nome){
+//     console.log(`Bom dia ${nome}!`);
+// }else{
+//     console.log("A variável está vazia.");
+// }
+
+//FIM

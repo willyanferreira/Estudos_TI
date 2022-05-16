@@ -412,3 +412,16 @@ console.log(raiz);*/
 // }
 
 //FIM
+
+//Lendo o livro de Algoritmos e praticando o operador de disjunção exclusiva com JS - 15/05/22
+
+/*let x = false;
+let y = false;
+
+if(x == false ^ y == false){
+    console.log('Usando o operador de disjunção exclusiva');
+}else{
+    console.log('Apenas uma das proposições precisa ser verdadeira');
+}*/
+
+//FIM

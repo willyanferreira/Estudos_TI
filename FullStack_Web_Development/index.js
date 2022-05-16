@@ -425,3 +425,18 @@ if(x == false ^ y == false){
 }*/
 
 //FIM
+
+//Lendo o livro de Algoritmos e praticando. Programa que verifica se duas pessoas tem o sexo diferente pra uma tomada de decisão usando o perador lógico de disjunção exclisva 16/05/22
+
+/*let n1, n2, s1, s2;
+n1 = prompt('Digite o nome da primeira pessoa:');
+s1 = prompt('Digite "M" para masculino ou "F" para feminino:');
+n2 = prompt('Digite o nome da segunda pessoa:');
+s2 = prompt('Digite "M" para masculino ou "F" para feminino:');
+if(s1 == "M" ^ s2 == "M" || s1 == "F" ^ s2 == "F"){
+    console.log(`${n1} pode dançar com ${n2}`);
+}else{
+    console.log(`${n1} não pode dançar com ${n2}`);
+}*/
+
+//FIM

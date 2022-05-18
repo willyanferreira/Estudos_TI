@@ -433,7 +433,7 @@ n1 = prompt('Digite o nome da primeira pessoa:');
 s1 = prompt('Digite "M" para masculino ou "F" para feminino:');
 n2 = prompt('Digite o nome da segunda pessoa:');
 s2 = prompt('Digite "M" para masculino ou "F" para feminino:');
-if(s1 == "M" ^ s2 == "M" || s1 == "F" ^ s2 == "F"){
+if((s1 == "M" || s1 == "m") ^ (s2 == "M" || s2 == "m")){
     console.log(`${n1} pode dançar com ${n2}`);
 }else{
     console.log(`${n1} não pode dançar com ${n2}`);

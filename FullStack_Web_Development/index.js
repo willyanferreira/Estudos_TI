@@ -455,3 +455,10 @@ if((s1 == "M" && (!(s2 == "M"))) || (!(s1 == "M") && s2 == "M")){ // outra forma
 }*/
 
 //FIM
+
+let dia = new Date().getHours();
+try{
+    console.losg(dia);
+}catch(sabado){
+    console.log(`O que está acontecendo: ${sabado.message}`);
+}

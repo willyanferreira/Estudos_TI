@@ -455,3 +455,21 @@ if((s1 == "M" && (!(s2 == "M"))) || (!(s1 == "M") && s2 == "M")){ // outra forma
 }*/
 
 //FIM
+
+//Praticando JS W3schools - 22/05/22
+
+/*{
+    var saudacao = 'Willyan C.F.S.';
+}
+console.log(`Bom dia ${saudacao}`);*/
+
+/*var nome = "Willyan";
+function saudacao(){
+    var nome = "Will";
+    console.log(`É assim que aprende ${nome}, praticando.`);
+}
+var nome = "Carlos";
+saudacao();
+console.log(nome);*/
+
+//FIM

@@ -473,3 +473,24 @@ saudacao();
 console.log(nome);*/
 
 //FIM
+
+//Praticando JavaScript JSON - 24/05/22
+
+const nomes = '{"person":['+
+'{"primeiroNome": "Willyan", "segundoNome": "Ferreira"},'+
+'{"primeiroNome": "Raquel", "segundoNome": "Ferreira"},'+
+'{"primeiroNome": "Heitor", "segundoNome": "Ferreira"},'+
+'{"primeiroNome": "Amaya", "segundoNome": "Ferreira"},'+
+'{"primeiroNome": "Henri", "segundoNome": "Ferreira"}]}';
+
+const dadosJSON = forEach(JSON.parse(nomes.forea));
+
+// console.log(dadosJSON.person[0].primeiroNome);
+
+console.log(dadosJSON)
+
+// for(let x in dadosJSON){
+//     console.log(dadosJSON.person[x].primeiroNome + dadosJSON.person[x].segundoNome);
+// }
+
+//FIM

@@ -476,7 +476,7 @@ console.log(nome);*/
 
 //Praticando JavaScript JSON - 24/05/22
 
-const nomes = '{"person":['+
+/*const nomes = '{"person":['+
 '{"primeiroNome": "Willyan", "segundoNome": "Ferreira"},'+
 '{"primeiroNome": "Raquel", "segundoNome": "Ferreira"},'+
 '{"primeiroNome": "Heitor", "segundoNome": "Ferreira"},'+
@@ -487,10 +487,25 @@ const dadosJSON = forEach(JSON.parse(nomes.forea));
 
 // console.log(dadosJSON.person[0].primeiroNome);
 
-console.log(dadosJSON)
+console.log(dadosJSON)*/
 
 // for(let x in dadosJSON){
 //     console.log(dadosJSON.person[x].primeiroNome + dadosJSON.person[x].segundoNome);
 // }
+
+//FIM
+
+//Estudando JS OBJ - 29/05/22
+//Creating a JS Object using the JS keyword new
+
+/*const obj = new Object();
+obj.firstNome = "will";
+obj.lastNome = "silva";
+
+const x = obj;
+x.firstNome = "Willyan Carlos"
+x.lastNome = "Ferreira da Silva"
+x.idade = 32;
+console.log(obj.idade);*/
 
 //FIM

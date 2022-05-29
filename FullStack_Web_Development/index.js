@@ -498,14 +498,20 @@ console.log(dadosJSON)*/
 //Estudando JS OBJ - 29/05/22
 //Creating a JS Object using the JS keyword new
 
-/*const obj = new Object();
-obj.firstNome = "will";
-obj.lastNome = "silva";
+const obj = new Object();
+obj.nome = "will";
+obj.sobreNome = "silva";
 
 const x = obj;
-x.firstNome = "Willyan Carlos"
-x.lastNome = "Ferreira da Silva"
+x.nome = "Willyan Carlos"
+x.sobreNome = "Ferreira da Silva"
 x.idade = 32;
-console.log(obj.idade);*/
+x.corDosOlhos = "Castanhos";
+x.peso = 86;
+// console.log(obj.idade);
+
+for(let w in obj){
+    console.log(obj[w]);
+}
 
 //FIM

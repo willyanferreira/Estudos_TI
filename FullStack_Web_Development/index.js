@@ -498,7 +498,7 @@ console.log(dadosJSON)*/
 //Estudando JS OBJ - 29/05/22
 //Creating a JS Object using the JS keyword new
 
-const obj = new Object();
+/*const obj = new Object();
 obj.nome = "will";
 obj.sobreNome = "silva";
 
@@ -509,9 +509,19 @@ x.idade = 32;
 x.corDosOlhos = "Castanhos";
 x.peso = 86;
 // console.log(obj.idade);
+delete obj.peso; //Como a const x não é uma cópia da const obj e sim o mesmo objeto, eu estou usando obj e x em instruções diferentes.
+
+x.saudacao = function(){
+    const data = new Date();
+    if(data.getHours() < 18){
+        return alert("Bom dia!");
+    }else{
+        return alert("Boa noite!");
+    }
+}
 
 for(let w in obj){
     console.log(obj[w]);
-}
+}*/
 
 //FIM

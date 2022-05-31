@@ -518,10 +518,23 @@ x.saudacao = function(){
     }else{
         return alert("Boa noite!");
     }
-}
-
-for(let w in obj){
-    console.log(obj[w]);
 }*/
+
+// for(let w in obj){
+//     console.log(obj[w]);
+// }
+
+//FIM
+
+//Estudando JS OBJ - 30/05/22
+//Exibindo JS OBJ
+
+/*console.log(Object.values(obj)); //consigo exibir o OBJ como array mas não consigo acessar um valor utilazndo um de seus indexes sem passar os valore para uma variável
+const meuArrei = Object.values(obj);
+console.log(meuArrei[2]);*/
+
+/*console.log(JSON.stringify(obj)); //exibindo diretamente tem o mesmo efeito de passar que usar uma variável
+const minhaString = JSON.stringify(obj);
+console.log(minhaString);*/
 
 //FIM

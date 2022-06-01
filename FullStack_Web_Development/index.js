@@ -538,3 +538,23 @@ const minhaString = JSON.stringify(obj);
 console.log(minhaString);*/
 
 //FIM
+
+//Estudando JS OBJ - 31/05/22
+//OBJ Accessors
+
+const ieiel = {
+    carat1: "amor",
+    carat2: "paciência",
+    carat3: "",
+    get quel(){
+        return `Raquel tem muito ${this.carat1} e muita ${this.carat2}`;
+    },
+    set carats(x){
+        this.carat3 = x;
+    }
+}
+// console.log(ieiel.quel);
+ieiel.carats = "bondade";
+console.log("Raquel também tem " + ieiel.carat3);
+
+//FIM

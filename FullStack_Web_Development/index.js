@@ -560,11 +560,31 @@ console.log("Raquel também tem " + ieiel.carat3);*/
 //FIM
 
 //Lendo o livro Algoritmos e praticando JS 07/06/22
-//Divisibilidade: Multiplos e Divisores
+//Divisibilidade: Múltiplos e Divisores
 
-let resto = 0, dividendo = 5, divisor = 2, quociente = 0;
-quociente = dividendo / divisor;
-resto = (dividendo - divisor) * quociente;
-console.log(`Resto = ${resto}\nQuociente = ${quociente}`);
+// let resto = 0, dividendo = 5, divisor = 2, quociente = 0;
+// quociente = dividendo / divisor;
+// resto = (dividendo - divisor) * quociente;
+// console.log(`Resto = ${resto}\nQuociente = ${quociente}`);
+
+//FIM
+
+// Um pequeno desafio que vi na DIO - 07/06/22
+//Bootcamp impulso-javascript-evolution
+
+// function gets(){
+//     return prompt();
+// }
+
+// function print(x){
+//     return console.log(x);
+// }
+
+// let A = parseInt(gets());
+// let B = parseInt(gets());
+
+// let SOMA = A + B;
+
+// print("A soma de " + A + " mais " + B + " é " + SOMA);
 
 //FIM

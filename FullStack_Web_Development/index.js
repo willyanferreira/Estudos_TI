@@ -542,7 +542,7 @@ console.log(minhaString);*/
 //Estudando JS OBJ - 31/05/22
 //OBJ Accessors
 
-const ieiel = {
+/*const ieiel = {
     carat1: "amor",
     carat2: "paciência",
     carat3: "",
@@ -555,6 +555,16 @@ const ieiel = {
 }
 // console.log(ieiel.quel);
 ieiel.carats = "bondade";
-console.log("Raquel também tem " + ieiel.carat3);
+console.log("Raquel também tem " + ieiel.carat3);*/
+
+//FIM
+
+//Lendo o livro Algoritmos e praticando JS 07/06/22
+//Divisibilidade: Multiplos e Divisores
+
+let resto = 0, dividendo = 5, divisor = 2, quociente = 0;
+quociente = dividendo / divisor;
+resto = (dividendo - divisor) * quociente;
+console.log(`Resto = ${resto}\nQuociente = ${quociente}`);
 
 //FIM

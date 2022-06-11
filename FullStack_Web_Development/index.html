@@ -12,6 +12,95 @@
 
 <body>
     <!--<button type="button" onclick="x.saudacao()">Clique aqui!</button>--> <!--Sempre usar o objeto para acessar um método.-->
+
+
+    <!--Tabela dinâmica-->
+    <!-- <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2">Disciplina</th>
+                <th colspan="2">Notas</th>
+                <th rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <td>Nota 1</td>
+                <td>Nota 2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Front</th>
+                <td>HTML</td>
+                <td><input oninput="media()" id="input1" type="text" placeholder="digite sua nota" maxlength="3" size="9"></td>
+                <td><input oninput="media()" id="input2" type="text" placeholder="digite sua nota" maxlength="3" size="9"></td>
+                <td id="td"></td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>JS</td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th rowspan="3">Back</th>
+                <td>PHP</td>
+                <td><input on type="text" placeholder="digite sua nota" size="9"></td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td></td>
+            </tr> 
+            <tr>
+                <td>Python</td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td><input type="text" placeholder="digite sua nota" size="9"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <!-- <script>
+        function media(){
+            // let nota = document.getElementById('input').innerHTML;
+            // let media = document.getElementById('td').innerHTML = nota;
+            // return media;
+            // alert('teste');
+            
+            // document.getElementById('td').innerHTML = document.getElementById('input').value;
+            
+            let nota1 = document.getElementById('input1').value;
+            let nota2 = document.getElementById('input2').value;
+            let media = (parseFloat(nota1) + parseFloat(nota2)) / 2;
+            let exibe_media = document.getElementById('td');
+            const padrao = /[A-z]/g;
+            
+            if(padrao.test(nota1)){
+                document.getElementById('input1').value = "";
+            }   
+            if(padrao.test(nota2)){
+                document.getElementById('input2').value = "";
+            }   
+
+            if(!nota1 || !nota2){
+                exibe_media.innerHTML = "";
+            }else if(isNaN(nota1) || isNaN(nota2)){
+                exibe_media.innerHTML = "";
+            }else{
+                exibe_media.innerHTML = media.toFixed(1);
+            }
+        }
+    </script> -->
 </body>
 
 </html>

@@ -588,3 +588,25 @@ console.log("Raquel também tem " + ieiel.carat3);*/
 // print("A soma de " + A + " mais " + B + " é " + SOMA);
 
 //FIM
+
+
+// Bootcamp da DIO IJE - Introdução à Programação e Pensamento Computacional - 11/06/22
+//Praticando JS
+//Soma de intervalo entre dois números
+
+// let x, y, resultado, total, resultado_parcial, repeticoes;
+
+// x = 1;
+// y = 200;
+// repeticoes = 0;
+// for(x; x <= 200; x++){
+//     repeticoes++;
+//     resultado_parcial = y + x;
+// //    console.log(y + " + " + x + " = " + resultado_parcial);
+//     y--;
+// }
+// total = repeticoes / 2; // 2 = quantidade de números usados em cada soma
+// resultado = total * resultado_parcial
+// console.log(`${total} x ${resultado_parcial} = ${resultado}`);
+
+//FIM
